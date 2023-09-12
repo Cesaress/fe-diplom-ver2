@@ -71,9 +71,9 @@ const MainForm = ({ className }) => {
   const clickHandler = () => {
     dispatch(setDataRequest({ data: { from, to } }));
     dispatch(setParameters({ offset: 0 }));
-    if (location.pathname !== `/fe-dev-diploma/trains/${urlSearchString}`)
+    if (location.pathname !== `/fe-diplom/trains/${urlSearchString}`)
       navigate({
-        pathname: `/fe-dev-diploma/trains/`,
+        pathname: `/fe-diplom/trains/`,
         search: `${urlSearchString}`,
       });
   };
@@ -151,7 +151,7 @@ const MainForm = ({ className }) => {
                 : false
             }
           ></Button>
-          {isError && location.pathname === "/fe-dev-diploma" && (
+          {isError && location.pathname === "/fe-diplom" && (
             <Info
               type={"error"}
               text={"Что-то пошло не так, обновите страницу..."}

@@ -61,7 +61,7 @@ const PassengersInfo = () => {
   const onClickHandler = () => {
     validatePass(passengers) === true
       ? navigate({
-          pathname: `/fe-dev-diploma/personal_information/${params.id}`,
+          pathname: `/fe-diplom/personal_information/${params.id}`,
           search: location.search,
         })
       : setShowError(true);
@@ -92,7 +92,7 @@ const PassengersInfo = () => {
                 text="Вы не выбрали ни одного места в вагоне "
                 onClick={() =>
                   navigate({
-                    pathname: `/fe-dev-diploma/seats/${params.id}`,
+                    pathname: `/fe-diplom/seats/${params.id}`,
                     search: location.search,
                   })
                 }

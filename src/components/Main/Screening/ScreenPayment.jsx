@@ -24,7 +24,7 @@ const ScreenPayment = ({ data }) => {
                 type="screening"
                 onClick={() =>
                   navigate({
-                    pathname: `/fe-dev-diploma/personal_information/${params.id}`,
+                    pathname: `/fe-diplom/personal_information/${params.id}`,
                     search: location.search,
                   })
                 }

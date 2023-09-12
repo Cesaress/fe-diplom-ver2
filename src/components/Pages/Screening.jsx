@@ -44,7 +44,7 @@ const Screening = () => {
   const onClickHandler = async () => {
     await handleAddOrder();
     navigate({
-      pathname: `/fe-dev-diploma/order-result/${params.id}`,
+      pathname: `/fe-diplom/order-result/${params.id}`,
       search: location.search,
     });
   };

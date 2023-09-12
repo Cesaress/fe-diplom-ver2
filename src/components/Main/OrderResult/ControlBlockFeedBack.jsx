@@ -46,7 +46,7 @@ const ControlBlockFeedBack = ({ amount }) => {
           <Button
             text="Вернуться на главную"
             type="reverse_to_homePage"
-            onClick={() => navigate("/fe-dev-diploma")}
+            onClick={() => navigate("/fe-diplom")}
           ></Button>
         </div>
       </div>

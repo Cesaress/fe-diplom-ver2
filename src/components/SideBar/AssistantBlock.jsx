@@ -26,7 +26,7 @@ const AssistantBlock = () => {
       from.date &&
       from.city.name &&
       to.city.name &&
-      location.pathname === "/fe-dev-diploma/trains"
+      location.pathname === "/fe-diplom/trains"
     )
       dispatch(
         setTrainsParameters({ data: { name: inputName, status: checked } })
