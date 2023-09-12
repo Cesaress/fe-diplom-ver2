@@ -6,11 +6,9 @@ import {
   CardBody,
 } from "../Main/CardsBlock/CardsMolecules";
 import icon_info from "../../img/howItWorks/icon_info.svg";
-
 import { nanoid } from "nanoid";
 import { Button } from "../Atoms/Atoms";
 
-/**className, data, children */
 const Modal = ({ type, onClick }) => {
 
   return (
@@ -46,4 +44,5 @@ const Modal = ({ type, onClick }) => {
     </React.Fragment>
   );
 };
+
 export default Modal;

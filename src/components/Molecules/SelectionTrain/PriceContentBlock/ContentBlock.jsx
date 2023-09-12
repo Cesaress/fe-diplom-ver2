@@ -6,7 +6,6 @@ import { nanoid } from "nanoid";
 
 const ContentBlock = ({ className,template }) => {
 
-
   return (
     <React.Fragment>
       <div className={className + "_block"}>
@@ -32,6 +31,5 @@ const ContentBlock = ({ className,template }) => {
     </React.Fragment>
   );
 };
+
 export default ContentBlock;
-
-

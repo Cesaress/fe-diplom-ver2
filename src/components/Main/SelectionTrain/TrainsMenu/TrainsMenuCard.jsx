@@ -7,10 +7,8 @@ import CardIconsBlock from "./CardIconsBlock";
 import { Button, MySvgIcon } from "../../../Atoms/Atoms";
 import TrainInfo from "../../../Molecules/SelectionWagon/TrainInfo";
 import TrailsData from "../../../Molecules/SelectionTrain/TrailsData";
-
 import icon_train from "../../../../img/selectionTrain/icon_train.svg";
 import icon_yellow_arrow_right from "../../../../img/selectionTrain/icon_yellow-arrow-right.svg";
-
 import { nanoid } from "nanoid";
 
 const TrainsMenuCard = ({ departure, onClick }) => {
@@ -148,5 +146,3 @@ const TrainsMenuCard = ({ departure, onClick }) => {
 };
 
 export default TrainsMenuCard;
-
-/*HOC приделать для AvailableVagons, он много места занимает */

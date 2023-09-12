@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const ContentBlockItem = ({ className, children }) => {
    
   return (
@@ -11,4 +10,5 @@ const ContentBlockItem = ({ className, children }) => {
     </React.Fragment>
   );
 };
+
 export default ContentBlockItem;

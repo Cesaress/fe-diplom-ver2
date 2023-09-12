@@ -1,11 +1,9 @@
 import React from "react";
-
 import { Button, Title } from "../../Atoms/Atoms";
 import PassengersForm from "../../Forms/PassengersForm/PassengersForm";
 
 const BlockItem = React.forwardRef(
   ({ id, clickHandler, clickDelete, showInfo }, ref) => {
-   
 
     return (
       <React.Fragment>
@@ -53,8 +51,5 @@ const BlockItem = React.forwardRef(
     );
   }
 );
-/**Вместо кнопки должна быть ссылка на следующего пассажира. Но
- * она должна что? подсветить следующий блок? развернуть его? прокрутить до него?
- * пока она просто для верстки
- */
+
 export default BlockItem;

@@ -10,11 +10,6 @@ const WagonFourthClass = ({ data, selectedTypeTicket, onClick }) => {
   const dataSeats = useSelector((state) => state.passengers.dataSeats);
   const passengers = useSelector((state) => state.passengers.passengers);
   const seatsBtnsArr = getSeatsArr(data.coach.class_type);
-
-  //console.log(data, 'data4')
-  
-
-
   
   return (
     <React.Fragment>
@@ -136,4 +131,5 @@ const WagonFourthClass = ({ data, selectedTypeTicket, onClick }) => {
     </React.Fragment>
   );
 };
+
 export default WagonFourthClass;

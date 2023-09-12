@@ -5,15 +5,14 @@ import ReactPaginate from "react-paginate";
 import TrainsMenu from "../Main/SelectionTrain/TrainsMenu/TrainsMenu";
 import { setParameters } from "../../features/catalogTrainsSlice";
 import { parsedUrlString, getUrlSearch } from "../../utils/trainSelectionUtils";
+
 const PaginatedItems = ({ itemsPerPage, items, listItems }) => {
   const [currentItems, setCurrentItems] = useState(listItems);
   const [pageCount, setPageCount] = useState(0);
   const itemOffset = useSelector(
     (state) => state.catalogTrains.searchData.parameters.offset
   );
-
   const dispatch = useDispatch();
-
   const location = useLocation();
   const navigate = useNavigate();
   let upData = parsedUrlString(location.search);
@@ -69,4 +68,5 @@ const PaginatedItems = ({ itemsPerPage, items, listItems }) => {
     </>
   );
 };
+
 export default PaginatedItems;

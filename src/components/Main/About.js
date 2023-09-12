@@ -31,6 +31,3 @@ const About = () => {
 };
 
 export default About;
-
-
-/**how it works */

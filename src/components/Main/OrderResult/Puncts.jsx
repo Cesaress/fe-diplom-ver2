@@ -5,6 +5,7 @@ import { CardTop, CardBody } from "../CardsBlock/CardsMolecules";
 import icon_comp from "../../../img/orderResult/icon_comp.svg";
 import icon_tickets from "../../../img/orderResult/icon_tickets.svg";
 import icon_driver from "../../../img/orderResult/icon_driver.svg";
+
 const Puncts = () => {
     return (
       <section className="order-result_puncts section">
@@ -58,4 +59,5 @@ const Puncts = () => {
       </section>
     );
   };
+  
   export default Puncts;

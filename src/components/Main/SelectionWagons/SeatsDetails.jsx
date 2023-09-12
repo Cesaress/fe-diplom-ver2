@@ -6,7 +6,6 @@ import WagonThirdClass from "./WagonThirdClass";
 import WagonFourthClass from "./WagonFourthClass";
 import WagonFirstClass from "./WagonFirstClass";
 import WagonSecondClass from "./WagonSecondClass";
-
 import { getArrWagons } from "../../../utils/WagonSelectionUtils";
 import { nanoid } from "nanoid";
 const SeatsDetails = ({ className, data, selectedTypeTicket, onClick }) => {
@@ -16,7 +15,7 @@ const SeatsDetails = ({ className, data, selectedTypeTicket, onClick }) => {
     return;
   }
   const result = getArrWagons(data);
-//console.log( result, "result");
+
   return (
     <React.Fragment>
       <div key={nanoid()} className={className + "_block"}>

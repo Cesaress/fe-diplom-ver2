@@ -69,4 +69,5 @@ const WagonSecondClass = ({ data, selectedTypeTicket, onClick }) => {
     </React.Fragment>
   );
 };
+
 export default WagonSecondClass;

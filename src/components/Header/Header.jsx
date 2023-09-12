@@ -1,11 +1,6 @@
 import React from "react";
-
 import NavBar from "./NavBar";
-
-
-
 import Logo from "./Logo";
-
 import "./header.css";
 import { nanoid } from "nanoid";
 
@@ -27,5 +22,4 @@ const Header = () => {
   );
 };
 
-/**  */
 export default Header;

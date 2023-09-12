@@ -19,7 +19,6 @@ const TrainsMenu = ({ currentItems }) => {
   }
 
   const clickHandler = (id, item) => {
-
     dispatch(clearDataSeats());
     dispatch(setTrainId({ id: item._id }));
     dispatch(setSelectionTrain({ data: item }));
@@ -41,4 +40,5 @@ const TrainsMenu = ({ currentItems }) => {
     </React.Fragment>
   );
 };
+
 export default TrainsMenu;

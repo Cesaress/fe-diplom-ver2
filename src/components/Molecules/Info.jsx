@@ -9,6 +9,7 @@ import { Button } from "../Atoms/Atoms";
 import icon_info from "../../img/howItWorks/icon_info.svg";
 import icon_error from "../../img/loading/icon_error.svg";
 import { nanoid } from "nanoid";
+
 const Info = ({ type, text, onClick }) => {
   return (
     <React.Fragment>
@@ -34,4 +35,5 @@ const Info = ({ type, text, onClick }) => {
     </React.Fragment>
   );
 };
+
 export default Info;

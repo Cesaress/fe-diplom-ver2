@@ -1,7 +1,7 @@
 import React from "react";
 
 const PaginationTrainsMenu = ({ amount, limit }) => {
-  //const totalPages = Math.round(amount / limit);
+
   return (
     <React.Fragment>
       <nav aria-label="..." className="nav-selection-trains-pagination">
@@ -38,4 +38,3 @@ const PaginationTrainsMenu = ({ amount, limit }) => {
 };
 
 export default PaginationTrainsMenu;
-/** Условие: если страниц больше трех, то выводить 1,2,3...endNumber*/

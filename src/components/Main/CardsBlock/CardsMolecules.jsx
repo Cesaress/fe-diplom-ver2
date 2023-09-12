@@ -4,7 +4,6 @@ import TrainInfo from "../../Molecules/SelectionWagon/TrainInfo";
 import { MySvgIcon } from "../../Atoms/Atoms";
 import { capitalizeFirstLetter } from "../../../utils/trainSelectionUtils";
 import { format} from "date-fns";
-
 import { nanoid } from "nanoid";
 import icon_clock from "../../../img/selectionTrain/icon_clock.svg";
 import icon_yellow_train from "../../../img/selectionTrain/icon_yellow-train.svg";

@@ -57,4 +57,3 @@ const TripDetails = () => {
 };
 
 export default TripDetails;
-/** CardBody = ({ className, data, children }) */

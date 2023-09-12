@@ -4,7 +4,6 @@ import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material/styles";
 
 const CustomSwitch = styled(Switch)(() => ({
-  /**Эти стили применяются только при обновлении (???) */
   width: 72,
   height: 30,
   padding: 6,

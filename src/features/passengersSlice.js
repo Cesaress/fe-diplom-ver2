@@ -144,8 +144,7 @@ console.log(data, 'data')
         return (item = { ...item, seats: [], count: 0 });
       });
       state.dataSeats = result;
-      //потом поправлю, чтоб только места удалялись,
-      // а к сохраненным пассажирам можно было цеплять новые места
+
       state.passengers = [];
       //
       state.totalPrice = 0;

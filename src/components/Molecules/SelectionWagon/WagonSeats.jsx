@@ -2,8 +2,7 @@ import React from "react";
 import WagonDetailsTable from "./WagonDetailsTable";
 import WagonServices from "./WagonServices";
 const WagonSeats = ({ className, data }) => {
-  /**кусок блока - наличие свободных мест и их цена */
-  //console.log(data, "servics");
+
   let bottomSeats = [];
   let topSeats = [];
 

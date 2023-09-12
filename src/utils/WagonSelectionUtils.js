@@ -16,7 +16,6 @@ export const getArrWagons = (arr) => {
     }
 
     //Когда-нибудь потом сделаю на несколько вагонов одного класса
-    //сейчас они сбивают и отвлекают от насущного RTQ
     /*} else if (arr.length === 2) {
       if (arr[0].coach.class_type === "first") {
         copyArr[0] = { ...arr[0], index: "02" };
@@ -88,8 +87,8 @@ export const getSeatsArr = (class_type) => {
   let rangeSideSeatsArr = [];
   if (class_type === "first") {
     boxSeatsArr = Array.from({ length: 18 }, (_, index) => index + 1);
-    boxSeatsArr.splice(1, 1); //удалить 2(не знаю зачем, но на макете его нет)
-    boxSeatsArr.splice(15, 1); //удалить 17(не знаю зачем, но на макете его нет)
+    boxSeatsArr.splice(1, 1);
+    boxSeatsArr.splice(15, 1);
     rangeBoxSeatsArr = rangeSeats(boxSeatsArr);
     return rangeBoxSeatsArr;
   } else if (class_type === "second") {

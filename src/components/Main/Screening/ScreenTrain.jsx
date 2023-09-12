@@ -1,7 +1,5 @@
 import React from "react";
-
 import { useSelector } from "react-redux";
-
 import TrainsMenuCard from "../../Main/SelectionTrain/TrainsMenu/TrainsMenuCard";
 
 const ScreenTrain = () => {
@@ -17,5 +15,3 @@ const ScreenTrain = () => {
 };
 
 export default ScreenTrain;
-
-/** Данные карточки поездки(номер поезда , время, города, вокзалы, вагоны)*/

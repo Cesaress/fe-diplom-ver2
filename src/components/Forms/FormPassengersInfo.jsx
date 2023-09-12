@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PassengersLableState from "./PassengersLableState";
 import ControlledCheckbox from "../Molecules/MUI/ControlledCheckbox";
-
 import ControlledInput from "../Molecules/MUI/ControlledInput";
 
 const PassengersInfo = () => {
@@ -135,25 +134,3 @@ const PassengersInfo = () => {
 };
 
 export default PassengersInfo;
-/** <input
-              type="date"
-              className="form-control input-birthdate"
-              id="exampleFormControlInput6"
-            /> */
-
-/** <input
-              type="text"
-              className="form-control input-fullname"
-              id="exampleFormControlInput1"
-            />
-            
-            <input
-              type="text"
-              className="form-control input-fullname"
-              id="exampleFormControlInput2"
-            />
-             <input
-              type="text"
-              className="form-control input-fullname"
-              id="exampleFormControlInput4"
-            /> */

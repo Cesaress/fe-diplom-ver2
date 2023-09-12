@@ -1,7 +1,6 @@
 import "../Main/main.css";
 import Modal from "../Molecules/Modal";
 import ic_subtract from "../../img/howItWorks/ic_subtract.svg";
-
 import ic_house from "../../img/howItWorks/ic_house.svg";
 import ic_globe from "../../img/howItWorks/ic_globe.svg";
 import React from "react";

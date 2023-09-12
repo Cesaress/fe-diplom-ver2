@@ -1,10 +1,7 @@
 import React from "react";
-
 import ControlledInput from "../Molecules/MUI/ControlledInput";
 
 const PersonalDataForm = ({ data, onChange }) => {
-
-  
 
   return (
     <React.Fragment>

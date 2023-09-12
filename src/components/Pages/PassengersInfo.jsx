@@ -6,11 +6,9 @@ import Banner from "../Molecules/Banner";
 import Info from "../Molecules/Info";
 import banner3 from "../../img/banner/banner3.png";
 import MainForm from "../Forms/MainForm";
-
 import SideBar from "../SideBar/SideBar";
 import ProgressBar from "../Molecules/ProgressBar";
 import AddPassenger from "../Main/Passengers/AddPassengerBlock";
-
 import BlockItem from "../Main/Passengers/BlockItem";
 import { Button } from "../Atoms/Atoms";
 import { validatePass } from "../../utils/formsValidator";
@@ -46,9 +44,6 @@ const PassengersInfo = () => {
       : event.target.classList.remove("expand-button");
   };
 
-  /* Переписать для объекта и вынести в utils
-  +эффект для корректного отображения порядка
-  */
   const updateCounter = (arr, id) => {
     const newArr = arr.filter((o) => o !== id);
     return newArr.map((item, idx) => {

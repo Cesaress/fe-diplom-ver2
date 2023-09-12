@@ -2,7 +2,7 @@ import React from "react";
 import { capitalizeFirstLetter } from "../../../utils/trainSelectionUtils";
 
 const TrainInfo = ({ className, data }) => {
-  //console.log(data, 'trainInfo');
+
   if (!data || data === {}) {
     return;
   }

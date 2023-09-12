@@ -5,7 +5,6 @@ import { Title, Button } from "../../Atoms/Atoms";
 const ControlBlockFeedBack = ({ amount }) => {
   const navigate = useNavigate();
   const [currentId, setCurrentId] = useState(0);
-
   const clickHandler = (id) => {
     setCurrentId(id);
   };

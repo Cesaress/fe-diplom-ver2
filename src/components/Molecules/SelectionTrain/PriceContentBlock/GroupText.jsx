@@ -1,6 +1,5 @@
 import React from "react";
 
-/**группа название полки и их количество */
 const GroupText = ({ className, name, amount }) => {
    
     return (
@@ -12,5 +11,5 @@ const GroupText = ({ className, name, amount }) => {
       </React.Fragment>
     );
   };
+
   export default GroupText;
-  

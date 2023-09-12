@@ -11,7 +11,7 @@ const ControlledInput = ({ id, type, state, onChangeInput, errorDocs }) => {
   else if (type === "certificate")
     placeholder = "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _";
   else placeholder = "";
-//console.log(state, 'input')
+
   return (
     <React.Fragment>
       <TextField
@@ -29,9 +29,6 @@ const ControlledInput = ({ id, type, state, onChangeInput, errorDocs }) => {
 };
 
 export default ControlledInput;
-/*const maskPassport = { seria: "_ _ _ _", number: "_ _ _ _ _ _" }; //маска для поля ввода пока для все одинаковая.она исчезает полностью на фокусе или по мере заполнения?
-const maskBirthCertificate = { number: "_ _ _ _ _ _ _ _ _ _ _ _" };
-const maskDate = "ДД/ММ/ГГГГ";*/
 
 const useStyles = makeStyles({
   customStyle: {

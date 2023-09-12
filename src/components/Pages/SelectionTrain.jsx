@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Banner from "../Molecules/Banner";
 import banner3 from "../../img/banner/banner3.png";
 import MainForm from "../Forms/MainForm";
-
 import SideBar from "../SideBar/SideBar";
 import ProgressBar from "../Molecules/ProgressBar";
 import Loader from "../Molecules/Loader";
@@ -17,7 +16,6 @@ import {
 import Info from "../Molecules/Info";
 import { useGetTrainsListQuery } from "../../features/myApi";
 import "../Main/SelectionTrain/selectionTrain.css";
-
 import {
   parsedUrlString,
   getUrlSearch,

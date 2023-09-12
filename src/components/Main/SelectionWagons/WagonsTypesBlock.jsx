@@ -3,7 +3,6 @@ import { CardTitle, Button } from "../../Atoms/Atoms";
 
 const WagonsTypesBlock = ({ className, selectedType, setSelectedType }) => {
 
-
   return (
     <React.Fragment>
       <div className={className + "_block"}>

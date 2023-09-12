@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import ContentBlock from "../../../Molecules/SelectionTrain/PriceContentBlock/ContentBlock";
 import { formattedPrice } from "../../../../utils/trainSelectionUtils";
 
@@ -25,14 +24,8 @@ const AvailableWagons = ({ amount, type, className, min_price, item }) => {
     currentPrice = item.name === "third"?item.side_price:item.top_price;
   
   }
- 
-
-  /** на свободные полки отдельный запрос, пока не разобралась куда
-   * разобралась, но не надо)) а то на каждый ховер будет отдельный запрос к серверу
-  */
 
   const [availableSeats, setAvailableSeats] = useState(false);
-
   const handleBoxToggle = () => {
     setAvailableSeats(!availableSeats);
   };
@@ -76,5 +69,3 @@ const AvailableWagons = ({ amount, type, className, min_price, item }) => {
 };
 
 export default AvailableWagons;
-
-/**поправить отступы для количества мест */

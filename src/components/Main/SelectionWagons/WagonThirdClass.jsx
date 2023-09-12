@@ -129,4 +129,5 @@ console.log(  data.seats,
     </React.Fragment>
   );
 };
+
 export default WagonThirdClass;

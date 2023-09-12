@@ -37,4 +37,3 @@ export const templateText = (data) => {
   }
   return text;
 };
-

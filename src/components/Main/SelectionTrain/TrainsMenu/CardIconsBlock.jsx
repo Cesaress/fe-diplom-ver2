@@ -1,7 +1,7 @@
 import React from "react";
 
 const CardIconsBlock = ({ wifi, express, className }) => {
-  /**на экспресс сделать условиеб сейчас он везде, тк надо было иконку наглядно пристроить */
+
   return (
     <React.Fragment>
       <div

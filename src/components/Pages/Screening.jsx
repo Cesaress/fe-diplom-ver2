@@ -5,7 +5,6 @@ import { Button } from "../Atoms/Atoms";
 import Banner from "../Molecules/Banner";
 import banner3 from "../../img/banner/banner3.png";
 import MainForm from "../Forms/MainForm";
-
 import SideBar from "../SideBar/SideBar";
 import ProgressBar from "../Molecules/ProgressBar";
 import ScreenTrain from "../Main/Screening/ScreenTrain";

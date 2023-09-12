@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import Tooltip from "../Tooltip";
 const WagonServices = ({ className, data }) => {
-  /**группа кнопок для выбор допопций в вагонах */
 
   const [options, setOptions] = useState([
     {
@@ -250,6 +249,5 @@ const WagonServices = ({ className, data }) => {
     </React.Fragment>
   );
 };
-export default WagonServices;
 
-/**  */
+export default WagonServices;

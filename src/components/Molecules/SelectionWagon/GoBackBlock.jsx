@@ -3,7 +3,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "../../Atoms/Atoms";
 
 const GoBackBlock = ({ className, type }) => {
-  /**"выбрать другой поезд" */
   const navigate = useNavigate();
   const location = useLocation();
 

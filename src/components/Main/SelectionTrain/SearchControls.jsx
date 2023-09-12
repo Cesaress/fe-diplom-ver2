@@ -8,7 +8,6 @@ const SearchControls = ({
   onClickLimit,
 }) => {
 
-
   return (
     <React.Fragment>
       <div className="search-controls__wrap d-flex">

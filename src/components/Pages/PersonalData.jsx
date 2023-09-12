@@ -18,13 +18,11 @@ import { optionsPayment } from "../../utils/dataText";
 const PersonalData = () => {
   const { loading } = useSelector((state) => state.catalogTrains);
   const { contributor, passengers } = useSelector((state) => state.passengers);
-
   const [state, setState] = useState(contributor);
   const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
   const dispatch = useDispatch();
-
   const onChangeInput = (value, id) => {
     if (id === "last_name") {
       setState((prevState) => ({
@@ -185,5 +183,3 @@ const PersonalData = () => {
 };
 
 export default PersonalData;
-
-/**Условие. чтоб только один чекбокс был выделен */

@@ -5,11 +5,9 @@ import { Button, Title } from "../Atoms/Atoms";
 import Banner from "../Molecules/Banner";
 import banner3 from "../../img/banner/banner3.png";
 import MainForm from "../Forms/MainForm";
-
 import SideBar from "../SideBar/SideBar";
 import ProgressBar from "../Molecules/ProgressBar";
 import Loader from "../Molecules/Loader";
-
 import TrailDetails from "../Main/SelectionWagons/TrailDetails";
 import QuantityTickets from "../Main/SelectionWagons/QuantityTickets";
 import WagonsTypesBlock from "../Main/SelectionWagons/WagonsTypesBlock";
@@ -24,7 +22,6 @@ import {
   upDateCatalog,
   setSelectionTrain,
 } from "../../features/catalogTrainsSlice";
-
 import {
   useGetTrainIdQuery,
   useGetTrainsListQuery,
@@ -34,7 +31,6 @@ import {
   parsedUrlString,
   formattedFormData,
 } from "../../utils/trainSelectionUtils";
-
 import "../Main/SelectionWagons/selectionWagons.css";
 
 const SelectionWagons = () => {
@@ -43,9 +39,7 @@ const SelectionWagons = () => {
   const [selectedTypeTicket, setSelectedTypeTicket] = useState({
     type: "adult",
   });
-
   const { id, seleсtedTrain } = useSelector((state) => state.catalogTrains);
-
   const dataSeats = useSelector((state) => state.passengers.dataSeats);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -64,11 +58,6 @@ console.log(upData,'upData')
     isLoading: isLoadingId,
   } = useGetTrainIdQuery(params.id);
   //console.log(list, "list");
-
-  /**В процессе. .. пока не очень понятно как вызвать в одном компоненте
-   * и id и список, если список "потерялся"
-   * и лишнего не навертеть
-   */
 
   const formData = formattedFormData(upData);
 

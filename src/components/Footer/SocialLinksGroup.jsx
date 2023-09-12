@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 const SocialLinksGroup = () => {
     return (<React.Fragment>
                     <div className="social  text-light">
@@ -31,4 +29,3 @@ const SocialLinksGroup = () => {
 }
 
 export default SocialLinksGroup;
-

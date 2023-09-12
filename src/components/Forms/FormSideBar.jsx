@@ -6,7 +6,6 @@ import FormCalendar from "../Molecules/ReactCalendar";
 const FormSideBar = () => {
   const { from, to } = useSelector((state) => state.formTickets.formData);
 
-
   return (
     <React.Fragment>
       <div className="form-sidebar-block">

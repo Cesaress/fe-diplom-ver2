@@ -1,7 +1,6 @@
 import React from "react";
 
 const Card = ({ id,className, children }) => {
-  /**Card, this is card)) */
 
   return (
     <React.Fragment>

@@ -7,10 +7,6 @@ import {
 import { format } from "date-fns";
 import { nanoid } from "nanoid";
 
-/**Расчет времени для отбытия-прибытия-длительности
- * по идее timestamp надо умножить на 1000, чтобы получить запранированное время в выбранной дате<div className="после этого трэш
- * поезд мск-спб едет двое суток">
- */
 const TrailsData = ({ className, data, icon, reverse = false }) => {
   const duration = getDuration(data.to.datetime, data.from.datetime);
 
@@ -125,7 +121,3 @@ const TrailsData = ({ className, data, icon, reverse = false }) => {
 };
 
 export default TrailsData;
-/**для реверса это временное состояние для верстки, пока  не будет нормальных запросов */
-/**` + duration.minutes < 10
-              ? `0 ${duration.minutes}`
-              : `${duration.minutes}`} */

@@ -1,7 +1,6 @@
-
 import React from "react";
 import { formattedPrice } from "../../../../utils/trainSelectionUtils";
-/**Группа цены "от ...Р" */
+
 const GroupPrice = ({ className, price }) => {
  
   return (

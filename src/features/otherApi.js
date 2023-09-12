@@ -7,7 +7,7 @@ export const other = createApi({
     tagTypes: ["Order", "Subscriber"],
   }),
   endpoints: (builder) => ({
-    /* addSubscriber: builder.mutation({
+    addSubscriber: builder.mutation({
       queryFn: async (data) => {
         console.log(data, "data");
         const { email, ...body } = data;
@@ -22,7 +22,7 @@ export const other = createApi({
           console.log("error");
         }
       },
-    }),*/
+    }),
     addOrder: builder.mutation({
       query: ({ body }) => ({
         //это работает

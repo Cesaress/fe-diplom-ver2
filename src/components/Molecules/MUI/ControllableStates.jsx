@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import { Autocomplete, TextField } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { setForm } from "../../../features/formTicketsSlice";
@@ -10,7 +9,6 @@ const ControllableStates = ({
   value,
   onChangeInput,
   options,
-
   popupIcon,
   placeholder,
 }) => {

@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useGetCityesNameQuery } from "../../features/myApi";
-
 import ControllableStates from "../Molecules/MUI/ControllableStates";
 import { LocationOn } from "@mui/icons-material";
 import { Title, Button } from "../Atoms/Atoms";
@@ -67,8 +66,7 @@ const MainForm = ({ className }) => {
 
   const clickReverse = () => {
     dispatch(setReverseData());
-    //просто меняет местами города
-    //для поиска и отправки запроса нужно нажать "Найти билеты"
+    // меняет местами города
   };
   const clickHandler = () => {
     dispatch(setDataRequest({ data: { from, to } }));

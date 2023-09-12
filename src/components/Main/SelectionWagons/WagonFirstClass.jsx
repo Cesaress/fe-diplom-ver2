@@ -8,9 +8,6 @@ const WagonFirstClass = ({ data, selectedTypeTicket, onClick }) => {
   const passengers = useSelector((state) => state.passengers.passengers);
   const seatsBtnsArr = getSeatsArr(data.coach.class_type);
 
-
-
-
   return (
     <React.Fragment>
       <div className="wagon_item wagon-first_class">
@@ -74,4 +71,5 @@ const WagonFirstClass = ({ data, selectedTypeTicket, onClick }) => {
     </React.Fragment>
   );
 };
+
 export default WagonFirstClass;

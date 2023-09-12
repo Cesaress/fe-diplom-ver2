@@ -1,6 +1,4 @@
 import React from "react";
-//import { useSelector } from "react-redux";
-
 import { Link } from "react-router-dom";
 import ic_phone from "../../img/footer/ic_phone.svg";
 import ic_email from "../../img/footer/ic_email.svg";
@@ -8,13 +6,9 @@ import ic_skype from "../../img/footer/ic_skype.svg";
 import icon_geo from "../../img/icon_geo.svg";
 import FormSubscribe from "../Forms/FormSubscribe";
 import SocialLinksGroup from "./SocialLinksGroup";
-//import { useGetSubscribeQuery } from "../../features/otherApi";
 import "./footer.css";
 import { nanoid } from "nanoid";
 const Footer = () => {
- // const  subscriber = useSelector((state) => state.passengers.subscriber);
-  //const { data = [], isLoading } = useGetSubscribeQuery(subscriber);
-  //console.log(subscriber, 'subscriber')
   return (
     <React.Fragment>
       <footer className="container-fluid footer" id="footer">
@@ -109,7 +103,7 @@ const Footer = () => {
               >
                 <i className="fa fa-angle-up" aria-hidden="true"></i>
               </a>
-              <span className="copyright-text">2018 Web</span>
+              <span className="copyright-text">2023 Web</span>
             </div>
           </div>
         </div>
@@ -119,5 +113,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-/** */
