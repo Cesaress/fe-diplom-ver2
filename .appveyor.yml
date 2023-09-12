@@ -20,7 +20,7 @@ build_script:
 
 deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
-  - git config --global user.name Arseny Prosvetov
-  - git config --global user.email arsprosvet@mail.ru
+  - git config --global user.name Andrey Bogdanov
+  - git config --global user.email cesaress@yandex.ru
   - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
   - npx push-dir --dir=build --branch=gh-pages --force --verbose
