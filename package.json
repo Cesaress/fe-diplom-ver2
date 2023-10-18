@@ -34,5 +34,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^8.51.0",
+    "eslint-plugin-react": "^7.33.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cesaress/fe-diplom-ver2.git"
+  },
+  "author": "Cesaress",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cesaress/fe-diplom-ver2/issues"
+  },
+  "homepage": "https://github.com/Cesaress/fe-diplom-ver2#readme"
 }
