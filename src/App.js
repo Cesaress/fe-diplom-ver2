@@ -16,7 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/fe-diplom/" element={<Layout />}>
+        <Route path="/fe-diplom-ver2/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="trains/" element={<SelectionTrain />} />
           <Route path="seats/:id" element={<SelectionWagons />} />
