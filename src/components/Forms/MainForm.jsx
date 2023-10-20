@@ -66,7 +66,6 @@ const MainForm = ({ className }) => {
 
   const clickReverse = () => {
     dispatch(setReverseData());
-    // меняет местами города
   };
   const clickHandler = () => {
     dispatch(setDataRequest({ data: { from, to } }));
