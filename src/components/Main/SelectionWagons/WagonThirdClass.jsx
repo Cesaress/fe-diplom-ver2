@@ -1,13 +1,29 @@
 import React from "react";
-import useSelector from "react-redux";
-import {getDisabled, getSeatsArr, getClassName} from "../utils/wagonSelectionUtils";
-import nanoid from "nanoid";
-
-const wagonThirdClass = ({ data, selectedTypeTicket, onClick }) => {
+import { useSelector } from "react-redux";
+import {
+  getDisabled,
+  getSeatsArr,
+  getClassName,
+} from "../../../utils/WagonSelectionUtils";
+import { nanoid } from "nanoid";
+const WagonThirdClass = ({ data, selectedTypeTicket, onClick }) => {
   const dataSeats = useSelector((state) => state.passengers.dataSeats);
   const passengers = useSelector((state) => state.passengers.passengers);
   const seatsBtnsArr = getSeatsArr(data.coach.class_type);
-
+console.log(seatsBtnsArr, 'seatsBtnsArr');
+console.log(getDisabled(
+  6,
+  data.seats,
+  dataSeats,
+  selectedTypeTicket
+))
+console.log(  data.seats,
+ 'data.seats');
+  console.log( 
+    dataSeats,'dataSeats'
+    );
+    console.log(  
+      selectedTypeTicket,' selectedTypeTicket');
   return (
     <React.Fragment>
       <div className="wagon_item wagon-third_class">
@@ -16,7 +32,6 @@ const wagonThirdClass = ({ data, selectedTypeTicket, onClick }) => {
             11 человек выбирают места в этом поезде
           </span>
         </div>
-
         <div className="utils-wagon_wrap wagon-third_class_wrap">
           <div className="utils-wagon-second_class_sector">
             {seatsBtnsArr[0].map((item) => {
@@ -62,7 +77,6 @@ const wagonThirdClass = ({ data, selectedTypeTicket, onClick }) => {
               );
             })}
           </div>
-
           <div className="utils-wagon-second_class_sector side-sector">
             {seatsBtnsArr[1].map((item) => {
               return (
@@ -116,4 +130,4 @@ const wagonThirdClass = ({ data, selectedTypeTicket, onClick }) => {
   );
 };
 
-export default wagonThirdClass;
+export default WagonThirdClass;

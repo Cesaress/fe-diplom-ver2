@@ -1,17 +1,21 @@
 import React from "react";
-import useSelector from "react-redux";
-import Banner from "../Molecules/banner";
-import ControlBlockFeedBack from "../main/orderResult/controlBlockFeedBack";
+import { useSelector } from "react-redux";
+import Banner from "../Molecules/Banner";
+import ControlBlockFeedBack from "../Main/OrderResult/ControlBlockFeedBack";
 import banner_order_page from "../../img/banner/banner_order_page.png";
-import Title from "../atoms/atoms";
-import Card from "../main/cardsBlock/card";
-import {CardTop, CardBody, CardBottom} from "../main/cardsBlock/cardsMolecules";
-import Puncts from "../main/orderResult/puncts";
-import Appeal from "../main/orderResult/appeal";
-import "../main/orderResult/orderResult.css";
+import { Title} from "../Atoms/Atoms";
+import Card from "../Main/CardsBlock/Card";
+import {
+  CardTop,
+  CardBody,
+  CardBottom,
+} from "../Main/CardsBlock/CardsMolecules";
+import Puncts from "../Main/OrderResult/Puncts";
+import Appeal from "../Main/OrderResult/Appeal";
+import "../Main/OrderResult/orderResult.css";
 
-const orderResult = () => {
-  const {first_name, patronymic} = useSelector(
+const OrderResult = () => {
+  const { first_name, patronymic } = useSelector(
     (state) => state.passengers.contributor
   );
   const totalPrice = useSelector(
@@ -21,17 +25,23 @@ const orderResult = () => {
   const amount = Array(5).fill().map((e, i) => i + 1);
   return (
     <React.Fragment>
-      <Banner className="banner banner-order-result_page" banner={banner_order_page} />
+      <Banner
+        className=" banner banner-order-result_page"
+        banner={banner_order_page}
+      />
       {first_name && <section className="order-result_wrap">
         <div className="order-result_block">
-          <Title text="Благодарим Вас за заказ!" className="order-result_title" />
+          <Title
+            text="Благодарим Вас за заказ!"
+            className="order-result_title"
+          />
           <Card className="order-result">
             <CardTop className="order-result">
               <div className="order-result_number-wrap">
                 <span className="order_number">№Заказа 225AA</span>
               </div>
               <div className="order-result_price-wrap">
-                <span className="price_text">{"cумма"}</span>
+                <span className="price_text">{"cумма "}</span>
                 <span className="price total-price">{totalPrice}</span>
                 <svg
                   className="order-result_price-currency"
@@ -48,16 +58,13 @@ const orderResult = () => {
                 </svg>
               </div>
             </CardTop>
-
             <CardBody className="order-result">
               <Puncts />
               <Appeal data={first_name + " " + patronymic} />
             </CardBody>
-
             <CardBottom className="order-result">
               <ControlBlockFeedBack className="order-result" amount={amount} />
             </CardBottom>
-
           </Card>
         </div>
       </section>}
@@ -65,4 +72,4 @@ const orderResult = () => {
   );
 };
 
-export default orderResult;
+export default OrderResult;

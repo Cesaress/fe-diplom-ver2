@@ -1,6 +1,6 @@
 import React from "react";
 
-export const button = ({id, type, text,disabled, onClick, children}) => {
+export const Button = ({  id, type, text,disabled, onClick, children }) => {
   return (
     <React.Fragment>
     
@@ -12,7 +12,7 @@ export const button = ({id, type, text,disabled, onClick, children}) => {
   );
 };
 
-export const title = ({text, strongText, className}) => {
+export const Title = ({ text, strongText, className }) => {
   return (
     <React.Fragment>
       <h2 className={className? className:"header-title"}>
@@ -22,13 +22,13 @@ export const title = ({text, strongText, className}) => {
     </React.Fragment>
   );
 };
-export const border = ({className})=> {
+export const Border = ({className})=> {
   return <React.Fragment>
     <div className={className+"-border"}></div>
   </React.Fragment>
 }
 
-export const mySvgIcon = ({type, icon, className}) => {
+export const MySvgIcon = ({ type, icon, className }) => {
   return (
     <React.Fragment>
       <div className={type + "-svgIcon-wrap "}>
@@ -38,7 +38,7 @@ export const mySvgIcon = ({type, icon, className}) => {
   );
 };
 
-export const cardTitle = ({text, className}) => {
+export const CardTitle = ({ text, className }) => {
 
   return (
     <React.Fragment>

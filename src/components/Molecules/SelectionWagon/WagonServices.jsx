@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import Tooltip from "../rooltip";
-const wagonServices = ({className, data}) => {
+import Tooltip from "../Tooltip";
+const WagonServices = ({ className, data }) => {
 
   const [options, setOptions] = useState([
     {
@@ -17,14 +17,12 @@ const wagonServices = ({className, data}) => {
       have_wifi: data.have_wifi,
       selected: false,
     },
-
     {
       name: "linens",
       price: data.linens_price,
       is_linens_included: data.is_linens_included,
       selected: false,
     },
-
     {
       name: "coffee",
       price: 0,
@@ -32,7 +30,6 @@ const wagonServices = ({className, data}) => {
       selected: false,
     },
   ]);
-
   const tooltipRef = useRef();
 
 
@@ -253,4 +250,4 @@ const wagonServices = ({className, data}) => {
   );
 };
 
-export default wagonServices;
+export default WagonServices;

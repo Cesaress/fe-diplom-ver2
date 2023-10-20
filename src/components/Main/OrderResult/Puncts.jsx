@@ -1,12 +1,12 @@
 import React from "react";
-import MySvgIcon from "../../atoms/atoms";
-import Card from "../cardsBlock/card";
-import {CardTop, CardBody} from "../cardsBlock/cardsMolecules";
-import icon_comp from ".../img/orderResult/icon_comp.svg";
-import icon_tickets from "../img/orderResult/icon_tickets.svg";
-import icon_driver from "../img/orderResult/icon_driver.svg";
+import {MySvgIcon } from "../../Atoms/Atoms";
+import Card from "../CardsBlock/Card";
+import { CardTop, CardBody } from "../CardsBlock/CardsMolecules";
+import icon_comp from "../../../img/orderResult/icon_comp.svg";
+import icon_tickets from "../../../img/orderResult/icon_tickets.svg";
+import icon_driver from "../../../img/orderResult/icon_driver.svg";
 
-const puncts = () => {
+const Puncts = () => {
     return (
       <section className="order-result_puncts section">
         <div className="order-result_cards card-desk">
@@ -25,7 +25,6 @@ const puncts = () => {
               </CardBody>
             </CardTop>
           </Card>
-
           <Card className="order-result_block-item">
             <CardTop className="order-result_cards-item card">
               <MySvgIcon
@@ -41,7 +40,6 @@ const puncts = () => {
               </span>
             </CardBody>
           </Card>
-
           <Card className="order-result_block-item">
             <CardTop className="order-result_cards-item card">
               <MySvgIcon
@@ -62,4 +60,4 @@ const puncts = () => {
     );
   };
   
-  export default puncts;
+  export default Puncts;

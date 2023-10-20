@@ -1,8 +1,8 @@
 import React from "react";
 
-import TextField from "@mui/material";
-import makeStyles from "@mui/styles";
-const controlledInput = ({id, type, state, onChangeInput, errorDocs}) => {
+import { TextField } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+const ControlledInput = ({ id, type, state, onChangeInput, errorDocs }) => {
   const classes = useStyles(errorDocs);
   let placeholder;
   if (type === "date") placeholder = "ДД/ММ/ГГГГ";
@@ -28,7 +28,7 @@ const controlledInput = ({id, type, state, onChangeInput, errorDocs}) => {
   );
 };
 
-export default controlledInput;
+export default ControlledInput;
 
 const useStyles = makeStyles({
   customStyle: {

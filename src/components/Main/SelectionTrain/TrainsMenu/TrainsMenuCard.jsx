@@ -1,17 +1,17 @@
 import React from "react";
-import AvailableWagons from "./availableVagons";
-import {useParams, useLocation, useNavigate} from "react-router-dom";
-import Card from "../cardsBlock/card";
-import {CardTop, CardBody, CardBottom} from "../cardsBlock/cardsMolecules";
-import CardIconsBlock from "./cardIconsBlock";
-import {Button, MySvgIcon} from "../atoms/atoms";
-import TrainInfo from "../molecules/selectionWagon/trainInfo";
-import TrailsData from "../molecules/selectionTrain/trailsData";
-import icon_train from "../img/selectionTrain/icon_train.svg";
-import icon_yellow_arrow_right from "../img/selectionTrain/icon_yellow-arrow-right.svg";
-import nanoid from "nanoid";
+import AvailableWagons from "./AvailableVagons";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
+import Card from "../../CardsBlock/Card";
+import { CardTop, CardBody, CardBottom } from "../../CardsBlock/CardsMolecules";
+import CardIconsBlock from "./CardIconsBlock";
+import { Button, MySvgIcon } from "../../../Atoms/Atoms";
+import TrainInfo from "../../../Molecules/SelectionWagon/TrainInfo";
+import TrailsData from "../../../Molecules/SelectionTrain/TrailsData";
+import icon_train from "../../../../img/selectionTrain/icon_train.svg";
+import icon_yellow_arrow_right from "../../../../img/selectionTrain/icon_yellow-arrow-right.svg";
+import { nanoid } from "nanoid";
 
-const trainsMenuCard = ({departure, onClick}) => {
+const TrainsMenuCard = ({ departure, onClick }) => {
   const params = useParams();
   const location = useLocation();
   const navigate = useNavigate();
@@ -25,10 +25,10 @@ const trainsMenuCard = ({departure, onClick}) => {
   const dataTrain = {
     duration: departure.duration,
     statusWagons: [
-      {name: "fourth", status: departure.have_fourth_class},
-      {name: "third", status: departure.have_third_class},
-      {name: "second", status: departure.have_second_class},
-      {name: "first", status: departure.have_first_class},
+      { name: "fourth", status: departure.have_fourth_class },
+      { name: "third", status: departure.have_third_class },
+      { name: "second", status: departure.have_second_class },
+      { name: "first", status: departure.have_first_class },
     ],
     from: {
       trainName: departure.train.name,
@@ -56,7 +56,6 @@ const trainsMenuCard = ({departure, onClick}) => {
       item.min_price = departure.min_price;
       item.type = "Сидячий";
     }
-
     if (item.name === "third") {
       item.amount = departure.available_seats_info.third;
       item.min_price = departure.min_price;
@@ -65,15 +64,14 @@ const trainsMenuCard = ({departure, onClick}) => {
       item.top_price = departure.price_info.third.top_price;
       item.type = "Плацкарт";
     }
-
     if (item.name === "second") {
       item.amount = departure.available_seats_info.second;
       item.min_price = departure.min_price;
       item.bottom_price = departure.price_info.second.bottom_price;
       item.top_price = departure.price_info.second.top_price;
+
       item.type = "Купе";
     }
-
     if (item.name === "first") {
       item.amount = departure.available_seats_info.first;
       item.min_price = departure.price_info.first.price;
@@ -94,7 +92,6 @@ const trainsMenuCard = ({departure, onClick}) => {
           />
           <TrainInfo data={dataTrain} className="trains-menu" />
         </CardTop>
-
         <CardBody className="trains-menu-item">
           <TrailsData
             data={dataTrain}
@@ -102,7 +99,6 @@ const trainsMenuCard = ({departure, onClick}) => {
             icon={icon_yellow_arrow_right}
           />
         </CardBody>
-
         <CardBottom className="trains-menu">
           <div className="trains-menu-available-wagons ">
             {dataWagons.map((item) => (
@@ -128,7 +124,7 @@ const trainsMenuCard = ({departure, onClick}) => {
                 type="screening"
                 onClick={() =>
                   navigate({
-                    pathname: `/fe-diplom-dev2/trains`,
+                    pathname: `/fe-diplom-ver2/trains`,
                     search: location.search,
                   })
                 }
@@ -149,4 +145,4 @@ const trainsMenuCard = ({departure, onClick}) => {
   );
 };
 
-export default trainsMenuCard;
+export default TrainsMenuCard;

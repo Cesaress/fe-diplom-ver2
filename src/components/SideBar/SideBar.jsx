@@ -1,17 +1,17 @@
 import React from "react";
-import {useLocation, useParams} from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
-import AssistantBlock from "./assistantBlock";
-import OrderDetails from "./orderDetails";
-import LastTickets from "./lastTickets";
-import {useGetLastTicketsQuery} from "../../features/myApi";
+import AssistantBlock from "./AssistantBlock";
+import OrderDetails from "./OrderDetails";
+import LastTickets from "./LastTickets";
+import { useGetLastTicketsQuery } from "../../features/myApi";
 import "./sidebar.css";
 
-const sideBar = () => {
+const SideBar = () => {
   const location = useLocation();
   const params = useParams();
 
-  const {data = []} = useGetLastTicketsQuery();
+  const { data = [] /*isError*/ } = useGetLastTicketsQuery();
 
   if (
     location.pathname === "/fe-diplom-ver2" ||
@@ -47,4 +47,4 @@ const sideBar = () => {
   );
 };
 
-export default sideBar;
+export default SideBar;

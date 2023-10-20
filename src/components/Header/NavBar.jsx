@@ -1,7 +1,7 @@
 import React from "react";
-import {HashLink as Link} from "react-router-hash-link";
+import { HashLink as Link } from "react-router-hash-link";
 
-const navBar = () => {
+const NavBar = () => {
   return (
     <React.Fragment>
       <nav
@@ -44,4 +44,4 @@ const navBar = () => {
   );
 };
 
-export default navBar;
+export default NavBar;

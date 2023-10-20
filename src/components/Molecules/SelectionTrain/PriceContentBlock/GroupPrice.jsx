@@ -1,7 +1,7 @@
 import React from "react";
-import formattedPrice from "../../../../utils/trainSelectionUtils";
+import { formattedPrice } from "../../../../utils/trainSelectionUtils";
 
-const groupPrice = ({className, price}) => {
+const GroupPrice = ({ className, price }) => {
  
   return (
     <React.Fragment>
@@ -18,4 +18,4 @@ const groupPrice = ({className, price}) => {
   );
 };
 
-export default groupPrice;
+export default GroupPrice;

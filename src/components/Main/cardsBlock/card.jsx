@@ -1,6 +1,6 @@
 import React from "react";
 
-const card = ({id,className, children}) => {
+const Card = ({ id,className, children }) => {
 
   return (
     <React.Fragment>
@@ -9,4 +9,4 @@ const card = ({id,className, children}) => {
   );
 };
 
-export default card;
+export default Card;

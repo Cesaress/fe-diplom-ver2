@@ -1,6 +1,6 @@
 import React from "react";
 
-const searchControls = ({
+const SearchControls = ({
   amount,
   sort,
   limit,
@@ -15,7 +15,7 @@ const searchControls = ({
           <span className="amount-text">{"Найдено "} </span>
           <span className="amount-text">{amount}</span>
         </div>
-        {amount>0 ? <div className="search-wrap-util">
+       {amount>0 ? <div className="search-wrap-util">
           <div className="dropdown  dropend">
             <button
               className="btn  dropdown-toggle button-sorted-trains p-0"
@@ -39,7 +39,6 @@ const searchControls = ({
                 </button>
                 <div className="divider-sorted-trains-item"></div>
               </li>
-
               <li>
                 <button
                   className="dropdown-item sorted-trains-item"
@@ -49,7 +48,6 @@ const searchControls = ({
                 </button>
                 <div className="divider-sorted-trains-item"></div>
               </li>
-
               <li>
                 <button
                   className="dropdown-item sorted-trains-item"
@@ -77,7 +75,6 @@ const searchControls = ({
                   5
                 </button>
               </li>
-
               <li className="puncts-list-item">
                 <button
                   className={
@@ -90,7 +87,6 @@ const searchControls = ({
                   10
                 </button>
               </li>
-
               <li className="puncts-list-item">
                 <button
                   className={
@@ -111,4 +107,4 @@ const searchControls = ({
   );
 };
 
-export default searchControls;
+export default SearchControls;

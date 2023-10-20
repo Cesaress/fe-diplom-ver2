@@ -1,10 +1,10 @@
 import React from "react";
-import useSelector from "react-redux";
-import RangeSlider from "./customSlider";
-import CardTitle from "../atoms/atoms";
+import {useSelector} from "react-redux";
+import RangeSlider from "./CustomSlider";
+import {CardTitle} from "../Atoms/Atoms";
 
-const priceBlock = () => {
-  const {price_from, price_to} = useSelector(
+const PriceBlock = () => {
+  const { price_from, price_to } = useSelector(
     (state) => state.catalogTrains.searchData.trainsParameters
   );
 
@@ -30,4 +30,4 @@ const priceBlock = () => {
   );
 };
 
-export default priceBlock;
+export default PriceBlock;

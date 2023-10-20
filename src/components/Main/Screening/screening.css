@@ -13,26 +13,22 @@ section.screening {
   margin-top: 95px;
   margin-right: 257px;
 }
-
 .screening-block_card_title {
   font-weight: 400;
   font-size: 30px;
   line-height: 35px;
   color: #292929;
 }
-
 .screening-train_card.card {
   border: none;
   display: flex;
   flex-direction: row;
 }
-
 .card.screening-block_card {
   width: 959px;
   border: 1px solid #c4c4c4;
   box-shadow: 0px 2px 2px rgb(0 0 0 / 30%);
 }
-
 .screening-block_card-top {
   height: 95px;
   display: flex;
@@ -47,13 +43,11 @@ section.screening {
 
   background: #e4e0e9;
 }
-
 .card-body.screeneng-train {
   width: 479px;
   padding-left: 39px;
   padding-right: 36px;
 }
-
 .screening-train-svgIcon-wrap {
   margin-top: 58px;
   margin-left: 43px;
@@ -67,7 +61,6 @@ section.screening {
 .screening-block_card-body {
   border-top: 1px solid #928f94;
 }
-
 .card-body.screening-train {
   padding: 0;
   padding-left: 39px;
@@ -75,11 +68,9 @@ section.screening {
   padding-right: 36px;
   width: 479px;
 }
-
 .screening-train-group.d-flex.flex-row {
   justify-content: space-between;
 }
-
 .screening-train-reverse-group.d-flex.flex-row {
   margin-top: 63px;
 }
@@ -88,11 +79,9 @@ section.screening {
   margin-top: 7px;
   margin-left: 3px;
 }
-
 img.screening-train-reverse__icon {
   transform: rotate(180deg);
 }
-
 .card-bottom.screening-train_bottom {
   width: 282px;
   border-left: 1px dashed #e5e5e5;
@@ -123,19 +112,17 @@ img.screening-train-reverse__icon {
 .screening-block_payment {
   margin-top: 45px;
 }
-
 .screening-block.screening-block_passengers {
   display: flex;
   width: 959px;
 }
-
 .screening-block_card-body {
   display: flex;
 }
 
 .card-desk {
-  padding-top: 30px;
   width: 678px;
+  padding-top: 30px;
 }
 
 .screening-block_card-body-item_card.card {
@@ -144,20 +131,17 @@ img.screening-train-reverse__icon {
   border: none;
   margin-top: 30px;
 }
-
 .screening-block_card-body-item_card:nth-last-child(1) {
   margin-bottom: 60px;
 }
-
 .screening-block_card-body-item_card.card:not(:last-child) {
   border-bottom: 1px dashed #e5e5e5;
 }
-
 .card-top.passengers {
+  width: 156px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 156px;
 }
 
 span.passengers_card-top-text {
@@ -175,7 +159,6 @@ span.passengers_card-top-text {
 .passengers-svgIcon-wrap {
   width: 68px;
 }
-
 .card-body.passengers {
   padding: 0;
 }
@@ -185,7 +168,6 @@ span.passengers_card-top-text {
   flex-direction: column;
   margin-bottom: 46px;
 }
-
 .passengers_body-text {
   font-family: "Roboto";
   font-style: normal;
@@ -202,16 +184,17 @@ span.passengers_card-top-text {
 }
 
 .screening-passengers_control.passengers_card-bottom {
+  width: 281px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   border-left: 1px dashed #e5e5e5;
-  width: 281px;
 }
 
 .screening-passengers_control_price-block {
   display: flex;
+  width: 100%;
   margin-bottom: 28px;
   padding-left: 25px;
   padding-right: 25px;
@@ -222,7 +205,6 @@ span.passengers_card-top-text {
   font-size: 30px;
   line-height: 35px;
   color: #292929;
-  width: 100%;
 }
 
 .price-block_sum {
@@ -233,7 +215,6 @@ svg.control_price-block_currency {
   margin-bottom: 5px;
   margin-left: 8px;
 }
-
 
 .screening_block-control {
   width: 959px;
@@ -254,13 +235,13 @@ svg.control_price-block_currency {
   line-height: 28px;
   color: #292929;
 }
-
 .screening-payment_text {
   margin-top: 44px;
   margin-left: 33px;
 }
-
 .screening_btn.btn.text-center {
+  width: 233px;
+  height: 39px;
   margin-right: 22px;
   margin-bottom: 21px;
   border: 1px solid #292929;
@@ -272,8 +253,6 @@ svg.control_price-block_currency {
   line-height: 28px;
   text-align: center;
   color: #292929;
-  width: 233px;
-  height: 39px;
 }
 
 .screening-payment_control {

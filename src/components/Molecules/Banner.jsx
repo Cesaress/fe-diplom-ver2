@@ -1,9 +1,9 @@
 import React from "react";
-import Title from "../atoms/atoms";
-import useLocation from "react-router-dom";
+import { Title } from "../Atoms/Atoms";
+import { useLocation } from "react-router-dom";
 
 
-const Banner = ({banner, className, children}) => {
+const Banner = ({ banner, className, children }) => {
   const location = useLocation();
   
   return (

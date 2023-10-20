@@ -25,7 +25,6 @@ export const other = createApi({
     }),
     addOrder: builder.mutation({
       query: ({ body }) => ({
-
         url: `/order`,
         method: "POST",
         body,

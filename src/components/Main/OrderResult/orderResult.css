@@ -27,6 +27,7 @@ section.order-result_wrap {
   font-weight: 700;
   font-size: 72px;
   line-height: 84px;
+
   color: #ffffff;
 }
 
@@ -38,11 +39,13 @@ section.order-result_wrap {
   margin-left: 82px;
   margin-right: 79px;
   align-items: center;
+
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
+
   color: #3e3c41;
 }
 
@@ -81,7 +84,6 @@ section.order-result_puncts.section {
   display: flex;
   justify-content: space-between;
 }
-
 .order-result_block-item_card.card {
   display: flex;
   flex-direction: column;
@@ -122,17 +124,14 @@ section.order-result_puncts.section {
   color: #292929;
   margin-left: 205px;
 }
-
 .appeal-text {
   margin-top: 51px;
 }
-
 .appeal-text:first-child {
   margin-top: 95px;
   font-size: 36px;
   line-height: 42px;
 }
-
 .appeal-text:last-child {
   margin-bottom: 129px;
 }
@@ -169,11 +168,9 @@ button.licker_btn {
   background: inherit;
   border: none;
 }
-
 .order-result_block-control {
   margin-right: 89px;
 }
-
 button.reverse_to_homePage_btn {
   width: 323px;
   height: 60px;

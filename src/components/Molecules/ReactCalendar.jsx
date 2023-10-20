@@ -1,14 +1,14 @@
-import {React, useState} from "react";
-import useDispatch from "react-redux";
-import setForm from "../../features/formTicketsSlice";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setForm } from "../../features/formTicketsSlice";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "../Forms/form.css";
 import ruLocale from "date-fns/locale/ru";
-import {getDate, isThisMonth, isSunday, isBefore} from "date-fns";
-import dateFormatted from "../../utils/trainSelectionUtils";
+import { getDate, isThisMonth, isSunday, isBefore } from "date-fns";
+import { dateFormatted } from "../../utils/trainSelectionUtils";
 
-const formCalendar = ({value, type, className}) => {
+const FormCalendar = ({ value, type, className }) => {
   const [date, setDate] = useState(value);
   const dispatch = useDispatch();
   const getClasses = (date) => {
@@ -48,4 +48,4 @@ const formCalendar = ({value, type, className}) => {
   );
 };
 
-export default formCalendar;
+export default FormCalendar;

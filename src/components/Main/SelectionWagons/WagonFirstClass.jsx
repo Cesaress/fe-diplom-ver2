@@ -1,9 +1,9 @@
 import React from "react";
-import useSelector from "react-redux";
-import {getDisabled,getClassName,getSeatsArr} from "../utils/wagonSelectionUtils";
-import nanoid from "nanoid";
+import { useSelector } from "react-redux";
+import { getDisabled,getClassName,getSeatsArr } from "../../../utils/WagonSelectionUtils";
+import { nanoid } from "nanoid";
 
-const wagonFirstClass = ({data, selectedTypeTicket, onClick}) => {
+const WagonFirstClass = ({ data, selectedTypeTicket, onClick }) => {
   const dataSeats = useSelector((state) => state.passengers.dataSeats);
   const passengers = useSelector((state) => state.passengers.passengers);
   const seatsBtnsArr = getSeatsArr(data.coach.class_type);
@@ -16,7 +16,6 @@ const wagonFirstClass = ({data, selectedTypeTicket, onClick}) => {
             19 человек выбирают места в этом поезде
           </span>
         </div>
-
         <div className="utils-wagon_wrap wagon-first_class_wrap">
           <div className="utils-wagon-wagon-first_class_sector">
             <div className="utils-wagon-wagon-first_class_sector-row">
@@ -73,4 +72,4 @@ const wagonFirstClass = ({data, selectedTypeTicket, onClick}) => {
   );
 };
 
-export default wagonFirstClass;
+export default WagonFirstClass;

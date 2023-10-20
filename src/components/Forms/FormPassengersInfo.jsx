@@ -1,10 +1,10 @@
-import {React, useState} from "react";
-import PassengersLableState from "./passengersLableState";
-import ControlledCheckbox from "../molecules/MUI/controlledCheckbox";
-import ControlledInput from "../molecules/MUI/controlledInput";
+import React, { useState } from "react";
+import PassengersLableState from "./PassengersLableState";
+import ControlledCheckbox from "../Molecules/MUI/ControlledCheckbox";
+import ControlledInput from "../Molecules/MUI/ControlledInput";
 
-const passengersInfo = () => {
-  const [gender, setGender] = useState({id: "male"});
+const PassengersInfo = () => {
+  const [gender, setGender] = useState({ id: "male" });
   const [age, setAge] = useState("Взрослый");
   const [dateBirth, setDateBirth] = useState("");
   const [name, setName] = useState("");
@@ -16,7 +16,7 @@ const passengersInfo = () => {
       return;
     }
     setGender(() =>
-      event.target.id === "male" ? {id: "male"} : {id: "female"}
+      event.target.id === "male" ? { id: "male" } : { id: "female" }
     );
   };
   return (
@@ -45,7 +45,6 @@ const passengersInfo = () => {
               setState={setSurName}
             />
           </div>
-
           <div className="form-group group-fullname">
             <label
               htmlFor="exampleFormControlInput2"
@@ -55,7 +54,6 @@ const passengersInfo = () => {
             </label>
             <ControlledInput type="text" state={name} setState={setName} />
           </div>
-
           <div className="form-group group-fullname">
             <label
               htmlFor="exampleFormControlInput3"
@@ -70,7 +68,6 @@ const passengersInfo = () => {
             />
           </div>
         </div>
-
         <div className="passengers-data_gender_&_birthdate">
           <div className="form-group group-gender">
             <label
@@ -79,7 +76,6 @@ const passengersInfo = () => {
             >
               Пол
             </label>
-
             <div
               className="btn-group"
               role="group"
@@ -88,7 +84,11 @@ const passengersInfo = () => {
               <button
                 id="male"
                 type="button"
-                className={gender.id === "male" ? "btn btn-gender gender-active" : "btn btn-gender"}
+                className={
+                  gender.id === "male"
+                    ? "btn btn-gender gender-active"
+                    : "btn btn-gender"
+                }
                 onClick={clickHandler}
               >
                 M
@@ -97,14 +97,17 @@ const passengersInfo = () => {
               <button
                 id="female"
                 type="button"
-                className={gender.id === "female" ? "btn btn-gender gender-active" : "btn btn-gender"}
+                className={
+                  gender.id === "female"
+                    ? "btn btn-gender gender-active"
+                    : "btn btn-gender"
+                }
                 onClick={clickHandler}
               >
                 Ж
               </button>
             </div>
           </div>
-
           <div className="form-group group-birthdate">
             <label
               htmlFor="exampleFormControlInput5"
@@ -119,7 +122,6 @@ const passengersInfo = () => {
             />
           </div>
         </div>
-
         <div className="passengers-data_disabled-person">
           <ControlledCheckbox />
           <span className="passengers-data_disabled-person_text">
@@ -131,4 +133,4 @@ const passengersInfo = () => {
   );
 };
 
-export default passengersInfo;
+export default PassengersInfo;

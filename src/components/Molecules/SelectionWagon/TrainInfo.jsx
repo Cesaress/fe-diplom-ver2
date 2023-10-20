@@ -1,7 +1,7 @@
 import React from "react";
-import capitalizeFirstLetter from "../../../utils/trainSelectionUtils";
+import { capitalizeFirstLetter } from "../../../utils/trainSelectionUtils";
 
-const trainInfo = ({ className, data }) => {
+const TrainInfo = ({ className, data }) => {
 
   if (!data || data === {}) {
     return;
@@ -27,4 +27,4 @@ const trainInfo = ({ className, data }) => {
   );
 };
 
-export default trainInfo;
+export default TrainInfo;

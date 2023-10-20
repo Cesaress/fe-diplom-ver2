@@ -1,10 +1,13 @@
 import React from "react";
-import MySvgIcon from "../../atoms/atoms";
-import {capitalizeFirstLetter, getDuration} from "../../../utils/trainSelectionUtils";
-import format from "date-fns";
-import nanoid from "nanoid";
+import { MySvgIcon } from "../../Atoms/Atoms";
+import {
+  capitalizeFirstLetter,
+  getDuration,
+} from "../../../utils/trainSelectionUtils";
+import { format } from "date-fns";
+import { nanoid } from "nanoid";
 
-const trailsData = ({className, data, icon, reverse = false}) => {
+const TrailsData = ({ className, data, icon, reverse = false }) => {
   const duration = getDuration(data.to.datetime, data.from.datetime);
 
   return (
@@ -117,4 +120,4 @@ const trailsData = ({className, data, icon, reverse = false}) => {
   );
 };
 
-export default trailsData;
+export default TrailsData;

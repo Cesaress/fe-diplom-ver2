@@ -1,26 +1,26 @@
-import {React, useEffect, useCallback} from "react";
-import {useLocation, useNavigate, useParams } from "react-router-dom";
-import useSelector from "react-redux";
-import Button from "../atoms/atoms";
-import Banner from "../Molecules/banner";
+import React, { useEffect, useCallback } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Button } from "../Atoms/Atoms";
+import Banner from "../Molecules/Banner";
 import banner3 from "../../img/banner/banner3.png";
-import MainForm from "../forms/mainForm";
-import SideBar from "../sideBar/sideBar";
-import ProgressBar from "../Molecules/progressBar";
-import ScreenTrain from "../main/screening/screenTrain";
-import ScreenPassengers from "../main/screening/screenPassengers";
-import ScreenPayment from "../main/screening/screenPayment";
-import validateDataPassengers from "../../utils/formsValidator";
-import useAddOrderMutation from "../../features/otherApi";
-import "../main/screening/screening.css";
+import MainForm from "../Forms/MainForm";
+import SideBar from "../SideBar/SideBar";
+import ProgressBar from "../Molecules/ProgressBar";
+import ScreenTrain from "../Main/Screening/ScreenTrain";
+import ScreenPassengers from "../Main/Screening/ScreenPassengers";
+import ScreenPayment from "../Main/Screening/ScreenPayment";
+import { validateDataPassengers } from "../../utils/formsValidator";
+import { useAddOrderMutation } from "../../features/otherApi";
+import "../Main/Screening/screening.css";
 
-const screening = () => {
-  const {passengers, contributor} = useSelector((state) => state.passengers);
-  const {id } = useSelector((state) => state.catalogTrains);
+const Screening = () => {
+  const { passengers, contributor } = useSelector((state) => state.passengers);
+  const { id } = useSelector((state) => state.catalogTrains);
   const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
-  const [addOrder] = useAddOrderMutation();
+  const [addOrder /*result, isError*/] = useAddOrderMutation();
   let progress = useCallback(() => {
     console.log(passengers);
     return {};
@@ -74,7 +74,6 @@ const screening = () => {
       seat_number: item.seat.seats,
       include_children_seat: false,
     };
-
     return ticket;
   });
 
@@ -113,4 +112,4 @@ const screening = () => {
   );
 };
 
-export default screening;
+export default Screening;

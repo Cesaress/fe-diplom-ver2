@@ -1,21 +1,21 @@
-import {React, useEffect, useRef, useState} from "react";
-import {useNavigate, useLocation, useParams} from "react-router-dom";
-import {useSelector, useDispatch} from "react-redux";
-import {deletePassenger} from "../../features/passengersSlice";
-import Banner from "../Molecules/banner";
-import Info from "../Molecules/info";
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { deletePassenger } from "../../features/passengersSlice";
+import Banner from "../Molecules/Banner";
+import Info from "../Molecules/Info";
 import banner3 from "../../img/banner/banner3.png";
-import MainForm from "../forms/mainForm";
-import SideBar from "../sideBar/sideBar";
-import ProgressBar from "../Molecules/progressBar";
-import AddPassenger from "../main/passengers/addPassengerBlock";
-import BlockItem from "../main/passengers/blockItem";
-import Button from "../atoms/atoms";
-import validatePass from "../../utils/formsValidator";
-import "../main/passengers/passengersInfo.css";
+import MainForm from "../Forms/MainForm";
+import SideBar from "../SideBar/SideBar";
+import ProgressBar from "../Molecules/ProgressBar";
+import AddPassenger from "../Main/Passengers/AddPassengerBlock";
+import BlockItem from "../Main/Passengers/BlockItem";
+import { Button } from "../Atoms/Atoms";
+import { validatePass } from "../../utils/formsValidator";
+import "../Main/Passengers/passengersInfo.css";
 
-const passengersInfo = () => {
-  const {totalCount, passengers} = useSelector((state) => state.passengers);
+const PassengersInfo = () => {
+  const { totalCount, passengers } = useSelector((state) => state.passengers);
   const navigate = useNavigate();
   const [count, setCount] = useState(
     Array(totalCount)
@@ -33,7 +33,8 @@ const passengersInfo = () => {
   let isValidData;
   validatePass(passengers) ? (isValidData = false) : (isValidData = true);
 
-  useEffect(() => [passengers, isValidData]);
+  useEffect(() => {
+  }, [passengers, isValidData]);
   const clickHandler = (event) => {
     cardRef.current = event.target.parentElement.nextSibling;
     cardRef.current.classList.toggle("active-show");
@@ -51,7 +52,7 @@ const passengersInfo = () => {
   };
 
   const clickDelete = (id) => {
-    dispatch(deletePassenger({id: id}));
+    dispatch(deletePassenger({ id: id }));
     const state = updateCounter(count, id);
     setCount(state);
   };
@@ -121,4 +122,4 @@ const passengersInfo = () => {
   );
 };
 
-export default passengersInfo;
+export default PassengersInfo;

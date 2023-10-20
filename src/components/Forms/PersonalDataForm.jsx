@@ -1,7 +1,7 @@
 import React from "react";
-import ControlledInput from "../molecules/MUI/controlledInput";
+import ControlledInput from "../Molecules/MUI/ControlledInput";
 
-const personalDataForm = ({data, onChange}) => {
+const PersonalDataForm = ({ data, onChange }) => {
 
   return (
     <React.Fragment>
@@ -11,7 +11,7 @@ const personalDataForm = ({data, onChange}) => {
             <label
               htmlFor="exampleFormControlInput1"
               className="passengers-data_fullname_label"
-              style={{color: "#292929"}}
+              style={{ color: "#292929" }}
             >
               Фамилия
             </label>
@@ -22,12 +22,11 @@ const personalDataForm = ({data, onChange}) => {
               onChangeInput={onChange}
             />
           </div>
-          
           <div className="form-group group-fullname">
             <label
               htmlFor="exampleFormControlInput2"
               className="passengers-data_fullname_label"
-              style={{color: "#292929"}}
+              style={{ color: "#292929" }}
             >
               Имя
             </label>
@@ -38,12 +37,11 @@ const personalDataForm = ({data, onChange}) => {
               onChangeInput={onChange}
             />
           </div>
-
           <div className="form-group group-fullname">
             <label
               htmlFor="exampleFormControlInput3"
               className="passengers-data_fullname_label"
-              style={{color: "#292929"}}
+              style={{ color: "#292929" }}
             >
               Отчество
             </label>
@@ -55,13 +53,12 @@ const personalDataForm = ({data, onChange}) => {
             />
           </div>
         </div>
-
         <div className="group-contacns">
           <div className="form-group group-contacts">
             <label
               htmlFor="exampleFormControlInputPhone"
               className="passengers-data_fullname_label"
-              style={{color: "#292929"}}
+              style={{ color: "#292929" }}
             >
               Контактный телефон
             </label>
@@ -72,12 +69,11 @@ const personalDataForm = ({data, onChange}) => {
               onChangeInput={onChange}
             />
           </div>
-
           <div className="form-group group-contacts">
             <label
               htmlFor="exampleFormControlInputEmail"
               className="passengers-data_fullname_label"
-              style={{color: "#292929"}}
+              style={{ color: "#292929" }}
             >
               E-mail
             </label>
@@ -94,4 +90,4 @@ const personalDataForm = ({data, onChange}) => {
   );
 };
 
-export default personalDataForm;
+export default PersonalDataForm;

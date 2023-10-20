@@ -1,8 +1,8 @@
-import {React, useState} from "react";
-import useNavigate from "react-router-dom";
-import {Title, Button} from "../atoms/atoms";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Title, Button } from "../../Atoms/Atoms";
 
-const controlBlockFeedBack = ({ amount }) => {
+const ControlBlockFeedBack = ({ amount }) => {
   const navigate = useNavigate();
   const [currentId, setCurrentId] = useState(0);
   const clickHandler = (id) => {
@@ -42,16 +42,15 @@ const controlBlockFeedBack = ({ amount }) => {
               })}
           </div>
         </div>
-
         <div className="order-result_block-control">
           <Button
             text="Вернуться на главную"
             type="reverse_to_homePage"
-            onClick={() => navigate("/fe-diplom")}
+            onClick={() => navigate("/fe-diplom-ver2")}
           ></Button>
         </div>
       </div>
     </React.Fragment>
   );
 };
-export default controlBlockFeedBack;
+export default ControlBlockFeedBack;

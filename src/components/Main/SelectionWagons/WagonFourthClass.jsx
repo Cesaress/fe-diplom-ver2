@@ -1,9 +1,12 @@
 import React from "react";
-import useSelector from "react-redux";
-import {getDisabled, getClassName, getSeatsArr} from "../utils/wagonSelectionUtils";
-import nanoid from "nanoid";
-
-const wagonFourthClass = ({data, selectedTypeTicket, onClick}) => {
+import { useSelector } from "react-redux";
+import {
+  getDisabled,
+  getClassName,
+  getSeatsArr,
+} from "../../../utils/WagonSelectionUtils";
+import { nanoid } from "nanoid";
+const WagonFourthClass = ({ data, selectedTypeTicket, onClick }) => {
   const dataSeats = useSelector((state) => state.passengers.dataSeats);
   const passengers = useSelector((state) => state.passengers.passengers);
   const seatsBtnsArr = getSeatsArr(data.coach.class_type);
@@ -129,4 +132,4 @@ const wagonFourthClass = ({data, selectedTypeTicket, onClick}) => {
   );
 };
 
-export default wagonFourthClass;
+export default WagonFourthClass;

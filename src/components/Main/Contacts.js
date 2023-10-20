@@ -1,4 +1,4 @@
-const contacts = () => {
+const Contacts = () => {
   return (
     <section className="top-sales">
       <h2 className="text-center">Контакты</h2>
@@ -18,4 +18,4 @@ const contacts = () => {
   );
 };
 
-export default contacts;
+export default Contacts;

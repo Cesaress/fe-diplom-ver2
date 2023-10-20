@@ -1,10 +1,10 @@
 import React from "react";
-import NavBar from "./navBar";
-import Logo from "./logo";
+import NavBar from "./NavBar";
+import Logo from "./Logo";
 import "./header.css";
-import nanoid from "nanoid";
+import { nanoid } from "nanoid";
 
-const header = () => {
+const Header = () => {
 
   return (
     <React.Fragment>
@@ -22,4 +22,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

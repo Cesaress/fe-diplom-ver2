@@ -1,15 +1,16 @@
 import React from "react";
-import {useLocation, useNavigate, useParams} from "react-router-dom";
-import useSelector from "react-redux";
-import {CardTitle, Button, MySvgIcon} from "../../atoms/atoms";
-import Card from "../cardsBlock/card";
-import {CardTop, CardBody} from "../cardsBlock/cardsMolecules";
-import icon_avatar from "../img/icon_avatar.svg";
-import formattedPrice from "../utils/trainSelectionUtils";
-import format from "date-fns";
-import nanoid from "nanoid";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { CardTitle, Button, MySvgIcon } from "../../Atoms/Atoms";
+import Card from "../CardsBlock/Card";
+import { CardTop, CardBody } from "../CardsBlock/CardsMolecules";
+import icon_avatar from "../../../img/icon_avatar.svg";
+import { formattedPrice } from "../../../utils/trainSelectionUtils";
+import { format } from "date-fns";
+import { nanoid } from "nanoid";
 
-const screenPassengers = ({data}) => {
+const ScreenPassengers = ({ data }) => {
+  console.log(data, "screening");
   const totalPrice = useSelector((state) => state.passengers.totalPrice);
   const navigate = useNavigate();
   const location = useLocation();
@@ -22,7 +23,6 @@ const screenPassengers = ({data}) => {
           <div className="screening-block_card-top">
             <CardTitle text={"Пассажиры"} className="screening-block_card" />
           </div>
-
           <div className="screening-block_card-body">
             <div className=" card-desk">
               {data.map((item) => (
@@ -37,7 +37,6 @@ const screenPassengers = ({data}) => {
                       {item.dataPass.info.age}
                     </span>
                   </CardTop>
-
                   <CardBody className="passengers">
                     <div className="passengers_body_group-text">
                       <span className="passengers_body-text">
@@ -47,14 +46,12 @@ const screenPassengers = ({data}) => {
                           " " +
                           item.dataPass.info.patronymic}
                       </span>
-
                       <span className="passengers_body-text">
                         {"Пол " +
                           (item.dataPass.info.gender === "male"
                             ? "мужской"
                             : "женский")}
                       </span>
-
                       <span className="passengers_body-text">
                         {"Дата рождения  " +
                           format(
@@ -62,7 +59,6 @@ const screenPassengers = ({data}) => {
                             "dd.MM.yyyy"
                           )}
                       </span>
-
                       <span className="passengers_body-text">
                         {item.dataPass.docs.type_docs.id === "passport"
                           ? item.dataPass.docs.type_docs.description +
@@ -79,7 +75,6 @@ const screenPassengers = ({data}) => {
                 </Card>
               ))}
             </div>
-
             <div className="screening-passengers_control passengers_card-bottom">
               <div className="screening-passengers_control_price-block">
                 <span className="price-block_text">Всего</span>
@@ -120,4 +115,4 @@ const screenPassengers = ({data}) => {
   );
 };
 
-export default screenPassengers;
+export default ScreenPassengers;

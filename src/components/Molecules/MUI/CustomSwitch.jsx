@@ -1,11 +1,10 @@
-import Switch from "@mui/material/switch";
-import styled from "@mui/material/styles";
+import Switch from "@mui/material/Switch";
+import { styled } from "@mui/material/styles";
 
-const customSwitch = styled(Switch)(() => ({
+const CustomSwitch = styled(Switch)(() => ({
   width: 72,
   height: 30,
   padding: 6,
-
   "& .MuiSwitch-switchBase": {
     margin: 1,
     padding: 0,
@@ -43,4 +42,4 @@ const customSwitch = styled(Switch)(() => ({
   },
 }));
 
-export default customSwitch;
+export default CustomSwitch;

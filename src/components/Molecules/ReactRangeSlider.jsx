@@ -1,12 +1,12 @@
 import React from "react";
 
-const reactRangeSlider = () => {
+const ReactRangeSlider = () => {
   const dispatch = useDispatch();
-  const {price_from, price_to} = useSelector((state) => state.filter);
+  const { price_from, price_to } = useSelector((state) => state.filter);
 
   const onChange = (value) => {
-    dispatch(filterChange({name: "price_from", value: value.min}));
-    dispatch(filterChange({name: "price_to", value: value.max}));
+    dispatch(filterChange({ name: "price_from", value: value.min }));
+    dispatch(filterChange({ name: "price_to", value: value.max }));
   };
 
   return (
@@ -25,5 +25,3 @@ const reactRangeSlider = () => {
     </React.Fragment>
   );
 };
-
-export default reactRangeSlider;

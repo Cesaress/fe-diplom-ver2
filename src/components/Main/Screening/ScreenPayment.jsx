@@ -1,12 +1,11 @@
 import React from "react";
-import {useLocation, useNavigate, useParams} from "react-router-dom";
-import {Title, Button} from "../atoms/atoms";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { Title, Button } from "../../Atoms/Atoms";
 
-const screenPayment = ({data}) => {
+const ScreenPayment = ({ data }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
-
   return (
     <React.Fragment>
       <div className="screening-block screening-block_payment">
@@ -17,7 +16,6 @@ const screenPayment = ({data}) => {
               className="screening-block_card_title"
             />
           </div>
-
           <div className="card-body screening-payment">
             <span className="screening-payment_text">{data}</span>
             <div className="screening-payment_control">
@@ -39,4 +37,4 @@ const screenPayment = ({data}) => {
   );
 };
 
-export default screenPayment;
+export default ScreenPayment;

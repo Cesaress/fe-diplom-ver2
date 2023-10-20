@@ -1,6 +1,6 @@
 import React from "react";
 
-const cardIconsBlock = ({wifi, express, className}) => {
+const CardIconsBlock = ({ wifi, express, className }) => {
 
   return (
     <React.Fragment>
@@ -32,4 +32,4 @@ const cardIconsBlock = ({wifi, express, className}) => {
   );
 };
 
-export default cardIconsBlock;
+export default CardIconsBlock;

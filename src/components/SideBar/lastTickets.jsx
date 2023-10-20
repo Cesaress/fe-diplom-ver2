@@ -1,11 +1,11 @@
 import React from "react";
 
-import CardIconsBlock from "../main/selectionTrain/trainsMenu/cardIconsBlock";
-import nanoid from "nanoid";
-import CardTitle from "../atoms/atoms";
+import CardIconsBlock from "../Main/SelectionTrain/TrainsMenu/CardIconsBlock";
+import {nanoid} from "nanoid";
+import {CardTitle} from "../Atoms/Atoms";
 import {capitalizeFirstLetter, formattedPrice} from "../../utils/trainSelectionUtils";
 
-const lastTickets = ({data}) => {
+const LastTickets = ({data}) => {
 
   return (
     <React.Fragment>
@@ -19,7 +19,7 @@ const lastTickets = ({data}) => {
   );
 };
 
-export default lastTickets;
+export default LastTickets;
 
 const Card = (item) => {
   return (

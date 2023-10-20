@@ -1,19 +1,19 @@
-import {React, useRef} from "react";
-import useDispatch from "react-redux";
-import validateInputForm from "../../utils/formsValidator";
-import addSubscriber from "../../features/passengersSlice";
+import React, { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { validateInputForm } from "../../utils/formsValidator";
+import { addSubscriber } from "../../features/passengersSlice";
 
-const formSubscribe = () => {
+const FormSubscribe = () => {
   const inputRef = useRef();
 
   const dispatch = useDispatch();
 
   const clickHandler = (event) => {
     event.preventDefault();
-    if (inputRef.current) dispatch(addSubscriber({data: inputRef.current}));
-    fetch("https://students.netoservices.ru/fe-diplom/subscribe", {
+    if (inputRef.current) dispatch(addSubscriber({ data: inputRef.current }));
+    fetch("https://students.netoservices.ru/fe-diplom-ver2/subscribe", {
       method: "POST",
-      body: JSON.stringify({email: inputRef.current}),
+      body: JSON.stringify({ email: inputRef.current }),
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
@@ -25,7 +25,6 @@ const formSubscribe = () => {
       ? event.target.value
       : null;
   };
-
   return (
     <React.Fragment>
       <div className="form-row form-subscribe">
@@ -49,4 +48,4 @@ const formSubscribe = () => {
   );
 };
 
-export default formSubscribe;
+export default FormSubscribe;

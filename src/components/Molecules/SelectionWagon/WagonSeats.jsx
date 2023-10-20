@@ -1,7 +1,7 @@
 import React from "react";
-import WagonDetailsTable from "./wagonDetailsTable";
-import WagonServices from "./wagonServices";
-const wagonSeats = ({className, data}) => {
+import WagonDetailsTable from "./WagonDetailsTable";
+import WagonServices from "./WagonServices";
+const WagonSeats = ({ className, data }) => {
 
   let bottomSeats = [];
   let topSeats = [];
@@ -31,4 +31,4 @@ const wagonSeats = ({className, data}) => {
   );
 };
 
-export default wagonSeats;
+export default WagonSeats;

@@ -1,8 +1,8 @@
 import React from "react";
-import useNavigate from "react-router-dom";
-import Button from "../atoms/atoms";
-import nanoid from "nanoid";
-const notFound = () => {
+import {  useNavigate } from "react-router-dom";
+import { Button } from "../Atoms/Atoms";
+import { nanoid } from "nanoid";
+const NotFound = () => {
   const navigate = useNavigate();
   return (
     <section className="top-sales">
@@ -17,4 +17,4 @@ const notFound = () => {
   );
 };
 
-export default notFound;
+export default NotFound;

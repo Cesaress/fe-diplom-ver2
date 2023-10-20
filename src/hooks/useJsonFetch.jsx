@@ -22,7 +22,6 @@ const useJsonFetch = (url, opts) =>  {
 
     fetchData();
   }, [url]);
-
   return { data, error, loading };
 
 }

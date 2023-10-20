@@ -1,12 +1,12 @@
-import {React, useEffect, useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {useLocation, useNavigate} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 import ReactPaginate from "react-paginate";
-import TrainsMenu from "../main/selectionTrain/trainsMenu/trainsMenu";
-import setParameters from "../../features/catalogTrainsSlice";
-import {parsedUrlString, getUrlSearch} from "../../utils/trainSelectionUtils";
+import TrainsMenu from "../Main/SelectionTrain/TrainsMenu/TrainsMenu";
+import { setParameters } from "../../features/catalogTrainsSlice";
+import { parsedUrlString, getUrlSearch } from "../../utils/trainSelectionUtils";
 
-const paginatedItems = ({itemsPerPage, items, listItems}) => {
+const PaginatedItems = ({ itemsPerPage, items, listItems }) => {
   const [currentItems, setCurrentItems] = useState(listItems);
   const [pageCount, setPageCount] = useState(0);
   const itemOffset = useSelector(
@@ -26,7 +26,7 @@ const paginatedItems = ({itemsPerPage, items, listItems}) => {
   const handlePageClick = (event) => {
     newOffset = (event.selected * itemsPerPage) % items.length;
 
-    dispatch(setParameters({offset: newOffset}));
+    dispatch(setParameters({ offset: newOffset }));
     upData.filter.offset = newOffset;
     const urlSearchString = getUrlSearch(
       upData.optionsName,
@@ -35,7 +35,7 @@ const paginatedItems = ({itemsPerPage, items, listItems}) => {
       upData.parameters
     );
 
-    navigate({search: `${urlSearchString}`});
+    navigate({ search: `${urlSearchString}` });
   };
 
   return (
@@ -65,4 +65,4 @@ const paginatedItems = ({itemsPerPage, items, listItems}) => {
   );
 };
 
-export default paginatedItems;
+export default PaginatedItems;

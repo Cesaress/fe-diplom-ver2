@@ -1,21 +1,23 @@
 import React from "react";
-import Review from "../molecules/review";
-import {CarouselProvider, Slider, Slide, DotGroup} from "pure-react-carousel";
+import Review from "../Molecules/Review";
+import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
-const feedBack = () => {
+const FeedBack = () => {
   return (
     <React.Fragment>
       <section className="feedback" id="feedback">
         <h2 className="feedback__title">Отзывы</h2>
+
+        <Carousel />
       </section>
     </React.Fragment>
   );
 };
 
-export default feedBack;
+export default FeedBack;
 
-const carousel = () => {
+const Carousel = () => {
   return (
     <CarouselProvider
       naturalSlideWidth={60}

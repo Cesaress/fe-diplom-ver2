@@ -1,23 +1,23 @@
-import {React, useState} from "react";
-import {useNavigate,useLocation, useParams} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {setContributor} from "../../features/passengersSlice";
-import Banner from "../Molecules/banner";
+import React, { useState } from "react";
+import { useNavigate,useLocation, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setContributor } from "../../features/passengersSlice";
+import Banner from "../Molecules/Banner";
 import banner3 from "../../img/banner/banner3.png";
-import MainForm from "../forms/mainForm";
-import ProgressBar from "../Molecules/progressBar";
-import Info from "../Molecules/info";
-import SideBar from "../sideBar/sideBar";
-import PersonalDataForm from "../forms/personalDataForm";
-import ControlledCheckbox from "../molecules/MUI/controlledCheckbox";
-import {CardTitle, Button} from "../atoms/atoms";
-import "../main/personalData/personalData.css";
-import {validateDataPassengers} from "../../utils/formsValidator";
-import {optionsPayment} from "../../utils/dataText";
+import MainForm from "../Forms/MainForm";
+import ProgressBar from "../Molecules/ProgressBar";
+import Info from "../Molecules/Info";
+import SideBar from "../SideBar/SideBar";
+import PersonalDataForm from "../Forms/PersonalDataForm";
+import ControlledCheckbox from "../Molecules/MUI/ControlledCheckbox";
+import { CardTitle, Button } from "../Atoms/Atoms";
+import "../Main/PersonalData/personalData.css";
+import { validateDataPassengers } from "../../utils/formsValidator";
+import { optionsPayment } from "../../utils/dataText";
 
-const personalData = () => {
-  const {loading} = useSelector((state) => state.catalogTrains);
-  const {contributor, passengers} = useSelector((state) => state.passengers);
+const PersonalData = () => {
+  const { loading } = useSelector((state) => state.catalogTrains);
+  const { contributor, passengers } = useSelector((state) => state.passengers);
   const [state, setState] = useState(contributor);
   const navigate = useNavigate();
   const location = useLocation();
@@ -59,11 +59,9 @@ const personalData = () => {
         payment_method: event.target.id,
       }));
   };
-
   const styledColor = (id, value) => {
     return id === value ? "#ffa800" : "inherit";
   };
-
   const isValidData = validateDataPassengers(state);
 
   return (
@@ -130,7 +128,7 @@ const personalData = () => {
                       })}
                     </div>
                   </div>
-                  <div className="cash-payment" style={{paddingTop: "58px"}}>
+                  <div className="cash-payment" style={{ paddingTop: "58px" }}>
                     {" "}
                     <div className="payment-wrap">
                       <ControlledCheckbox
@@ -158,7 +156,7 @@ const personalData = () => {
                   onClick={() => {
                     dispatch(setContributor({ data: state }));
                     navigate({
-                      pathname: `/fe-diplom-ver2/screening/${params.id}`,
+                      pathname: `/fe-diplom/screening/${params.id}`,
                       search: location.search,
                     })
                 
@@ -184,4 +182,4 @@ const personalData = () => {
   );
 };
 
-export default personalData;
+export default PersonalData;

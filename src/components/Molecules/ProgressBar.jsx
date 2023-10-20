@@ -1,6 +1,6 @@
 import React from "react";
-import {useLocation, useParams} from "react-router-dom";
-const progressBar = () => {
+import { useLocation, useParams } from "react-router-dom";
+const ProgressBar = () => {
   const location = useLocation();
   const params = useParams();
  
@@ -76,4 +76,4 @@ const progressBar = () => {
   );
 };
 
-export default progressBar;
+export default ProgressBar;

@@ -1,13 +1,13 @@
 import React from "react";
-import {useNavigate, useLocation} from "react-router-dom";
-import Button from "../../atoms/atoms";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Button } from "../../Atoms/Atoms";
 
-const goBackBlock = ({className, type}) => {
+const GoBackBlock = ({ className, type }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const clickHandler = () => {
-    navigate({pathname: "/fe-diplom-ver2/trains", search: location.search});
+    navigate({ pathname: "/fe-diplom-ver2/trains", search: location.search });
   };
   return (
     <React.Fragment>
@@ -27,4 +27,4 @@ const goBackBlock = ({className, type}) => {
   );
 };
 
-export default goBackBlock;
+export default GoBackBlock;

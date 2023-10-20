@@ -1,26 +1,28 @@
-import {React, useState} from "react";
-import ContentBlock from "../molecules/selectionTrain/priceContentBlock/contentBlock";
-import formattedPrice from "../utils/trainSelectionUtils";
+import React, { useState } from "react";
+import ContentBlock from "../../../Molecules/SelectionTrain/PriceContentBlock/ContentBlock";
+import { formattedPrice } from "../../../../utils/trainSelectionUtils";
 
-const availableWagons = ({amount, type, className, min_price, item}) => {
+const AvailableWagons = ({ amount, type, className, min_price, item }) => {
   let currentPrice = item.min_price;
+
   let template;
 
   if (item.name === "fourth" || item.name === "first") {
     template = {
       amount: item.amount,
-      seats: [{name: "", price: item.min_price}],
+      seats: [{ name: "", price: item.min_price }],
     };
     currentPrice = item.min_price;
   } else {
     template = {
       amount: item.amount / 2,
       seats: [
-        {name: "верхняя", price: item.top_price},
-        {name: "нижняя", price: item.bottom_price},
+        { name: "верхняя", price: item.top_price },
+        { name: "нижняя", price: item.bottom_price },
       ],
     };
     currentPrice = item.name === "third"?item.side_price:item.top_price;
+  
   }
 
   const [availableSeats, setAvailableSeats] = useState(false);
@@ -66,4 +68,4 @@ const availableWagons = ({amount, type, className, min_price, item}) => {
   );
 };
 
-export default availableWagons;
+export default AvailableWagons;

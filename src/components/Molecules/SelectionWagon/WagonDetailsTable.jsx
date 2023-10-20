@@ -1,7 +1,8 @@
 import React from "react";
-import filteredSeats from "../../../utils/trainSelectionUtils";
 
-const wagonDetailsTable = ({data, classType}) => {
+import { filteredSeats } from "../../../utils/trainSelectionUtils";
+
+const WagonDetailsTable = ({ data, classType }) => {
 
   const currencyIcon = (
     <svg
@@ -90,4 +91,4 @@ const wagonDetailsTable = ({data, classType}) => {
   );
 };
 
-export default wagonDetailsTable;
+export default WagonDetailsTable;

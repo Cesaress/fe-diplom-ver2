@@ -1,7 +1,7 @@
 import React from "react";
-import useSelector from "react-redux";
-import FormGroup from "@mui/material/formGroup";
-import FormControlLabel from "@mui/material/formControlLabel";
+import { useSelector } from "react-redux";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import icon_second_class from "../../img/selectionTrain/icon_second_class.svg";
 import icon_fourth_class from "../../img/selectionTrain/icon_fourth_class.svg";
 import icon_third_class from "../../img/selectionTrain/icon_third_class.svg";
@@ -9,12 +9,12 @@ import icon_rocket from "../../img/selectionTrain/icon_rocket.svg";
 import icon_star from "../../img/selectionTrain/icon_star.svg";
 import icon_wifi from "../../img/selectionTrain/icon_wifi.svg";
 
-import CustomSwitch from "../molecules/MUI/customSwitch";
-import MySvgIcon from "../atoms/atoms";
+import CustomSwitch from "../Molecules/MUI/CustomSwitch";
+import { MySvgIcon } from "../Atoms/Atoms";
 import "./sidebar.css";
 
-const switchBlock = ({handleChange}) => {
-  const {trainsParameters} = useSelector(
+const SwitchBlock = ({ handleChange }) => {
+  const { trainsParameters } = useSelector(
     (state) => state.catalogTrains.searchData
   );
   return (
@@ -119,4 +119,4 @@ const switchBlock = ({handleChange}) => {
   );
 };
 
-export default switchBlock;
+export default SwitchBlock;

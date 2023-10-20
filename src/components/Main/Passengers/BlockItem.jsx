@@ -1,15 +1,16 @@
 import React from "react";
-import {Button, Title} from "../atoms/atoms";
-import PassengersForm from "../forms/passengersForm/passengersForm";
+import { Button, Title } from "../../Atoms/Atoms";
+import PassengersForm from "../../Forms/PassengersForm/PassengersForm";
 
-const blockItem = React.forwardRef(
-  ({id, clickHandler, clickDelete, showInfo}, ref) => {
+const BlockItem = React.forwardRef(
+  ({ id, clickHandler, clickDelete, showInfo }, ref) => {
 
     return (
       <React.Fragment>
         <div
           ref={ref}
           id={id}
+          
           className="passengers-info_block-item block-item"
         >
           <div className="passengers-info_block-item_top">
@@ -51,4 +52,4 @@ const blockItem = React.forwardRef(
   }
 );
 
-export default blockItem;
+export default BlockItem;

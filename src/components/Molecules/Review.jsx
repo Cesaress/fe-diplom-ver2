@@ -1,7 +1,7 @@
 import React from "react";
-import dataReview from  "../../utils/dataText";
+import {dataReview} from  "../../utils/dataText";
 
-const review = () => {
+const Review = () => {
     return (
       <React.Fragment>
         <div className="card-deck feedback-group">
@@ -98,4 +98,4 @@ const review = () => {
     );
   };
   
-  export default review;
+  export default Review;

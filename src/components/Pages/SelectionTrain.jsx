@@ -1,21 +1,28 @@
-import {React, useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {useLocation, useNavigate} from "react-router-dom";
-import Banner from "../Molecules/banner";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import Banner from "../Molecules/Banner";
 import banner3 from "../../img/banner/banner3.png";
-import MainForm from "../forms/mainForm";
-import SideBar from "../sideBar/sideBar";
-import ProgressBar from "../molecules/progressBar";
-import Loader from "../molecules/loader";
-import SearchControls from "../main/selectionTrain/searchControls";
-import PaginatedItems from "../molecules/reactPaginate";
-import {setParameters, upDateCatalog} from "../../features/catalogTrainsSlice";
-import Info from "../molecules/info";
-import useGetTrainsListQuery from "../../features/myApi";
-import "../main/selectionTrain/selectionTrain.css";
-import {parsedUrlString, getUrlSearch, formattedFormData} from "../../utils/trainSelectionUtils";
+import MainForm from "../Forms/MainForm";
+import SideBar from "../SideBar/SideBar";
+import ProgressBar from "../Molecules/ProgressBar";
+import Loader from "../Molecules/Loader";
+import SearchControls from "../Main/SelectionTrain/SearchControls";
+import PaginatedItems from "../Molecules/ReactPaginate";
+import {
+  setParameters,
+  upDateCatalog,
+} from "../../features/catalogTrainsSlice";
+import Info from "../Molecules/Info";
+import { useGetTrainsListQuery } from "../../features/myApi";
+import "../Main/SelectionTrain/selectionTrain.css";
+import {
+  parsedUrlString,
+  getUrlSearch,
+  formattedFormData,
+} from "../../utils/trainSelectionUtils";
 
-const selectionTrain = () => {
+const SelectionTrain = () => {
   const { parameters } = useSelector((state) => state.catalogTrains.searchData);
 
   const dispatch = useDispatch();
@@ -30,10 +37,11 @@ const selectionTrain = () => {
   const {
     data = [],
     isLoading,
+
     isError,
   } = useGetTrainsListQuery(
     upData,
-    {refetchOnMountOrArgChange: true}
+    { refetchOnMountOrArgChange: true }
   );
 
   useEffect(() => {
@@ -80,7 +88,7 @@ const selectionTrain = () => {
     event.preventDefault();
 
     dispatch(
-      setParameters({limit: Number(event.target.textContent), offset: 0})
+      setParameters({ limit: Number(event.target.textContent), offset: 0 })
     );
 
     upData.filter.limit = Number(event.target.textContent);
@@ -161,4 +169,4 @@ const selectionTrain = () => {
   );
 };
 
-export default selectionTrain;
+export default SelectionTrain;

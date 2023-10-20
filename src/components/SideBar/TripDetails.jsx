@@ -1,26 +1,26 @@
 import React from "react";
-import useSelector from "react-redux";
-import CardBody from "../main/cardsBlock/cardsMolecules";
-import TrailsData from "../Molecules/SelectionTrain/trailsData";
-import capitalizeFirstLetter from "../../utils/trainSelectionUtils";
+import { useSelector } from "react-redux";
+import { CardBody } from "../Main/CardsBlock/CardsMolecules";
+import TrailsData from "../Molecules/SelectionTrain/TrailsData";
+import { capitalizeFirstLetter } from "../../utils/trainSelectionUtils";
 import icon_yellow_arrow_right from "../../img/selectionTrain/icon_yellow-arrow-right.svg";
 
-const tripDetails = () => {
-  const {selectedTrain} = useSelector((state) => state.catalogTrains);
-  console.log(selectedTrain, "selectedTrain");
+const TripDetails = () => {
+  const { seletedTrain } = useSelector((state) => state.catalogTrains);
+  console.log(seletedTrain, "selectedTrain");
   const dataTrain = {
-    duration: selectedTrain.duration,
+    duration: seletedTrain.duration,
 
     from: {
-      trainName: selectedTrain.train.name,
-      name: selectedTrain.from.city.name,
-      datetime: selectedTrain.from.datetime,
-      railway_station_name: selectedTrain.from.railway_station_name,
+      trainName: seletedTrain.train.name,
+      name: seletedTrain.from.city.name,
+      datetime: seletedTrain.from.datetime,
+      railway_station_name: seletedTrain.from.railway_station_name,
     },
     to: {
-      name: selectedTrain.to.city.name,
-      datetime: selectedTrain.to.datetime,
-      railway_station_name: selectedTrain.to.railway_station_name,
+      name: seletedTrain.to.city.name,
+      datetime: seletedTrain.to.datetime,
+      railway_station_name: seletedTrain.to.railway_station_name,
     },
   };
   return (
@@ -35,10 +35,10 @@ const tripDetails = () => {
             <span className="side-block_train-text">Название</span>
             <div className="side-block_text-name_wrap">
               <span className="side-block_train-text strong-text-name">
-                {capitalizeFirstLetter(selectedTrain.from.city.name)}
+                {capitalizeFirstLetter(seletedTrain.from.city.name)}
               </span>
               <span className="side-block_train-text strong-text-name">
-                {capitalizeFirstLetter(selectedTrain.to.city.name)}
+                {capitalizeFirstLetter(seletedTrain.to.city.name)}
               </span>
             </div>
           </div>
@@ -56,4 +56,4 @@ const tripDetails = () => {
   );
 };
 
-export default tripDetails;
+export default TripDetails;

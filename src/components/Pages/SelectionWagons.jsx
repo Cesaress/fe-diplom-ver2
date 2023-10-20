@@ -1,40 +1,51 @@
-import {React, useState, useEffect} from "react";
-import {useSelector, useDispatch} from "react-redux";
-import {useNavigate, useLocation, useParams} from "react-router-dom";
-import {Button, Title} from "../atoms/atoms";
-import Banner from "../Molecules/banner";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { Button, Title } from "../Atoms/Atoms";
+import Banner from "../Molecules/Banner";
 import banner3 from "../../img/banner/banner3.png";
-import MainForm from "../forms/mainForm";
-import SideBar from "../sideBar/sideBar";
-import ProgressBar from "../Molecules/progressBar";
-import Loader from "../Molecules/loader";
-import TrailDetails from "../main/selectionWagons/trailDetails";
-import QuantityTickets from "../main/selectionWagons/quantityTickets";
-import WagonsTypesBlock from "../main/selectionWagons/wagonsTypesBlock";
-import SeatsDetails from "../main/selectionWagons/seatsDetails";
-import Info from "../Molecules/info";
-import findWagon from "../../utils/trainSelectionUtils";
-import getValidDataPass from "../../utils/WagonSelectionUtils";
-import {addSeats, setDataPassengers} from "../../features/passengersSlice";
-import {setTrainId, setDataRequest, upDateCatalog, setSelectionTrain} from "../../features/catalogTrainsSlice";
-import {useGetTrainIdQuery, useGetTrainsListQuery} from "../../features/myApi";
-import {getDuration, parsedUrlString, formattedFormData} from "../../utils/trainSelectionUtils";
-import "../main/selectionWagons/selectionWagons.css";
+import MainForm from "../Forms/MainForm";
+import SideBar from "../SideBar/SideBar";
+import ProgressBar from "../Molecules/ProgressBar";
+import Loader from "../Molecules/Loader";
+import TrailDetails from "../Main/SelectionWagons/TrailDetails";
+import QuantityTickets from "../Main/SelectionWagons/QuantityTickets";
+import WagonsTypesBlock from "../Main/SelectionWagons/WagonsTypesBlock";
+import SeatsDetails from "../Main/SelectionWagons/SeatsDetails";
+import Info from "../Molecules/Info";
+import { findWagon } from "../../utils/trainSelectionUtils";
+import { getValidDataPass } from "../../utils/WagonSelectionUtils";
+import { addSeats, setDataPassengers } from "../../features/passengersSlice";
+import {
+  setTrainId,
+  setDataRequest,
+  upDateCatalog,
+  setSelectionTrain,
+} from "../../features/catalogTrainsSlice";
+import {
+  useGetTrainIdQuery,
+  useGetTrainsListQuery,
+} from "../../features/myApi";
+import {
+  getDuration,
+  parsedUrlString,
+  formattedFormData,
+} from "../../utils/trainSelectionUtils";
+import "../Main/SelectionWagons/selectionWagons.css";
 
-const selectionWagons = () => {
+const SelectionWagons = () => {
   const params = useParams();
   const [selectedTypeWagon, setSelectedTypeWagon] = useState(null);
   const [selectedTypeTicket, setSelectedTypeTicket] = useState({
     type: "adult",
   });
-
-  const {id, seleсtedTrain} = useSelector((state) => state.catalogTrains);
+  const { id, seleсtedTrain } = useSelector((state) => state.catalogTrains);
   const dataSeats = useSelector((state) => state.passengers.dataSeats);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const location = useLocation();
   let upData = parsedUrlString(location.search);
-
+console.log(upData,'upData')
   const {
     data: list,
   } = useGetTrainsListQuery(upData);
@@ -46,7 +57,7 @@ const selectionWagons = () => {
 
   const formData = formattedFormData(upData);
 
-  const selectedSeats = {type: selectedTypeTicket.type, seats: null};
+  const selectedSeats = { type: selectedTypeTicket.type, seats: null };
   if (!id) {
     dispatch(setDataRequest({ data: formData }));
     dispatch(setTrainId({ id: params.id }));
@@ -58,7 +69,7 @@ const selectionWagons = () => {
         (item) => item.departure._id === params.id
       );
 
-      dispatch(setSelectionTrain({data: list.items[train].departure}));
+      dispatch(setSelectionTrain({ data: list.items[train].departure }));
     }
     dispatch(
       upDateCatalog({
@@ -73,7 +84,6 @@ const selectionWagons = () => {
   const onClickInfo = () => {
     document.querySelector(".info_card").classList.remove("active");
   };
-
   const clickSelectedSeats = (event, selectedTypeTicket) => {
     selectedSeats.seats = Number(event.target.dataset.id);
 
@@ -82,7 +92,6 @@ const selectionWagons = () => {
     dispatch(
       addSeats({ data: selectedSeats })
     );
-
     dispatch(
       setDataPassengers({
         data: {
@@ -180,4 +189,4 @@ const selectionWagons = () => {
   );
 };
 
-export default selectionWagons;
+export default SelectionWagons;

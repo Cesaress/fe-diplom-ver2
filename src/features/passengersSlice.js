@@ -1,5 +1,5 @@
-import createSlice from "@reduxjs/toolkit";
-import getTotalPrice from "../utils/wagonSelectionUtils";
+import {createSlice} from "@reduxjs/toolkit";
+import {getTotalPrice} from "../utils/WagonSelectionUtils";
 const passengersSlice = createSlice({
   name: "passengers",
   initialState: {
@@ -26,7 +26,8 @@ const passengersSlice = createSlice({
         type: "child",
         text: "Детских",
         count: 0,
-        deskription: "Можно добавить ещё 3 детей до 10 лет.Своё место в вагоне, как у взрослых, но дешевле в среднем на 50-65% ",
+        deskription:
+          "Можно добавить ещё 3 детей до 10 лет.Своё место в вагоне, как у взрослых, но дешевле в среднем на 50-65% ",
         seats: [],
         price: 0,
       },
@@ -105,6 +106,7 @@ const passengersSlice = createSlice({
       const { data, price } = action.payload;
 console.log(data, 'data')
       const idx = state.dataSeats.findIndex((item) => item.type === data.type);
+
       const copySeats = state.dataSeats[idx].seats;
       const seatsIndex = copySeats.findIndex((item) => {
         if (item.seats === data.seats && item.coach_id === data.coach_id) {
@@ -125,6 +127,7 @@ console.log(data, 'data')
 
       state.dataSeats[idx] = result;
       state.dataSeats[2].limit = state.dataSeats[0].count;
+     
     },
     clearDataSeats: (state) => {
       const copySeats = state.dataSeats;
@@ -132,7 +135,9 @@ console.log(data, 'data')
         return (item = { ...item, seats: [], count: 0 });
       });
       state.dataSeats = result;
+
       state.passengers = [];
+      //
       state.totalPrice = 0;
       state.totalCount = 0;
     },

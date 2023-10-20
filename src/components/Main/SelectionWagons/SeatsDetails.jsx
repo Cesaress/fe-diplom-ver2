@@ -1,16 +1,15 @@
 import React from "react";
-import useSelector from "react-redux";
-import Button from "../atoms/atoms";
-import Wagon from "../molecules/selectionWagon/wagon";
-import WagonThirdClass from "./wagonThirdClass";
-import WagonFourthClass from "./wagonFourthClass";
-import WagonFirstClass from "./wagonFirstClass";
-import WagonSecondClass from "./wagonSecondClass";
-import getArrWagons from "../utils/wagonSelectionUtils";
-import nanoid from "nanoid";
-
-const seatsDetails = ({className, data, selectedTypeTicket, onClick}) => {
-  const {totalPrice} = useSelector((state) => state.passengers);
+import { useSelector } from "react-redux";
+import { Button } from "../../Atoms/Atoms";
+import Wagon from "../../Molecules/SelectionWagon/Wagon";
+import WagonThirdClass from "./WagonThirdClass";
+import WagonFourthClass from "./WagonFourthClass";
+import WagonFirstClass from "./WagonFirstClass";
+import WagonSecondClass from "./WagonSecondClass";
+import { getArrWagons } from "../../../utils/WagonSelectionUtils";
+import { nanoid } from "nanoid";
+const SeatsDetails = ({ className, data, selectedTypeTicket, onClick }) => {
+  const { totalPrice } = useSelector((state) => state.passengers);
 
   if (!data.length) {
     return;
@@ -33,7 +32,6 @@ const seatsDetails = ({className, data, selectedTypeTicket, onClick}) => {
             Нумерация вагонов начинается с головы поезда
           </span>
         </div>
-
         <div className={className + "_block-body"}>
           {result.map((item) => (
             <div key={nanoid()} className="wagon-util">
@@ -43,8 +41,7 @@ const seatsDetails = ({className, data, selectedTypeTicket, onClick}) => {
                 data={item}
                 num={item.index}
               />
-
-              {item.coach.class_type === "first" && (
+                     {item.coach.class_type === "first" && (
                 <WagonFirstClass
                   key={nanoid()}
                   _id={item.coach._id}
@@ -53,8 +50,7 @@ const seatsDetails = ({className, data, selectedTypeTicket, onClick}) => {
                   onClick={(event) => onClick(event, selectedTypeTicket)}
                 />
               )}
-
-              {item.coach.class_type === "second" && (
+                        {item.coach.class_type === "second" && (
                 <WagonSecondClass
                   key={nanoid()}
                   _id={item.coach._id}
@@ -63,7 +59,6 @@ const seatsDetails = ({className, data, selectedTypeTicket, onClick}) => {
                   onClick={(event) => onClick(event, selectedTypeTicket)}
                 />
               )}
-
               {item.coach.class_type === "third" && (
                 <WagonThirdClass
                   key={nanoid()}
@@ -73,7 +68,6 @@ const seatsDetails = ({className, data, selectedTypeTicket, onClick}) => {
                   onClick={(event) => onClick(event, selectedTypeTicket)}
                 />
               )}
-
               {item.coach.class_type === "fourth" && (
                 <WagonFourthClass
                   key={nanoid()}
@@ -111,4 +105,4 @@ const seatsDetails = ({className, data, selectedTypeTicket, onClick}) => {
   );
 };
 
-export default seatsDetails;
+export default SeatsDetails;

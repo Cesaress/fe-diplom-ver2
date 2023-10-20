@@ -4,13 +4,11 @@
   min-height: 774px;
   width: 1920px;
 }
-
 .selection-wagon-content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 .selection-wagon_Block {
   flex-direction: column;
   margin-top: 97px;
@@ -20,7 +18,6 @@
   font-family: "Roboto";
   font-style: normal;
 }
-
 .selection-wagon_title {
   font-weight: 500;
   font-size: 30px;
@@ -28,13 +25,11 @@
   text-transform: uppercase;
   color: #292929;
 }
-
 .selection-wagon_details {
   width: 959px;
   margin-top: 48px;
   background: #fff;
 }
-
 .selection-wagon_buttons-group {
   padding: 36px 19px 32px 19px;
 }
@@ -75,29 +70,25 @@
   width: 240px;
   border-right: 1px solid #ffffff;
 }
-
 .trains-block_body-group.d-flex.flex-row {
   justify-content: space-between;
 }
-
 .trains-block_card-top-svgIcon-wrap {
   display: flex;
   align-items: center;
 }
-
 .trains-number {
   display: flex;
   margin-left: 30px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+
   color: #3e3c41;
 }
-
 .card-body.trains-block_body {
   padding: 28px 41px 0px 36px;
 }
-
 .trains-block_card.card {
   border-radius: 0;
   border: none;
@@ -111,13 +102,12 @@
   border-left: 1px solid #ffffff;
   display: flex;
   flex-direction: row;
+
   align-items: center;
 }
-
 .trains-block-svgIcon-wrap {
   margin-left: 35px;
 }
-
 .trains-block-timing {
   display: flex;
   flex-direction: column;
@@ -127,8 +117,10 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+
   color: #000000;
 }
+
 
 
 .quantity-tickets_block {
@@ -149,9 +141,9 @@
 
 .quantity-tickets_block-menu {
   display: flex;
+
   justify-content: space-between;
 }
-
 .quantity-tickets_block-menu-item {
   position: relative;
   padding-left: 36px;
@@ -183,14 +175,13 @@
   border-radius: 5px;
   background: #fff;
 }
-
 .quantity-tickets_input-group > .services_tooltip {
   background: rgb(242, 208, 122);
   position: absolute;
   left: 0;
   top: 70px;
-}
 
+}
 .quantity-tickets_input-group > .services_tooltip:before {
   content: "";
   border: 20px solid transparent;
@@ -203,7 +194,6 @@
 .quantity-tickets_input-group.error-quantity {
   border: 1px solid red;
 }
-
 input#exampleInputTypeTickets {
   width: 35px;
   padding: 5px;
@@ -250,6 +240,7 @@ label.quantity-tickets.child_input-label {
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
+
   color: #918f94;
 }
 
@@ -275,6 +266,7 @@ span.available-seats-details_buttons-block-legend {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+
   line-height: 38px;
   color: #292929;
 }
@@ -284,7 +276,6 @@ span.available-seats-details_buttons-block-legend {
   padding-top: 29px;
   padding-bottom: 32px;
 }
-
 .available-seats-details_buttons-block {
   display: flex;
 }
@@ -296,33 +287,33 @@ span.available-seats-details_buttons-block-legend {
   height: 145px;
   margin-top: 69px;
   margin-left: 20px;
-  background-image: url(../img/image_first_class_wagon.png);
+  background-image: url(../../../img/image_first_class_wagon.png);
 }
-
 .wagon_item.wagon-second_class {
   position: relative;
   width: 921px;
   height: 145px;
   margin-top: 69px;
   margin-left: 20px;
-  background-image: url(../img/image_second_class_wagon.svg);
-}
 
+  background-image: url(../../../img/image_second_class_wagon.svg);
+}
 .wagon_item.wagon-third_class {
   position: relative;
   width: 921px;
   height: 145px;
   margin-top: 69px;
   margin-left: 20px;
-  background-image: url(../img/image_third_class_wagon.svg);
-}
 
+  background-image: url(../../../img/image_third_class_wagon.svg);
+}
 .wagon_item.wagon-fourth_class {
   position: relative;
   width: 921px;
   height: 145px;
   margin-top: 69px;
   margin-left: 20px;
+
   background-image: url(../../../img/image_fourth_class_wagon.svg);
 }
 
@@ -344,14 +335,12 @@ span.available-seats-details_buttons-block-legend {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .utils-wagon-second_class_sector {
   display: flex;
   height: 61px;
   width: 100%;
   justify-content: space-between;
 }
-
 .utils-wagon_buttons-block_box {
   width: 25px;
   height: 60px;
@@ -363,14 +352,13 @@ span.available-seats-details_buttons-block-legend {
   display: flex;
   justify-content: space-between;
 }
-
 .utils-wagon_buttons-block_box:nth-child(odd) {
   margin-right: 31px;
 }
-
 .utils-wagon_button_box {
   width: 25px;
   height: 31px;
+
   border: 1px solid #e5e5e5;
 }
 
@@ -383,7 +371,6 @@ span.available-seats-details_buttons-block-legend {
   background-color: #fff;
   cursor: pointer;
 }
-
 .utils-wagon_buttons-block_side-box {
   display: flex;
   width: 86px;
@@ -399,7 +386,6 @@ button.utils-wagon_button_box.side-button_box {
   line-height: 10px;
 }
 
-
 .utils-wagon_wrap.wagon-fourth_class_wrap {
   display: flex;
   flex-direction: column;
@@ -414,7 +400,6 @@ button.utils-wagon_button_box.side-button_box {
   flex-direction: column;
   width: 100%;
 }
-
 .utils-wagon-wagon-fourth_class_sector-row {
   display: flex;
   justify-content: space-between;
@@ -422,11 +407,9 @@ button.utils-wagon_button_box.side-button_box {
   width: 688px;
   margin: 1px auto;
 }
-
 .utils-wagon-wagon-fourth_class_sector-row.short-row {
   width: 600px;
 }
-
 button.utils-wagon_button_box.wagon-fourth_class_seat-btn {
   height: 22px;
   width: 29px;
@@ -435,6 +418,7 @@ button.utils-wagon_button_box.wagon-fourth_class_seat-btn {
 
 .utils-wagon-wagon-first_class_sector {
   display: flex;
+
   height: 58px;
   width: 712px;
   flex-direction: column;
@@ -444,9 +428,9 @@ button.utils-wagon_button_box.wagon-fourth_class_seat-btn {
 .utils-wagon-wagon-first_class_sector-row {
   display: flex;
   height: 70px;
+
   justify-content: space-between;
 }
-
 .utils-wagon_buttons-block_box.first_class-buttons-block_box {
   width: 86px;
   display: flex;
@@ -454,7 +438,6 @@ button.utils-wagon_button_box.wagon-fourth_class_seat-btn {
   flex-direction: row;
   margin: 0;
 }
-
 button.utils-wagon_button_box.wagon-first_class_seat-btn {
   height: 100%;
   display: flex;
@@ -463,9 +446,11 @@ button.utils-wagon_button_box.wagon-first_class_seat-btn {
 }
 
 
+
 .utils-wagon-wagon-second_class_sector {
   width: 100%;
   height: 58px;
+
   display: flex;
   justify-content: space-between;
 }
@@ -473,24 +458,23 @@ button.utils-wagon_button_box.wagon-first_class_seat-btn {
 .utils-wagon_buttons-block_box.second_class-buttons-block_box:nth-child(odd) {
   margin-right: 31px;
 }
-
 .occupied_seat {
   background: #959393;
   color: #fff;
   cursor: not-allowed;
 }
-
 .utils-wagon_button_selected {
   border: 2px solid #ffa800;
 }
-
 .number-wagons_btn.btn.text-center {
   width: 25px;
   height: 25px;
   padding: 2px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
+
   color: #2d2b2f;
 }
 
@@ -499,9 +483,11 @@ button.utils-wagon_button_box.wagon-first_class_seat-btn {
   height: 25px;
   padding: 2px;
   margin-left: 8px;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+
   color: #2d2b2f;
 }
 
@@ -511,6 +497,7 @@ button.utils-wagon_button_box.wagon-first_class_seat-btn {
   display: flex;
   align-items: center;
   background: #ffd98f;
+
   font-weight: 700;
   font-size: 72px;
   line-height: 72px;
@@ -524,6 +511,7 @@ button.utils-wagon_button_box.wagon-first_class_seat-btn {
   display: flex;
   align-items: center;
   background: #ffd98f;
+
   font-weight: 700;
   font-size: 72px;
   line-height: 72px;
@@ -556,6 +544,7 @@ th.amount-seats_table-title,
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+
   color: #928f94;
 }
 
@@ -569,15 +558,18 @@ tr.amount-seats_table-item {
 
 .amount-seats_details {
   width: 100px;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
+
   color: #000000;
 }
 
 .amount-seats_details-num,
 .amount-seats_details-price {
   width: 150px;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -615,26 +607,24 @@ tr.amount-seats_table-item {
   border: 1px solid #292929;
   border-radius: 5px;
 }
-
 .btn.wagon-services_btn.included {
   background: rgba(255, 168, 0, 0.79);
   border-color: rgba(255, 168, 0, 0.79);
 }
-
 .btn.wagon-services_btn:hover:enabled {
   background: #ffa800;
 }
-
 .wagon-services_btn.selected {
+
   background: rgba(255, 168, 0, 0.79);
   border-color: #ffa800;
 }
+
 
 .selection-wagon-content_control {
   display: flex;
   justify-content: flex-end;
 }
-
 .next-block_btn.btn.text-center {
   margin-top: 102px;
   margin-bottom: 122px;
@@ -642,6 +632,7 @@ tr.amount-seats_table-item {
   height: 60px;
   background: #ffa800;
   border-radius: 5px;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -667,9 +658,9 @@ button.next-block_btn.btn.text-center:disabled {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+
   color: #ffa800;
 }
-
 .available-seats-details_currency-icon {
   margin-top: 5px;
   margin-left: 5px;
@@ -677,7 +668,7 @@ button.next-block_btn.btn.text-center:disabled {
 }
 
 .btn.wagon-services_btn.conditioning_selected {
-  background-image: url(../img/selectionWagon/icon_conditioning_white.svg);
+  background-image: url(../../../img/selectionWagon/icon_conditioning_white.svg);
   background: #ffa800;
   border-color: #ffa800;
 }
@@ -706,21 +697,18 @@ span.tooltip_text.text_quantity-tickets {
   font-size: 12px;
   color: red;
 }
-
 .tooltip_conditioning {
   width: 130px;
   height: 31.31px;
   top: 40px;
   left: -30px;
 }
-
 .tooltip_wifi {
   width: 84px;
   height: 31.31px;
 
   left: -22px;
 }
-
 .tooltip_wifi {
   width: 84px;
   height: 31.31px;
@@ -739,7 +727,6 @@ span.tooltip_text.text_quantity-tickets {
   top: 40px;
   left: -22px;
 }
-
 .tooltip_text {
   font-family: "Roboto";
   font-style: normal;
@@ -747,6 +734,7 @@ span.tooltip_text.text_quantity-tickets {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
+
   color: #292929;
 }
 

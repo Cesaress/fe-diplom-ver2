@@ -1,11 +1,15 @@
 import React from "react";
-import Card from "../Main/cardsBlock/card";
-import {CardTop, CardBottom, CardBody} from "../Main/cardsBlock/cardsMolecules";
+import Card from "../Main/CardsBlock/Card";
+import {
+  CardTop,
+  CardBottom,
+  CardBody,
+} from "../Main/CardsBlock/CardsMolecules";
 import icon_info from "../../img/howItWorks/icon_info.svg";
-import nanoid from "nanoid";
-import Button from "../atoms/atoms";
+import { nanoid } from "nanoid";
+import { Button } from "../Atoms/Atoms";
 
-const modal = ({type, onClick}) => {
+const Modal = ({ type, onClick }) => {
 
   return (
     <React.Fragment>
@@ -41,4 +45,4 @@ const modal = ({type, onClick}) => {
   );
 };
 
-export default modal;
+export default Modal;

@@ -1,10 +1,10 @@
-import {React, useState, useEffect} from "react";
-import {Autocomplete, TextField} from "@mui/material";
-import useDispatch from "react-redux";
-import setForm from "../../../features/formTicketsSlice";
-import makeStyles from "@mui/styles";
+import React, { useState, useEffect } from "react";
+import { Autocomplete, TextField } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { setForm } from "../../../features/formTicketsSlice";
+import { makeStyles } from "@mui/styles";
 
-const controllableStates = ({
+const ControllableStates = ({
   type,
   value,
   onChangeInput,
@@ -71,7 +71,7 @@ const controllableStates = ({
   );
 };
 
-export default controllableStates;
+export default ControllableStates;
 
 const useStyles = makeStyles({
   customStyle: {

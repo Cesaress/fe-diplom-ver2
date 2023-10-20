@@ -1,9 +1,14 @@
 import React from "react";
-import GoBackBlock from "../molecules/selectionWagon/goBackBlock";
-import Card from "../main/cardsBlock/card";
-import {CardBody, CardBottom, CardTop} from "../main/cardsBlock/cardsMolecules";
+import GoBackBlock from "../../Molecules/SelectionWagon/GoBackBlock";
 
-const trailDetails = ({className, data}) => {
+import Card from "../../Main/CardsBlock/Card";
+import {
+  CardBody,
+  CardBottom,
+  CardTop,
+} from "../../Main/CardsBlock/CardsMolecules";
+
+const TrailDetails = ({ className, data }) => {
   if (!data) {
     return;
   }
@@ -22,4 +27,4 @@ const trailDetails = ({className, data}) => {
   );
 };
 
-export default trailDetails;
+export default TrailDetails;

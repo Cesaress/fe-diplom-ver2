@@ -12,8 +12,8 @@ const formSlice = createSlice({
       window.location.search === ""
         ? {
             status: false,
-            from: {date: null, city: {_id: "", name: null}},
-            to: {date: null, city: {_id: "", name: null}},
+            from: { date: null, city: { _id: "", name: null } },
+            to: { date: null, city: { _id: "", name: null } },
           }
         : {
             status: false,
@@ -29,13 +29,13 @@ const formSlice = createSlice({
   } ,
   reducers: {
     inputValue: (state, action) => {
-      const {name} = action.payload;
+      const { name } = action.payload;
 
       const value = state.name === name ? state.name : name;
       state.name = value;
     },
     setForm: (state, action) => {
-      const {type, data, status} = action.payload;
+      const { type, data, status } = action.payload;
       if (type === "startCity") state.formData.from.city = data;
       if (type === "finishCity") state.formData.to.city = data;
       if (type === "startDate") state.formData.from.date = data;

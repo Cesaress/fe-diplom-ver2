@@ -1,13 +1,14 @@
 import React from "react";
-import {Autocomplete, TextField} from "@mui/material";
-import makeStyles from "@mui/styles";
+import { Autocomplete, TextField } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
-const passengersLableState = ({
+const PassengersLableState = ({
   id,
   type,
   value,
   setState,
   options,
+
   popupIcon,
   placeholder,
 }) => {
@@ -21,6 +22,7 @@ const passengersLableState = ({
       <Autocomplete
         className={classes.customStyle}
         id={id}
+       
         onChange={(event, newValue) => {
           console.log(id, 'id')
           setState(newValue,id);
@@ -31,12 +33,14 @@ const passengersLableState = ({
         value={value}
         sx={{
           width: width,
+
           "& control": { height: 50 },
         }}
         renderInput={(params) => (
           <TextField
             {...params}
             placeholder={placeholder}
+         
           />
         )}
       />{" "}
@@ -44,12 +48,13 @@ const passengersLableState = ({
   );
 };
 
-export default passengersLableState;
+export default PassengersLableState;
 
 const useStyles = makeStyles({
   customStyle: {
     "& .MuiOutlinedInput-root": {
       height: 50,
+
       paddingBottom: 13,
       "& input": {
         height: 15,
@@ -57,6 +62,7 @@ const useStyles = makeStyles({
       "& fieldset": {
         height: 50,
       },
+
       "&.Mui-focused fieldset": {
         borderColor: "#ffa800",
         borderWidth: "2px",

@@ -1,13 +1,16 @@
 import React from "react";
-import {useNavigate, useLocation} from "react-router-dom";
-import useDispatch from "react-redux";
-import {setTrainId, setSelectionTrain} from "../features/catalogTrainsSlice";
-import clearDataSeats from "../features/passengersSlice";
-import TrainsMenuCard from "../trainsMenuCard";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {
+  setTrainId,
+  setSelectionTrain,
+} from "../../../../features/catalogTrainsSlice";
+import { clearDataSeats } from "../../../../features/passengersSlice";
+import TrainsMenuCard from "./TrainsMenuCard";
 
-import nanoid from "nanoid";
+import { nanoid } from "nanoid";
 
-const trainsMenu = ({currentItems}) => {
+const TrainsMenu = ({ currentItems }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const location = useLocation();
@@ -38,4 +41,4 @@ const trainsMenu = ({currentItems}) => {
   );
 };
 
-export default trainsMenu;
+export default TrainsMenu;

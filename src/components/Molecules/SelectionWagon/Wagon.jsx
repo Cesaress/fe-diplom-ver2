@@ -1,7 +1,7 @@
 import React from "react";
-import WagonSeats from "./wagonSeats";
+import WagonSeats from "./WagonSeats";
 
-const wagon = ({data, num, className}) => {
+const Wagon = ({ data, num, className }) => {
 
     return (
       <React.Fragment>
@@ -19,4 +19,4 @@ const wagon = ({data, num, className}) => {
     );
   };
 
-  export default wagon;
+  export default Wagon;

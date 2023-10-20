@@ -1,16 +1,14 @@
 import React from "react";
-import Link from "react-router-dom";
+import { Link } from "react-router-dom";
 import ic_phone from "../../img/footer/ic_phone.svg";
 import ic_email from "../../img/footer/ic_email.svg";
 import ic_skype from "../../img/footer/ic_skype.svg";
 import icon_geo from "../../img/icon_geo.svg";
-import FormSubscribe from "../forms/formSubscribe";
-import SocialLinksGroup from "./socialLinksGroup";
+import FormSubscribe from "../Forms/FormSubscribe";
+import SocialLinksGroup from "./SocialLinksGroup";
 import "./footer.css";
-import nanoid from "nanoid";
-
-const footer = () => {
-
+import { nanoid } from "nanoid";
+const Footer = () => {
   return (
     <React.Fragment>
       <footer className="container-fluid footer" id="footer">
@@ -94,7 +92,7 @@ const footer = () => {
             <div className="footer-border"></div>
             <div className="copyright">
               <Link
-                to="/fe-diplom"
+                to="/fe-diplom-ver2"
                 className="logo__footer-link"
               >
                 <span>Лого</span>
@@ -114,4 +112,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

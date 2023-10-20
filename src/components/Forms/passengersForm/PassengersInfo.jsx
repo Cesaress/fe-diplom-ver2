@@ -1,16 +1,17 @@
 import React from "react";
 import PassengersSelect from "./PassengersLableState";
-import ControlledCheckbox from "../molecules/MUI/controlledCheckbox";
-import ControlledInput from "../molecules/MUI/controlledInput";
+import ControlledCheckbox from "../../Molecules/MUI/ControlledCheckbox";
 
-const passengersInfo = ({state, setState}) => {
+import ControlledInput from "../../Molecules/MUI/ControlledInput";
+
+const PassengersInfo = ({ state, setState }) => {
   const clickHandler = (event) => {
     if (event.target.id === state.gender) {
       return;
     }
 
     setState((prevState) => ({
-      prevState,
+      ...prevState,
       gender: event.target.id === "male" ? "male" : "female",
     }));
   };
@@ -18,29 +19,30 @@ const passengersInfo = ({state, setState}) => {
   const onChangeInput = (value, id) => {
     if (id === "last_name")
       setState((prevState) => ({
-        prevState,
+        ...prevState,
         last_name: value,
       }));
     if (id === "first_name")
       setState((prevState) => ({
-        prevState,
+        ...prevState,
         first_name: value,
       }));
     if (id === "patronymic")
       setState((prevState) => ({
-        prevState,
+        ...prevState,
         patronymic: value,
       }));
     if (id === "date_birth")
       setState((prevState) => ({
-        prevState,
+        ...prevState,
         date_birth: value,
       }));
       if (id === "age")
  
       setState((prevState) => ({
-        prevState,
+        ...prevState,
         age: value,
+    
       }));
   };
   return (
@@ -166,5 +168,5 @@ const passengersInfo = ({state, setState}) => {
   );
 };
 
-export default passengersInfo;
+export default PassengersInfo;
 

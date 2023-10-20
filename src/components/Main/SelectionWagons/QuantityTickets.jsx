@@ -1,12 +1,12 @@
-import {React, useRef} from "react";
-import useDispatch from "react-redux";
-import CardTitle from "../atoms/atoms";
-import Tooltip from "../molecules/rooltip";
-import templateText from "../utils/dataText";
-import setTicketNoSeats from "../features/passengersSlice";
-import nanoid from "nanoid";
+import React, { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { CardTitle } from "../../Atoms/Atoms";
+import Tooltip from "../../Molecules/Tooltip";
+import { templateText } from "../../../utils/dataText";
+import { setTicketNoSeats } from "../../../features/passengersSlice";
+import { nanoid } from "nanoid";
 
-const quantityTickets = ({className, data, selected, setSelected}) => {
+const QuantityTickets = ({ className, data, selected, setSelected }) => {
   const dispatch = useDispatch();
   const inputRef = useRef();
   const tooltipRef = useRef();
@@ -36,23 +36,21 @@ const quantityTickets = ({className, data, selected, setSelected}) => {
     document
       .querySelector(".tooltip_" + tooltipRef.current)
       .classList.remove("visible");
-
     if (event.target.value === "") {
       return;
     }
     inputRef.current = event.target.parentElement;
-
     if (data[0].count < Number(event.target.value)) {
       inputRef.current.classList.add("error-quantity");
       inputRef.current.nextElementSibling.style.visibility = "visible";
+
       return;
     }
 
     inputRef.current.nextElementSibling.style.visibility = "hidden";
     inputRef.current.classList.remove("error-quantity");
-    dispatch(setTicketNoSeats({count: Number(event.target.value)}));
+    dispatch(setTicketNoSeats({ count: Number(event.target.value) }));
   };
-  
   return (
     <React.Fragment>
       <div className={className + "_block"}>
@@ -64,32 +62,54 @@ const quantityTickets = ({className, data, selected, setSelected}) => {
               <div
                 key={nanoid()}
                 id={item.type}
-                className={item.type === selected.type ? basedClassesItem + " selected_type-tickets" : basedClassesItem}
-                onClick={() => item.type !== "child-no-seats" ? onClickSelected(item.type) : null}
+                className={
+                  item.type === selected.type
+                    ? basedClassesItem + " selected_type-tickets"
+                    : basedClassesItem
+                }
+                onClick={() =>
+                  item.type !== "child-no-seats"
+                    ? onClickSelected(item.type)
+                    : null
+                }
               >
                 <div
-                  className={"input-group-prepend " + className + "_input-group"}
+                  className={
+                    "input-group-prepend " + className + "_input-group"
+                  }
                 >
                   <span
-                    className={className + " " + item.type + "_input-group-text"}
+                    className={
+                      className + " " + item.type + "_input-group-text"
+                    }
                   >
                     {item.text + " \u2013"}{" "}
                   </span>
                   <input
                     type="number"
                     data-name={item.type}
-                    className={className + " " + item.type + " input form-control"}
+                    className={
+                      className + " " + item.type + " input form-control"
+                    }
                     id="exampleInputTypeTickets"
                     aria-describedby="typeTickets"
                     defaultValue={item.count}
-                    onChange={(event) => item.type === "child-no-seats" ? onChangeInput(event) : null}
+                    onChange={(event) =>
+                      item.type === "child-no-seats"
+                        ? onChangeInput(event)
+                        : null
+                    }
                     onMouseOver={onMouseOver}
                     onMouseOut={onMouseOut}
                   />
 
                   <Tooltip
                     name={item.type}
-                    text={item.type === "child-no-seats" ? "Введите количество билетов" : "Кликните на иконку вагона и выберите место из доступных"}
+                    text={
+                      item.type === "child-no-seats"
+                        ? "Введите количество билетов"
+                        : "Кликните на иконку вагона и выберите место из доступных"
+                    }
                   />
                 </div>{" "}
                 {item.type === "child-no-seats" ? (
@@ -114,4 +134,4 @@ const quantityTickets = ({className, data, selected, setSelected}) => {
   );
 };
 
-export default quantityTickets;
+export default QuantityTickets;

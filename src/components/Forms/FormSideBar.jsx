@@ -1,9 +1,9 @@
 import React from "react";
-import useSelector from "react-redux";
-import CardTitle from "../atoms/atoms";
-import FormCalendar from "../molecules/reactCalendar";
+import { useSelector } from "react-redux";
+import { CardTitle } from "../Atoms/Atoms";
+import FormCalendar from "../Molecules/ReactCalendar";
 
-const formSideBar = () => {
+const FormSideBar = () => {
   const { from, to } = useSelector((state) => state.formTickets.formData);
 
   return (
@@ -14,12 +14,12 @@ const formSideBar = () => {
             className={"form-sidebar-block_departure"}
             text="Дата поездки"
           />
+
           <FormCalendar
             className="sidebar_form"
             value={from.date ? new Date(from.date) : null}
           />
         </div>
-
         <div className="form-sidebar-block_arrival">
           <CardTitle
             className={"form-sidebar-block_arrival"}
@@ -35,4 +35,4 @@ const formSideBar = () => {
   );
 };
 
-export default formSideBar;
+export default FormSideBar;

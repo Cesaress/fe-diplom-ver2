@@ -1,9 +1,9 @@
 import React from "react";
-import useSelector from "react-redux";
-import TrainsMenuCard from "../main/selectionTrain/trainsMenu/trainsMenuCard";
+import { useSelector } from "react-redux";
+import TrainsMenuCard from "../../Main/SelectionTrain/TrainsMenu/TrainsMenuCard";
 
-const screenTrain = () => {
-  const {seleсtedTrain} = useSelector((state) => state.catalogTrains);
+const ScreenTrain = () => {
+  const { seleсtedTrain } = useSelector((state) => state.catalogTrains);
 
   return (
     <React.Fragment>
@@ -14,4 +14,4 @@ const screenTrain = () => {
   );
 };
 
-export default screenTrain;
+export default ScreenTrain;

@@ -1,10 +1,10 @@
-import {React, useState} from "react";
-import {Button, MySvgIcon, CardTitle} from "../atoms/atoms";
-import getDataPassTemplate from "../../utils/wagonSelectionUtils";
-import formattedPrice from "../../utils/trainSelectionUtils";
+import React, { useState } from "react";
+import { Button, MySvgIcon, CardTitle } from "../Atoms/Atoms";
+import { getDataPassTemplate } from "../../utils/WagonSelectionUtils";
+import { formattedPrice } from "../../utils/trainSelectionUtils";
 import icon_pass_yellow from "../../img/sidebar/icon_pass_yellow.svg";
-import nanoid from "nanoid";
-const quantityPassBlock = ({ data }) => {
+import { nanoid } from "nanoid";
+const QuantityPassBlock = ({ data }) => {
   const [showPassengers, setShowPassengers] = useState(true);
 
   const clickHandler = () => {
@@ -70,4 +70,4 @@ const quantityPassBlock = ({ data }) => {
   );
 };
 
-export default quantityPassBlock;
+export default QuantityPassBlock;

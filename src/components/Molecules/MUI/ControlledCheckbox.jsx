@@ -1,6 +1,6 @@
-import {React, useState } from "react";
-import Checkbox from "@mui/material";
-const controlledCheckbox = ({id, value, onChange}) => {
+import React, { useState } from "react";
+import { Checkbox } from "@mui/material";
+const ControlledCheckbox = ({ id, value, onChange }) => {
   const [checked, setChecked] = useState(false);
   const handleChange = (event) => {
     setChecked(event.target.checked);
@@ -9,10 +9,10 @@ const controlledCheckbox = ({id, value, onChange}) => {
   return (
     <Checkbox
       sx={{
-        "&": {padding: 0 },
-        "& .MuiSvgIcon-root": {fontSize: 28},
+        "&": { padding: 0 },
+        "& .MuiSvgIcon-root": { fontSize: 28 },
 
-        "&:hover": {bgcolor: "transparent", padding: 0},
+        "&:hover": { bgcolor: "transparent", padding: 0 },
         "&.Mui-checked": {
           color: "#ffa800",
         },
@@ -20,9 +20,9 @@ const controlledCheckbox = ({id, value, onChange}) => {
       id={id}
       checked={id ? value === id : checked}
       onChange={(event) => (id ? onChange(event, value) : handleChange(event))}
-      inputProps={{"aria-label": "controlled"}}
+      inputProps={{ "aria-label": "controlled" }}
     />
   );
 };
 
-export default controlledCheckbox;
+export default ControlledCheckbox;

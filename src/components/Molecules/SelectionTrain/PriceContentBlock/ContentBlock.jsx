@@ -1,10 +1,10 @@
 import React from "react";
-import ContentBlockItem from "./contentBlockItem";
-import GroupText from "./groupText";
-import GroupPrice from "./groupPrice";
-import nanoid from "nanoid";
+import ContentBlockItem from "./ContentBlockItem";
+import GroupText from "./GroupText";
+import GroupPrice from "./GroupPrice";
+import { nanoid } from "nanoid";
 
-const contentBlock = ({className,template}) => {
+const ContentBlock = ({ className,template }) => {
 
   return (
     <React.Fragment>
@@ -32,4 +32,4 @@ const contentBlock = ({className,template}) => {
   );
 };
 
-export default contentBlock;
+export default ContentBlock;

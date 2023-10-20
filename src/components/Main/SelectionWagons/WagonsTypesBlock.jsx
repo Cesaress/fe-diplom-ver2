@@ -1,7 +1,7 @@
 import React from "react";
-import {CardTitle, Button} from "../atoms/atoms";
+import { CardTitle, Button } from "../../Atoms/Atoms";
 
-const wagonsTypesBlock = ({className, selectedType, setSelectedType}) => {
+const WagonsTypesBlock = ({ className, selectedType, setSelectedType }) => {
 
   return (
     <React.Fragment>
@@ -123,4 +123,4 @@ const wagonsTypesBlock = ({className, selectedType, setSelectedType}) => {
   );
 };
 
-export default wagonsTypesBlock;
+export default WagonsTypesBlock;

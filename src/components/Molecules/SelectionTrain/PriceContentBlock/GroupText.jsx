@@ -1,6 +1,6 @@
 import React from "react";
 
-const groupText = ({className, name, amount}) => {
+const GroupText = ({ className, name, amount }) => {
    
     return (
       <React.Fragment>
@@ -12,4 +12,4 @@ const groupText = ({className, name, amount}) => {
     );
   };
 
-  export default groupText;
+  export default GroupText;

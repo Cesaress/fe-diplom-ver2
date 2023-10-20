@@ -1,39 +1,38 @@
 import React from "react";
-import PassengersSelect from "./PassengersLableState";
-import ControlledInput from "../molecules/MUI/controlledInput";
 
-const passengersDocs = ({state, setState, errorDocs}) => {
+import PassengersSelect from "./PassengersLableState";
+import ControlledInput from "../../Molecules/MUI/ControlledInput";
+
+const PassengersDocs = ({ state, setState, errorDocs }) => {
   let doc_id;
   const onChangeSelect = (value, id) => {
     doc_id = value === "Паспорт РФ" ? "passport" : "certificate";
     if (doc_id) {
       setState((prevState) => ({
-        prevState,
-        type_docs: {id: doc_id, description: value},
-        data_docs: {seria: "", number: ""},
+        ...prevState,
+        type_docs: { id: doc_id, description: value },
+        data_docs: { seria: "", number: "" },
       }));
     }
   };
-
   const onChangeInput = (value, id, type) => {
     if (type === "certificate" && id === "number")
       setState((prevState) => ({
-        prevState,
+        ...prevState,
         data_docs: { number: value },
       }));
     if (type === "passport" && id === "seria") {
       setState((prevState) => ({
-        prevState,
+        ...prevState,
         data_docs: { seria: value, number: state.data_docs.number },
       }));
     } else if (type === "passport" && id === "number") {
       setState((prevState) => ({
-        prevState,
+        ...prevState,
         data_docs: { seria: state.data_docs.seria, number: value },
       }));
     }
   };
-
   return (
     <React.Fragment>
       <div className="form passengers-docs_form">
@@ -62,7 +61,6 @@ const passengersDocs = ({state, setState, errorDocs}) => {
               />
             </div>
           ) : null}
-
           <div className="form-group group_document-number">
             <label className="passengers-data_document_label">Номер</label>
             <ControlledInput
@@ -79,4 +77,4 @@ const passengersDocs = ({state, setState, errorDocs}) => {
   );
 };
 
-export default passengersDocs;
+export default PassengersDocs;

@@ -1,7 +1,7 @@
 import React from "react";
-import useLocation from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-const main = (props) => {
+const Main = (props) => {
   const location = useLocation();
 
   const classBased =
@@ -19,4 +19,4 @@ const main = (props) => {
   );
 };
 
-export default main;
+export default Main;

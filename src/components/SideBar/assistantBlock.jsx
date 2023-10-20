@@ -1,15 +1,16 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {useLocation, useNavigate} from "react-router-dom";
-import FormSideBar from "../forms/formSideBar";
-import SwitchBlock from "./switchBlock";
-import PriceBlock from "./priceBlock";
-import SideBlock from "./sideBlock";
+import FormSideBar from "../Forms/FormSideBar";
+import SwitchBlock from "./SwitchBlock";
+import PriceBlock from "./PriceBlock";
+import SideBlock from "./SideBlock";
 import {parsedUrlString, getUrlSearch} from "../../utils/trainSelectionUtils";
-import setTrainsParameters from "../../features/catalogTrainsSlice";
+import {setTrainsParameters} from "../../features/catalogTrainsSlice";
 
-const assistantBlock = () => {
-  const {from, to} = useSelector(
+
+const AssistantBlock = () => {
+  const { from, to } = useSelector(
     (state) => state.catalogTrains.searchData.travelData
   );
 
@@ -28,7 +29,7 @@ const assistantBlock = () => {
       location.pathname === "/fe-diplom-ver2/trains"
     )
       dispatch(
-        setTrainsParameters({data: {name: inputName, status: checked}})
+        setTrainsParameters({ data: { name: inputName, status: checked } })
       );
 
     let newValue = Object.keys(upData.parameters).find((key) =>
@@ -42,7 +43,6 @@ const assistantBlock = () => {
       upData.filter,
       upData.parameters
     );
-    
     navigate({
       search: `${urlSearchString}`,
     });
@@ -61,4 +61,4 @@ const assistantBlock = () => {
   );
 };
 
-export default assistantBlock;
+export default AssistantBlock;

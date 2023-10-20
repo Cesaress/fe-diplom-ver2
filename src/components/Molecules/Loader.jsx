@@ -1,9 +1,9 @@
 import React from "react";
-import MySvgIcon from "../atoms/atoms";
+import { MySvgIcon } from "../Atoms/Atoms";
 import ic_loading_train from "../../img/loading/ic_loading_train.svg";
 import ic_loading_line from "../../img/loading/ic_loading_line.svg";
 
-const loader = () => {
+const Loader = () => {
   return (
     <React.Fragment>
       <div className="loader_block">
@@ -26,4 +26,4 @@ const loader = () => {
   );
 };
 
-export default loader;
+export default Loader;

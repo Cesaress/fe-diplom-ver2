@@ -1,11 +1,11 @@
-import "./main.css";
-import Modal from "../molecules/modal";
+import "../Main/main.css";
+import Modal from "../Molecules/Modal";
 import ic_subtract from "../../img/howItWorks/ic_subtract.svg";
 import ic_house from "../../img/howItWorks/ic_house.svg";
 import ic_globe from "../../img/howItWorks/ic_globe.svg";
 import React from "react";
 
-const howItWorks = () => {
+const HowItWorks = () => {
   const clickHandler = (event) => {
     event.preventDefault();
     console.log("click");
@@ -79,4 +79,4 @@ const howItWorks = () => {
   );
 };
 
-export default howItWorks;
+export default HowItWorks;

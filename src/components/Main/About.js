@@ -1,6 +1,6 @@
-import "./main.css";
+import "../Main/main.css";
 
-const about = () => {
+const About = () => {
   return (
     <section className="about" id="about">
      
@@ -30,4 +30,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

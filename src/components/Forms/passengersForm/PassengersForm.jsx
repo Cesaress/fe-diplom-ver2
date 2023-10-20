@@ -1,14 +1,17 @@
-import {React, useEffect, useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import PassengersInfo from "../passengersInfo";
-import PassengersDocs from "../passengersDocs";
-import {Button, MySvgIcon} from "../atoms/atoms";
-import {validateDataPassengers, validateInputForm} from "../utils/formsValidator";
-import setDataPassengers from "../features/passengersSlice";
-import icon_green_btn from "../img/passengers/icon_green_btn.svg";
-import icon_error_docs from "../img/passengers/icon_error_docs.svg";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import PassengersInfo from "./PassengersInfo";
+import PassengersDocs from "./PassengersDocs";
+import { Button, MySvgIcon } from "../../Atoms/Atoms";
+import {
+  validateDataPassengers,
+  validateInputForm,
+} from "../../../utils/formsValidator";
+import { setDataPassengers } from "../../../features/passengersSlice";
+import icon_green_btn from "../../../img/passengers/icon_green_btn.svg";
+import icon_error_docs from "../../../img/passengers/icon_error_docs.svg";
 
-const passengersForm = ({id}) => {
+const PassengersForm = ({ id }) => {
   const [info, setInfo] = useState({
     id: id,
     gender: "male",
@@ -68,7 +71,6 @@ const passengersForm = ({id}) => {
     dataInfo.type = dataInfo.age === "Взрослый" ? "adult" : "child";
     dispatch(setDataPassengers({ data: { info: dataInfo, docs } }));
   };
-
   return (
     <React.Fragment>
       <PassengersInfo state={info} setState={setInfo} />
@@ -117,5 +119,4 @@ const passengersForm = ({id}) => {
     </React.Fragment>
   );
 };
-
-export default passengersForm;
+export default PassengersForm;

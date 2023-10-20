@@ -1,22 +1,22 @@
 import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-import Layout from "./components/layout";
-import HomePage from "./components/pages/homePage";
-import SelectionTrain from "./components/pages/selectionTrain";
-import SelectionWagons from "./components/pages/selectionWagons";
-import PassengersInfo from "./components/pages/passengersInfo";
-import PersonalData from "./components/pages/personalData";
-import Screening from "./components/pages/screening";
-import OrderResult from "./components/pages/orderResult";
-import NotFound from "./components/pages/notFound";
-import "./app.css";
+import Layout from "./components/Layout";
+import HomePage from "./components/Pages/HomePage";
+import SelectionTrain from "./components/Pages/SelectionTrain";
+import SelectionWagons from "./components/Pages/SelectionWagons";
+import PassengersInfo from "./components/Pages/PassengersInfo";
+import PersonalData from "./components/Pages/PersonalData";
+import Screening from "./components/Pages/Screening";
+import OrderResult from "./components/Pages/OrderResult";
+import NotFound from "./components/Pages/NotFound";
+import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/fe-diplom-ver2/" element={<Layout />}>
+        <Route path="/fe-diplom/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="trains/" element={<SelectionTrain />} />
           <Route path="seats/:id" element={<SelectionWagons />} />
@@ -31,3 +31,5 @@ function App() {
     </BrowserRouter>
   );
 }
+
+export default App;

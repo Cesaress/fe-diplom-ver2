@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { CardTitle, MySvgIcon, Button } from "../atoms/atoms";
-import Timing from "./timing";
-import TripDetails from "./tripDetails";
-import Tooltip from "../Molecules/rooltip";
+import { CardTitle, MySvgIcon, Button } from "../Atoms/Atoms";
+import Timing from "./Timing";
+import TripDetails from "./TripDetails";
+import Tooltip from "../Molecules/Tooltip";
 import icon_arrow from "../../img/sidebar/icon_arrow.svg";
-const sideBlock = ({type, data, date, side, children, parent, onChange}) => {
+const SideBlock = ({ type, data, date, side, children, parent, onChange }) => {
   const [showTiming, setShowTiming] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -31,24 +31,20 @@ const sideBlock = ({type, data, date, side, children, parent, onChange}) => {
               }
             />
           ) : null}
-
           <MySvgIcon
             type="sidebar-side-block"
             icon={icon_arrow}
             className={basedClasses + "_arrow"}
           />
-
           <CardTitle
             text={type === "departure" ? "Туда" : "Обратно"}
             className="sidebar-side-block"
           />
-
           {data && data.departure.from.date ? (
             <span className="sidebar-side-block_date">
               {data.departure.from.date}
             </span>
           ) : null}
-
           <Button type="sidebar-side-block" onClick={() => clickHandler(type)}>
             {showTiming ? (
               <i className="fa fa-minus" aria-hidden="true"></i>
@@ -56,18 +52,15 @@ const sideBlock = ({type, data, date, side, children, parent, onChange}) => {
               <i className="fa fa-plus" aria-hidden="true"></i>
             )}
           </Button>
-          
         </div>
-
         {showTiming && !data && !parent ? (
           <Timing type={type} onChangeHandler={onChange} />
         ) : null}
         {showTiming && parent && <TripDetails />}
         {children ? children : null}
       </div>
-      
     </React.Fragment>
   );
 };
 
-export default sideBlock;
+export default SideBlock;

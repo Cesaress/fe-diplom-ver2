@@ -1,9 +1,9 @@
 import React from "react";
-import useSelector from "react-redux";
-import CardTitle from "../atoms/atoms";
-import RangeSlider from "./customSlider";
+import { useSelector } from "react-redux";
+import { CardTitle } from "../Atoms/Atoms";
+import RangeSlider from "./CustomSlider";
 
-const timing = ({type}) => {
+const Timing = ({ type }) => {
   const {
     start_departure_hour_from,
     start_departure_hour_to,
@@ -61,4 +61,4 @@ const timing = ({type}) => {
   );
 };
 
-export default timing;
+export default Timing;

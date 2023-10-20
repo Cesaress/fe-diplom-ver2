@@ -1,14 +1,14 @@
-import {React, useState, useEffect} from "react";
-import useDebouncedCallback from "use-debounce";
-import useDispatch from "react-redux";
+import React, {useState, useEffect} from "react";
+import {useDebouncedCallback} from "use-debounce";
+import {useDispatch} from "react-redux";
 import {useLocation, useNavigate} from "react-router-dom";
 import {parsedUrlString, getUrlSearch} from "../../utils/trainSelectionUtils";
-import Box from "@mui/material/box";
-import Slider from "@mui/material/slider";
-import setTrainsParameters from "../../features/catalogTrainsSlice";
-import styled from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
+import {setTrainsParameters} from "../../features/catalogTrainsSlice";
+import {styled} from "@mui/material/styles";
 
-const rangeSlider = ({min, max, step, height, type, start, end}) => {
+const RangeSlider = ({ min, max, step, height, type, start, end }) => {
   const [value, setValue] = useState([start, end]);
 
   const dispatch = useDispatch();
@@ -16,7 +16,6 @@ const rangeSlider = ({min, max, step, height, type, start, end}) => {
   const navigate = useNavigate();
   const debounsedValue = useDebouncedCallback((value) => {
     setValue(value);
-
     let upData = parsedUrlString(location.search);
     let template;
 
@@ -27,7 +26,6 @@ const rangeSlider = ({min, max, step, height, type, start, end}) => {
       };
       upData.parameters.price_from = value[0];
       upData.parameters.price_to = value[1];
-
     } else if (type === "start_departure") {
       template = {
         name: "start_departure",
@@ -38,7 +36,6 @@ const rangeSlider = ({min, max, step, height, type, start, end}) => {
       };
       upData.parameters.start_departure_hour_from = value[0];
       upData.parameters.start_departure_hour_to = value[1];
-
     } else if (type === "start_arrival") {
       template = {
         name: "end_departure",
@@ -49,7 +46,6 @@ const rangeSlider = ({min, max, step, height, type, start, end}) => {
       };
       upData.parameters.end_departure_hour_from = value[0];
       upData.parameters.end_departure_hour_to = value[1];
-
     } else if (type === "end_departure") {
       template = {
         name: "start_arrival",
@@ -60,7 +56,6 @@ const rangeSlider = ({min, max, step, height, type, start, end}) => {
       };
       upData.parameters.start_arrival_hour_from = value[0];
       upData.parameters.start_arrival_hour_to = value[1];
-
     } else if (type === "end_arrival") {
       template = {
         name: "end_arrival",
@@ -93,7 +88,7 @@ const rangeSlider = ({min, max, step, height, type, start, end}) => {
     [debounsedValue, value]
   );
 
-  const handleChange = (newValue, activeThumb) => {
+  const handleChange = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
       return;
     }
@@ -134,15 +129,15 @@ const rangeSlider = ({min, max, step, height, type, start, end}) => {
         step={step}
         marks={mark}
         onChange={handleChange}
-        getAriaValueText={valueText}
+        getAriaValueText={valuetext}
       />
     </Box>
   );
 };
 
-export default rangeSlider;
+export default RangeSlider;
 
-const CustomSlider = styled(Slider)(({height}) => ({
+const CustomSlider = styled(Slider)(({ theme, height }) => ({
   color: "#FFA800",
   height: height,
   padding: 0,
@@ -188,6 +183,6 @@ const CustomSlider = styled(Slider)(({height}) => ({
   },
 }));
 
-const valueText = (value) => {
+const valuetext = (value) => {
   return `${value}`;
 };
