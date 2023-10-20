@@ -17,5 +17,4 @@ const Layout = () => {
     </React.Fragment>
   );
 };
-
 export default Layout;

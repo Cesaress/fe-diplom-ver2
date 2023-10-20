@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Layout from "./components/Layout";
 import HomePage from "./components/Pages/HomePage";
 import SelectionTrain from "./components/Pages/SelectionTrain";
@@ -9,7 +10,7 @@ import PersonalData from "./components/Pages/PersonalData";
 import Screening from "./components/Pages/Screening";
 import OrderResult from "./components/Pages/OrderResult";
 import NotFound from "./components/Pages/NotFound";
-import "App.css";
+import "./App.css";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="order-result/:id/" element={<OrderResult/>} />
           <Route path="*" element={<NotFound />} />
         </Route>
+      
       </Routes>
     </BrowserRouter>
   );
