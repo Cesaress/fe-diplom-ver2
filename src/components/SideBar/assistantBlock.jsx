@@ -1,12 +1,12 @@
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {useLocation, useNavigate} from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 import FormSideBar from "../Forms/FormSideBar";
 import SwitchBlock from "./SwitchBlock";
 import PriceBlock from "./PriceBlock";
 import SideBlock from "./SideBlock";
-import {parsedUrlString, getUrlSearch} from "../../utils/trainSelectionUtils";
-import {setTrainsParameters} from "../../features/catalogTrainsSlice";
+import { parsedUrlString, getUrlSearch } from "../../utils/trainSelectionUtils";
+import { setTrainsParameters } from "../../features/catalogTrainsSlice";
 
 
 const AssistantBlock = () => {

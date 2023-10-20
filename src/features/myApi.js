@@ -1,10 +1,10 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 import queryString from "query-string";
 export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://students.netoservices.ru/fe-diplom/routes/",
+    baseUrl: "https://students.netoservices.ru/fe-diplom-ver2/routes/",
   }),
   endpoints: (builder) => ({
     getCityesName: builder.query({
@@ -23,7 +23,7 @@ export const api = createApi({
           ...arg.parameters,
           ...arg.filter,
         };
-      console.log(requestObj,'requestObj')
+console.log(requestObj,'requestObj')
         for (let key in requestObj) {
           if (requestObj[key] === false) requestObj[key] = undefined;
         }

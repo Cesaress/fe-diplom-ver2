@@ -1,9 +1,9 @@
 import React from "react";
 
 import CardIconsBlock from "../Main/SelectionTrain/TrainsMenu/CardIconsBlock";
-import {nanoid} from "nanoid";
-import {CardTitle} from "../Atoms/Atoms";
-import {capitalizeFirstLetter, formattedPrice} from "../../utils/trainSelectionUtils";
+import { nanoid } from "nanoid";
+import { CardTitle } from "../Atoms/Atoms";
+import { capitalizeFirstLetter, formattedPrice } from "../../utils/trainSelectionUtils";
 
 const LastTickets = ({data}) => {
 

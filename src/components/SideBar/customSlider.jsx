@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from "react";
-import {useDebouncedCallback} from "use-debounce";
-import {useDispatch} from "react-redux";
-import {useLocation, useNavigate} from "react-router-dom";
-import {parsedUrlString, getUrlSearch} from "../../utils/trainSelectionUtils";
+import React, { useState, useEffect } from "react";
+import { useDebouncedCallback } from "use-debounce";
+import { useDispatch } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import { parsedUrlString, getUrlSearch } from "../../utils/trainSelectionUtils";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import {setTrainsParameters} from "../../features/catalogTrainsSlice";
-import {styled} from "@mui/material/styles";
+import { setTrainsParameters } from "../../features/catalogTrainsSlice";
+import { styled } from "@mui/material/styles";
 
 const RangeSlider = ({ min, max, step, height, type, start, end }) => {
   const [value, setValue] = useState([start, end]);
@@ -16,6 +16,7 @@ const RangeSlider = ({ min, max, step, height, type, start, end }) => {
   const navigate = useNavigate();
   const debounsedValue = useDebouncedCallback((value) => {
     setValue(value);
+
     let upData = parsedUrlString(location.search);
     let template;
 
@@ -82,8 +83,10 @@ const RangeSlider = ({ min, max, step, height, type, start, end }) => {
   }, 2000);
 
   useEffect(
+
     () => {
       debounsedValue(value);
+
     },
     [debounsedValue, value]
   );
@@ -97,6 +100,7 @@ const RangeSlider = ({ min, max, step, height, type, start, end }) => {
     } else {
       setValue([value[0], Math.max(newValue[1], value[0] + min)]);
     }
+
   };
   const mark = [
     {
@@ -133,6 +137,7 @@ const RangeSlider = ({ min, max, step, height, type, start, end }) => {
       />
     </Box>
   );
+
 };
 
 export default RangeSlider;

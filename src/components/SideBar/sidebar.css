@@ -89,7 +89,8 @@ span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
 span.MuiSlider-mark.css-1tfve6q-MuiSlider-mark {
   background-color: inherit;
 }
-
+span.MuiSlider-markLabel.css-yafthl-MuiSlider-markLabel {
+}
 .sidebar-price-block_description {
   display: flex;
   justify-content: space-between;

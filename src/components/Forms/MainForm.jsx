@@ -66,6 +66,7 @@ const MainForm = ({ className }) => {
 
   const clickReverse = () => {
     dispatch(setReverseData());
+    
   };
   const clickHandler = () => {
     dispatch(setDataRequest({ data: { from, to } }));

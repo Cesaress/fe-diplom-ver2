@@ -1,7 +1,7 @@
 import React from "react";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import RangeSlider from "./CustomSlider";
-import {CardTitle} from "../Atoms/Atoms";
+import { CardTitle } from "../Atoms/Atoms";
 
 const PriceBlock = () => {
   const { price_from, price_to } = useSelector(

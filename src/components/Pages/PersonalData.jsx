@@ -156,7 +156,7 @@ const PersonalData = () => {
                   onClick={() => {
                     dispatch(setContributor({ data: state }));
                     navigate({
-                      pathname: `/fe-diplom/screening/${params.id}`,
+                      pathname: `/fe-diplom-ver2/screening/${params.id}`,
                       search: location.search,
                     })
                 

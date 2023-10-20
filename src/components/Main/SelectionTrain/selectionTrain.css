@@ -26,7 +26,7 @@ section#trains-menu {
   width: 959px;
 }
 
-
+/*Form*/
 .search-tickets_form {
   position: absolute;
   left: 215px;
@@ -73,7 +73,7 @@ section#trains-menu {
   margin-right: 41px;
   margin-top: 30px;
 }
-
+/*ProgressBar*/
 .progress {
   position: relative;
   width: 1919px;
@@ -100,13 +100,13 @@ section#trains-menu {
 
   clip-path: polygon(
     0% 0px,
-     0px 0%,
-     calc(100% - 47px) 0%,
-     100% 47px,
-     100% calc(100% - 47px),
-     calc(100% - 47px) 100%,
-     0px 100%,
-     0 calc(100% - 47px)
+    /* верхняя левая */ 0px 0%,
+    /* верхняя левая */ calc(100% - 47px) 0%,
+    /* верхняя правая */ 100% 47px,
+    /* верхняя правая */ 100% calc(100% - 47px),
+    /* нижняя правая */ calc(100% - 47px) 100%,
+    /* нижняя правая */ 0px 100%,
+    /* нижняя левая */ 0 calc(100% - 47px) /* нижняя левая */
   );
 }
 .progress-bar.step-tickets {
@@ -169,7 +169,7 @@ span.numbering {
   margin-left: 28px;
 }
 
-
+/*SearchControls*/
 .search-controls__wrap {
   margin-top: 95px;
   height: 43px;
@@ -282,7 +282,7 @@ button.btn.puncts-list__btn {
   color: #292929;
 }
 
-
+/*Trains-cards*/
 .trains-menu-wrap.d-flex {
   margin-top: 26px;
   margin-right: 256px;
@@ -322,6 +322,7 @@ button.btn.puncts-list__btn {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+
   color: #292929;
 }
 .trains-menu.trains-number {
@@ -343,6 +344,7 @@ span.trail-city-name {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+
   color: #292929;
 }
 i.fa.fa-long-arrow-right {
@@ -538,6 +540,7 @@ button.selection-seats_btn {
   color: #ffffff;
   width: 228px;
   height: 39px;
+
   background: #ffa800;
   border-radius: 5px;
 }
@@ -551,7 +554,7 @@ button.selection-seats_btn:active {
   border: 1px solid #ffa800;
 }
 
-
+/*Пагинация на странице выбор поезда*/
 .selection-trains-pagination {
   display: flex;
   justify-content: flex-end;
@@ -564,12 +567,15 @@ li.trains-menu-pagination__item {
   width: 85px;
   margin-left: 35px;
 }
-
+/*.trains-menu-pagination__item-link:first-child {
+ background: #ffa800;
+}*/
 .trains-menu-pagination__item-link,
 .trains-menu-pagination__next-item-link,
 .trains-menu-pagination__previus-item-link {
   width: 83px;
   height: 75px;
+
   display: flex;
   align-items: center;
   justify-content: center;

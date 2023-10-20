@@ -8,6 +8,7 @@ const useJsonFetch = (url, opts) =>  {
   useEffect(() => {
 
     const fetchData = async () => {
+     
       try {
         const response = await fetch(url, opts);
         if (!response.ok) throw new Error(`${response.url} ${response.status} ${response.statusText}`);
@@ -21,7 +22,9 @@ const useJsonFetch = (url, opts) =>  {
     }
 
     fetchData();
+
   }, [url]);
+
   return { data, error, loading };
 
 }

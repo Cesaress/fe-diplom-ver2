@@ -12,6 +12,7 @@ const TrailDetails = ({ className, data }) => {
   if (!data) {
     return;
   }
+ 
 
   return (
     <React.Fragment>

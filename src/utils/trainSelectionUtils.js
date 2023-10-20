@@ -1,4 +1,4 @@
-import {format, intervalToDuration} from "date-fns";
+import { format, intervalToDuration } from "date-fns";
 import queryString from "query-string";
 
 export const getUrlSearch = (search, form, filter, parameters) => {

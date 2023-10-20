@@ -66,6 +66,7 @@
 .trains-block_card-top.card-top {
   display: flex;
   flex-direction: row;
+
   padding-left: 35px;
   width: 240px;
   border-right: 1px solid #ffffff;
@@ -418,7 +419,6 @@ button.utils-wagon_button_box.wagon-fourth_class_seat-btn {
 
 .utils-wagon-wagon-first_class_sector {
   display: flex;
-
   height: 58px;
   width: 712px;
   flex-direction: column;
@@ -428,7 +428,6 @@ button.utils-wagon_button_box.wagon-fourth_class_seat-btn {
 .utils-wagon-wagon-first_class_sector-row {
   display: flex;
   height: 70px;
-
   justify-content: space-between;
 }
 .utils-wagon_buttons-block_box.first_class-buttons-block_box {
@@ -470,11 +469,9 @@ button.utils-wagon_button_box.wagon-first_class_seat-btn {
   width: 25px;
   height: 25px;
   padding: 2px;
-
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
-
   color: #2d2b2f;
 }
 
@@ -615,7 +612,6 @@ tr.amount-seats_table-item {
   background: #ffa800;
 }
 .wagon-services_btn.selected {
-
   background: rgba(255, 168, 0, 0.79);
   border-color: #ffa800;
 }

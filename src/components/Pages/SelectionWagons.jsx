@@ -54,6 +54,7 @@ console.log(upData,'upData')
     isError: isErrorId,
     isLoading: isLoadingId,
   } = useGetTrainIdQuery(params.id);
+  
 
   const formData = formattedFormData(upData);
 
@@ -80,6 +81,7 @@ console.log(upData,'upData')
         },
       })
     );
+    
   }, [seleсtedTrain, selectedTypeWagon, list, params.id, dispatch]);
   const onClickInfo = () => {
     document.querySelector(".info_card").classList.remove("active");

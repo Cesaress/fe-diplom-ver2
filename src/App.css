@@ -20,7 +20,7 @@ a:hover {
   cursor: pointer;
 }
 
-
+/* Common Styles */
 .invisible {
   opacity: 0;
 }
@@ -35,7 +35,7 @@ input::-webkit-inner-spin-button {
   width: 670px;
 }
 
-
+/* Preloader */
 .preloader {
   margin: 10px auto;
   position: relative;
@@ -82,6 +82,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
+/* Bootstrap */
 
 input {
   border: none;

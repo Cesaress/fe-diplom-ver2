@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const catalogTrainsSlice = createSlice({
   name: "catalogTrains",
@@ -25,14 +25,14 @@ const catalogTrainsSlice = createSlice({
         have_express: false,
         price_from: 500,
         price_to: 9000,
-        start_departure_hour_from: 0,
-        start_departure_hour_to: 24,
-        start_arrival_hour_from: 0,
-        start_arrival_hour_to: 24,
-        end_departure_hour_from: 0,
-        end_departure_hour_to: 24,
-        end_arrival_hour_from: 0,
-        end_arrival_hour_to: 24,
+        start_departure_hour_from: 0, 
+        start_departure_hour_to: 24, 
+        start_arrival_hour_from: 0, 
+        start_arrival_hour_to: 24, 
+        end_departure_hour_from: 0, 
+        end_departure_hour_to: 24, 
+        end_arrival_hour_from: 0, 
+        end_arrival_hour_to: 24, 
       },
     },
     seleсtedTrain: null,
