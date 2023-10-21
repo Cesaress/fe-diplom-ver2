@@ -46,5 +46,3 @@ export const CardTitle = ({ text, className }) => {
     </React.Fragment>
   );
 };
-
-export default Atom;
