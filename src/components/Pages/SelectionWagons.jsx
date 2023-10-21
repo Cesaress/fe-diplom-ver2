@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
-import { Button, Title } from "../Atoms/Atoms.jsx";
+import { Button, Title } from "../Atoms/Atoms";
 import Banner from "../Molecules/Banner";
 import banner3 from "../../img/banner/banner3.png";
 import MainForm from "../Forms/MainForm";
@@ -16,21 +16,9 @@ import Info from "../Molecules/Info";
 import { findWagon } from "../../utils/trainSelectionUtils";
 import { getValidDataPass } from "../../utils/WagonSelectionUtils";
 import { addSeats, setDataPassengers } from "../../features/passengersSlice";
-import {
-  setTrainId,
-  setDataRequest,
-  upDateCatalog,
-  setSelectionTrain,
-} from "../../features/catalogTrainsSlice";
-import {
-  useGetTrainIdQuery,
-  useGetTrainsListQuery,
-} from "../../features/myApi";
-import {
-  getDuration,
-  parsedUrlString,
-  formattedFormData,
-} from "../../utils/trainSelectionUtils";
+import {setTrainId, setDataRequest, upDateCatalog, setSelectionTrain} from "../../features/catalogTrainsSlice";
+import {useGetTrainIdQuery, useGetTrainsListQuery} from "../../features/myApi";
+import {getDuration, parsedUrlString, formattedFormData} from "../../utils/trainSelectionUtils";
 import "../Main/SelectionWagons/selectionWagons.css";
 
 const SelectionWagons = () => {

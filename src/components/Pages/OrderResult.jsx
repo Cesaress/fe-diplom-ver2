@@ -3,13 +3,9 @@ import { useSelector } from "react-redux";
 import Banner from "../Molecules/Banner";
 import ControlBlockFeedBack from "../Main/OrderResult/ControlBlockFeedBack";
 import banner_order_page from "../../img/banner/banner_order_page.png";
-import { Title } from "../Atoms/Atoms.jsx";
+import { Title } from "../Atoms/Atoms";
 import Card from "../Main/CardsBlock/Card";
-import {
-  CardTop,
-  CardBody,
-  CardBottom,
-} from "../Main/CardsBlock/CardsMolecules";
+import {CardTop, CardBody, CardBottom} from "../Main/CardsBlock/CardsMolecules";
 import Puncts from "../Main/OrderResult/Puncts";
 import Appeal from "../Main/OrderResult/Appeal";
 import "../Main/OrderResult/orderResult.css";
