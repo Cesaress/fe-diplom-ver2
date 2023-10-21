@@ -45,8 +45,9 @@ const SelectionTrain = () => {
           parameters: upData.filter,
         },
       })
-   
-    ); // eslint-disable-line react-hooks/exhaustive-deps
+    );
+
+  // eslint-disable-next-line
   }, [dispatch, location, cardInfo]);
 
   if (isError) console.log(isError, "error!");

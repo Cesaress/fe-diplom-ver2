@@ -107,11 +107,13 @@ const passengersSlice = createSlice({
 
       const idx = state.dataSeats.findIndex((item) => item.type === data.type);
       const copySeats = state.dataSeats[idx].seats;
+      
+      // eslint-disable-next-line
       const seatsIndex = copySeats.findIndex((item) => {
         if (item.seats === data.seats && item.coach_id === data.coach_id) {
           return item;
         } 
-      });// eslint-disable-next-line
+      });
 
       seatsIndex === -1
         ? copySeats.push(data)

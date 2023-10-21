@@ -65,9 +65,11 @@ console.log(upData,'upData')
           parameters: upData.filter,
         },
       })
-    );// eslint-disable-line react-hooks/exhaustive-deps
-    
+    );
+
+  // eslint-disable-next-line
   }, [seleсtedTrain, selectedTypeWagon, list, params.id, dispatch]);
+  
   const onClickInfo = () => {
     document.querySelector(".info_card").classList.remove("active");
   };
@@ -124,7 +126,7 @@ console.log(upData,'upData')
           {isErrorId && (
             <Info
               type={"error"}
-              text={"Что-то пошло не так..."}
+              text={"Что-то пошло не так"}
               onClick={onClickInfo}
             />
           )}
