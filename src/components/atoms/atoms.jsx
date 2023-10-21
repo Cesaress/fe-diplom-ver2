@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Button = ({  id, type, text, disabled, onClick, children }) => {
+export const Button = ({  id, type, text,disabled, onClick, children }) => {
   return (
     <React.Fragment>
     

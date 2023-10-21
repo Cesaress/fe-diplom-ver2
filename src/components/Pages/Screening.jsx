@@ -20,7 +20,7 @@ const Screening = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
-  const [addOrder] = useAddOrderMutation();
+  const [addOrder /*result, isError*/] = useAddOrderMutation();
   let progress = useCallback(() => {
     console.log(passengers);
     return {};
@@ -32,6 +32,7 @@ const Screening = () => {
       passengers.length > 0 && !validateDataPassengers(contributor)
         ? true
         : false;
+
   }, [progress, passengers, contributor]);
 
   const paymentText =
