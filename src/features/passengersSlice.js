@@ -110,8 +110,8 @@ const passengersSlice = createSlice({
       const seatsIndex = copySeats.findIndex((item) => {
         if (item.seats === data.seats && item.coach_id === data.coach_id) {
           return item;
-        }
-      });
+        } 
+      });// eslint-disable-next-line
 
       seatsIndex === -1
         ? copySeats.push(data)

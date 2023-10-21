@@ -65,8 +65,8 @@ console.log(upData,'upData')
           parameters: upData.filter,
         },
       })
-    );
-
+    );// eslint-disable-line react-hooks/exhaustive-deps
+    
   }, [seleсtedTrain, selectedTypeWagon, list, params.id, dispatch]);
   const onClickInfo = () => {
     document.querySelector(".info_card").classList.remove("active");

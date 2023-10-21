@@ -46,12 +46,10 @@ const SelectionTrain = () => {
         },
       })
    
-    );
-
-   
+    ); // eslint-disable-line react-hooks/exhaustive-deps
   }, [dispatch, location, cardInfo]);
 
-  if (isError) console.log(isError, "error!!!");
+  if (isError) console.log(isError, "error!");
 
   const onClickSorted = (event) => {
     event.preventDefault();
