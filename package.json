@@ -49,7 +49,6 @@
   },
   "homepage": "https://github.com/Cesaress/fe-diplom-ver2#readme",
   "devDependencies": {
-    "eslint": "^8.52.0",
-    "eslint-plugin-react": "^7.33.2"
+
   }
 }
