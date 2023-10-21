@@ -106,7 +106,7 @@ button.add-passenger_btn.btn.text-center_btn.btn.text-center {
   transition: height 0.5s ease 0s;
 }
 
-
+/*Form*/
 .passengers-data_form {
   padding: 38px 35px 31px 36px;
 }
@@ -188,7 +188,7 @@ button.btn.btn-gender.gender-active {
   color: #292929;
 }
 
-
+/*FormDocs*/
 .passengers-data_disabled-person {
   margin-top: 45px;
 }
@@ -196,7 +196,7 @@ button.btn.btn-gender.gender-active {
 .passengers-data_docs {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-start; /* margin-left: 35px; */
 }
 
 .passengers-info_block-item_body_divider {
@@ -237,7 +237,7 @@ button.next-passenger_btn.btn.text-center {
   font-size: 24px;
   line-height: 28px;
 }
-
+/*add passenger*/
 
 .passengers-info_block-item_top.add-passenger {
   height: 97px;

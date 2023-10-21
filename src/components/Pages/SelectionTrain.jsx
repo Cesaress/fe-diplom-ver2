@@ -58,6 +58,8 @@ const SelectionTrain = () => {
    
     );
 
+   
+    // eslint-disable-next-line
   }, [dispatch, location, cardInfo]);
 
   if (isError) console.log(isError, "error!!!");

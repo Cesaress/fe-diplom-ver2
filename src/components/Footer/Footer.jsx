@@ -92,7 +92,7 @@ const Footer = () => {
             <div className="footer-border"></div>
             <div className="copyright">
               <Link
-                to="/fe-diplom-ver2"
+                to="/fe-diplom"
                 className="logo__footer-link"
               >
                 <span>Лого</span>

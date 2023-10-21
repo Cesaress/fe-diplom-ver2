@@ -9,7 +9,7 @@ const Banner = ({ banner, className, children }) => {
   return (
     <React.Fragment>
       <div className={className}>
-        {location.pathname === "/fe-diplom-ver2" ? (
+        {location.pathname === "/fe-diplom" ? (
           <Title
             text="Вся жизнь - "
             strongText={"путешествие!"}

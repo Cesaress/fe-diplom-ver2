@@ -102,7 +102,7 @@ const ScreenPassengers = ({ data }) => {
                 type="screening"
                 onClick={() =>
                   navigate({
-                    pathname: `/fe-diplom-ver2/passengers/${params.id}`,
+                    pathname: `/fe-diplom/passengers/${params.id}`,
                     search: location.search,
                   })
                 }

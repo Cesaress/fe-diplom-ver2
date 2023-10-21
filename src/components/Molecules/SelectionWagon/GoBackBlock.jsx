@@ -7,7 +7,7 @@ const GoBackBlock = ({ className, type }) => {
   const location = useLocation();
 
   const clickHandler = () => {
-    navigate({ pathname: "/fe-diplom-ver2/trains", search: location.search });
+    navigate({ pathname: "/fe-diplom/trains", search: location.search });
   };
   return (
     <React.Fragment>

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Layout from "./components/Layout.jsx";
+import Layout from "./components/Layout";
 import HomePage from "./components/Pages/HomePage";
 import SelectionTrain from "./components/Pages/SelectionTrain";
 import SelectionWagons from "./components/Pages/SelectionWagons";
@@ -16,7 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/fe-diplom-ver2/" element={<Layout />}>
+        <Route path="/fe-diplom/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="trains/" element={<SelectionTrain />} />
           <Route path="seats/:id" element={<SelectionWagons />} />

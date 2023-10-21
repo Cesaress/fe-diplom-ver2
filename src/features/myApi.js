@@ -4,7 +4,7 @@ import queryString from "query-string";
 export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://students.netoservices.ru/fe-diplom-ver2/routes/",
+    baseUrl: "https://students.netoservices.ru/fe-diplom/routes/",
   }),
   endpoints: (builder) => ({
     getCityesName: builder.query({
@@ -54,3 +54,5 @@ export const {
   useGetTrainIdQuery,
   useGetLastTicketsQuery,
 } = api;
+/* providesTags: (result, error, arg) => [{type: "dataSearchTrains", data: arg}],*/
+/**    */

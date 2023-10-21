@@ -31,7 +31,7 @@
 
   color: #ffffff;
 }
-
+/*FormTickets*/
 .homepage_form {
   position: absolute;
   width: 729px;
@@ -84,6 +84,7 @@
 .main_form-block_departure_title {
   width: 50%;
   margin-top: 28px;
+
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
@@ -160,7 +161,7 @@
   border-radius: 5px;
 }
 
-
+/*About*/
 section.about {
   max-width: 1920px;
   margin-left: 258px;
@@ -174,6 +175,7 @@ section.about {
   font-size: 36px;
   line-height: 42px;
   text-transform: uppercase;
+
   color: #292929;
   margin-top: 144px;
   margin-bottom: 30px;
@@ -186,6 +188,7 @@ section.about {
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
+
   color: #292929;
   margin-left: 28px;
   margin-bottom: 28px;
@@ -200,10 +203,11 @@ section.about {
   width: 9px;
   height: 231px;
   left: 258px;
+
   background: #ffa800;
 }
 
-
+/*Modal*/
 .modal-wrapper {
   position: absolute;
   height: 575px;
@@ -267,7 +271,7 @@ button.modal_btn.btn.text-center {
   line-height: 28px;
   color: #292929;
 }
-
+/*HowItWorks*/
 
 .how-it-works {
   height: 575px;
@@ -369,7 +373,7 @@ img.how-it-works__icon {
   width: 225px;
 }
 
-
+/*FeedBack*/
 .feedback {
   margin-left: 252px;
   margin-right: 261px;
@@ -513,7 +517,7 @@ button.carousel__dot--selected {
   width: 100%;
 }
 
-
+/*Info*/
 
 .info__wrapper {
   margin-top: 94px;
@@ -586,7 +590,7 @@ button.carousel__dot--selected {
   text-align: justify;
   line-height: 28px;
 }
-
+/*Loader*/
 .loader_block {
   height: 774px;
   width: 1920px;

@@ -48,13 +48,16 @@ const SelectionWagons = () => {
 console.log(upData,'upData')
   const {
     data: list,
+    /*isError: isErrorList,
+    isLoading: isLoadingList,
+    isSuccess,*/
   } = useGetTrainsListQuery(upData);
   const {
     data = [],
     isError: isErrorId,
     isLoading: isLoadingId,
   } = useGetTrainIdQuery(params.id);
-  
+  //console.log(list, "list");
 
   const formData = formattedFormData(upData);
 
@@ -81,7 +84,7 @@ console.log(upData,'upData')
         },
       })
     );
-    
+    // eslint-disable-next-line
   }, [seleсtedTrain, selectedTypeWagon, list, params.id, dispatch]);
   const onClickInfo = () => {
     document.querySelector(".info_card").classList.remove("active");
@@ -178,7 +181,7 @@ console.log(upData,'upData')
                   type="next-block"
                   disabled={isValidSeats.length ? false : true}
                   onClick={() =>     navigate({
-                    pathname: `/fe-diplom-ver2/passengers/${id}`,
+                    pathname: `/fe-diplom/passengers/${id}`,
                     search: location.search,
                   })}
                 ></Button>

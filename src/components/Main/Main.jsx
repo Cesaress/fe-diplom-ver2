@@ -5,7 +5,7 @@ const Main = (props) => {
   const location = useLocation();
 
   const classBased =
-    location.pathname === "/fe-diplom-ver2"
+    location.pathname === "/fe-diplom"
       ? "main-content__home-page"
       : "main-content__wrap d-flex";
   return (

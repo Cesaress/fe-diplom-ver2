@@ -34,6 +34,7 @@ const PassengersInfo = () => {
   validatePass(passengers) ? (isValidData = false) : (isValidData = true);
 
   useEffect(() => {
+    // console.log(passengers, "passengers");
   }, [passengers, isValidData]);
   const clickHandler = (event) => {
     cardRef.current = event.target.parentElement.nextSibling;
@@ -60,7 +61,7 @@ const PassengersInfo = () => {
   const onClickHandler = () => {
     validatePass(passengers) === true
       ? navigate({
-          pathname: `/fe-diplom-ver2/personal_information/${params.id}`,
+          pathname: `/fe-diplom/personal_information/${params.id}`,
           search: location.search,
         })
       : setShowError(true);
@@ -91,7 +92,7 @@ const PassengersInfo = () => {
                 text="Вы не выбрали ни одного места в вагоне "
                 onClick={() =>
                   navigate({
-                    pathname: `/fe-diplom-ver2/seats/${params.id}`,
+                    pathname: `/fe-diplom/seats/${params.id}`,
                     search: location.search,
                   })
                 }

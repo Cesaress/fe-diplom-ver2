@@ -25,14 +25,14 @@ const catalogTrainsSlice = createSlice({
         have_express: false,
         price_from: 500,
         price_to: 9000,
-        start_departure_hour_from: 0, 
-        start_departure_hour_to: 24, 
-        start_arrival_hour_from: 0, 
-        start_arrival_hour_to: 24, 
-        end_departure_hour_from: 0, 
-        end_departure_hour_to: 24, 
-        end_arrival_hour_from: 0, 
-        end_arrival_hour_to: 24, 
+        start_departure_hour_from: 0, //Час отбытия от (число)
+        start_departure_hour_to: 24, //Час отбытия до (число)
+        start_arrival_hour_from: 0, //Час прибытия от (число)
+        start_arrival_hour_to: 24, //Час прибытия до (число)
+        end_departure_hour_from: 0, //Час отбытия назад от (число)
+        end_departure_hour_to: 24, //Час отбытия назад до (число)
+        end_arrival_hour_from: 0, //Час прибытия назад от (работает при установленном параметре date_end)
+        end_arrival_hour_to: 24, //Час прибытия назад до (работает при установленном параметре date_end)
       },
     },
     seleсtedTrain: null,

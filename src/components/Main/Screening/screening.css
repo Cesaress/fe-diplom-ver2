@@ -106,7 +106,7 @@ img.screening-train-reverse__icon {
   display: flex;
   justify-content: flex-end;
 }
-
+/*Пассажиры*/
 
 .screening-block_passengers,
 .screening-block_payment {
@@ -153,6 +153,7 @@ span.passengers_card-top-text {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+
   color: #292929;
 }
 
@@ -204,6 +205,7 @@ span.passengers_card-top-text {
   font-weight: 400;
   font-size: 30px;
   line-height: 35px;
+
   color: #292929;
 }
 
@@ -215,7 +217,7 @@ svg.control_price-block_currency {
   margin-bottom: 5px;
   margin-left: 8px;
 }
-
+/*Способ оплаты*/
 .screening_block-control {
   width: 959px;
   display: flex;
@@ -223,6 +225,7 @@ svg.control_price-block_currency {
 }
 
 .card-body.screening-payment {
+  /*padding: 44px 33px 21px 33px;*/
   padding: 0;
   height: 146px;
   display: flex;
@@ -233,6 +236,7 @@ svg.control_price-block_currency {
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
+
   color: #292929;
 }
 .screening-payment_text {
