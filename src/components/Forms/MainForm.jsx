@@ -27,12 +27,12 @@ const MainForm = ({ className }) => {
   const dispatch = useDispatch();
   const reverseRef = useRef();
   const formRef = useRef();
-  const { data = [], isError /*isLoading */ } = useGetCityesNameQuery(name);
+  const { data = [], isError} = useGetCityesNameQuery(name);
   const navigate = useNavigate();
 
   const location = useLocation();
 
-  if (isError) console.log(isError, "error!!!");
+  if (isError) console.log(isError, "error!");
   let optionsData = [];
   if (data.length > 0) {
     optionsData = data.map((item) => {
@@ -66,14 +66,13 @@ const MainForm = ({ className }) => {
 
   const clickReverse = () => {
     dispatch(setReverseData());
-    // меняет местами города
   };
   const clickHandler = () => {
     dispatch(setDataRequest({ data: { from, to } }));
     dispatch(setParameters({ offset: 0 }));
-    if (location.pathname !== `/fe-diplom/trains/${urlSearchString}`)
+    if (location.pathname !== `/fe-diplom-ver2/trains/${urlSearchString}`)
       navigate({
-        pathname: `/fe-diplom/trains/`,
+        pathname: `/fe-diplom-ver2/trains/`,
         search: `${urlSearchString}`,
       });
   };
@@ -151,10 +150,10 @@ const MainForm = ({ className }) => {
                 : false
             }
           ></Button>
-          {isError && location.pathname === "/fe-diplom" && (
+          {isError && location.pathname === "/fe-diplom-ver2" && (
             <Info
               type={"error"}
-              text={"Что-то пошло не так, обновите страницу..."}
+              text={"Что-то пошло не так, обновите страницу"}
               onClick={onClickInfo}
             />
           )}

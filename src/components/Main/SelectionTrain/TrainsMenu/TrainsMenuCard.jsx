@@ -16,7 +16,7 @@ const TrainsMenuCard = ({ departure, onClick }) => {
   const location = useLocation();
   const navigate = useNavigate();
   let screen =
-    location.pathname === `/fe-diplom/screening/${params.id}`
+    location.pathname === `/fe-diplom-ver2/screening/${params.id}`
       ? "screen"
       : null;
 
@@ -124,7 +124,7 @@ const TrainsMenuCard = ({ departure, onClick }) => {
                 type="screening"
                 onClick={() =>
                   navigate({
-                    pathname: `/fe-diplom/trains`,
+                    pathname: `/fe-diplom-ver2/trains`,
                     search: location.search,
                   })
                 }

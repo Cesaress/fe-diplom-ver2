@@ -20,7 +20,7 @@ const Screening = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
-  const [addOrder /*result, isError*/] = useAddOrderMutation();
+  const [addOrder] = useAddOrderMutation();
   let progress = useCallback(() => {
     console.log(passengers);
     return {};
@@ -32,7 +32,6 @@ const Screening = () => {
       passengers.length > 0 && !validateDataPassengers(contributor)
         ? true
         : false;
-    //console.log(addOrder, result, isError, "addOrder");
   }, [progress, passengers, contributor]);
 
   const paymentText =
@@ -44,7 +43,7 @@ const Screening = () => {
   const onClickHandler = async () => {
     await handleAddOrder();
     navigate({
-      pathname: `/fe-diplom/order-result/${params.id}`,
+      pathname: `/fe-diplom-ver2/order-result/${params.id}`,
       search: location.search,
     });
   };

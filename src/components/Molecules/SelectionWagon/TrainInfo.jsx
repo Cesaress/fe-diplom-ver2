@@ -3,7 +3,7 @@ import { capitalizeFirstLetter } from "../../../utils/trainSelectionUtils";
 
 const TrainInfo = ({ className, data }) => {
 
-  if (!data || data === {}) {
+  if (!data || data == {}) {
     return;
   }
   return (

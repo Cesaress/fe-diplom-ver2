@@ -23,7 +23,7 @@ const TrainsMenu = ({ currentItems }) => {
     dispatch(setTrainId({ id: item._id }));
     dispatch(setSelectionTrain({ data: item }));
     navigate({
-      pathname: `/fe-diplom/seats/${item._id}`,
+      pathname: `/fe-diplom-ver2/seats/${item._id}`,
       search: location.search,
     });
   };

@@ -12,7 +12,6 @@ import {
 } from "../Main/CardsBlock/CardsMolecules";
 import Puncts from "../Main/OrderResult/Puncts";
 import Appeal from "../Main/OrderResult/Appeal";
-//import {useAddOrderMutation} from "../../features/otherApi";
 import "../Main/OrderResult/orderResult.css";
 
 const OrderResult = () => {
@@ -22,7 +21,6 @@ const OrderResult = () => {
   const totalPrice = useSelector(
     (state) => state.passengers.totalPrice
   );
-//  const [addOrder, result] = useAddOrderMutation()
 
   const amount = Array(5).fill().map((e, i) => i + 1);
   return (

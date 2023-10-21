@@ -8,7 +8,6 @@ import SideBlock from "./SideBlock";
 import { parsedUrlString, getUrlSearch } from "../../utils/trainSelectionUtils";
 import { setTrainsParameters } from "../../features/catalogTrainsSlice";
 
-/* Боковая панель, выбор поездки по параметрам*/
 const AssistantBlock = () => {
   const { from, to } = useSelector(
     (state) => state.catalogTrains.searchData.travelData
@@ -26,7 +25,7 @@ const AssistantBlock = () => {
       from.date &&
       from.city.name &&
       to.city.name &&
-      location.pathname === "/fe-diplom/trains"
+      location.pathname === "/fe-diplom-ver2/trains"
     )
       dispatch(
         setTrainsParameters({ data: { name: inputName, status: checked } })

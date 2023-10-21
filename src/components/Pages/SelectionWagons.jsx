@@ -46,21 +46,14 @@ const SelectionWagons = () => {
   const location = useLocation();
   let upData = parsedUrlString(location.search);
 console.log(upData,'upData')
-  const {
-    data: list,
-    /*isError: isErrorList,
-    isLoading: isLoadingList,
-    isSuccess,*/
-  } = useGetTrainsListQuery(upData);
+  const {data: list} = useGetTrainsListQuery(upData);
   const {
     data = [],
     isError: isErrorId,
     isLoading: isLoadingId,
   } = useGetTrainIdQuery(params.id);
-  //console.log(list, "list");
 
   const formData = formattedFormData(upData);
-
   const selectedSeats = { type: selectedTypeTicket.type, seats: null };
   if (!id) {
     dispatch(setDataRequest({ data: formData }));
@@ -84,7 +77,7 @@ console.log(upData,'upData')
         },
       })
     );
-    // eslint-disable-next-line
+
   }, [seleсtedTrain, selectedTypeWagon, list, params.id, dispatch]);
   const onClickInfo = () => {
     document.querySelector(".info_card").classList.remove("active");
@@ -181,7 +174,7 @@ console.log(upData,'upData')
                   type="next-block"
                   disabled={isValidSeats.length ? false : true}
                   onClick={() =>     navigate({
-                    pathname: `/fe-diplom/passengers/${id}`,
+                    pathname: `/fe-diplom-ver2/passengers/${id}`,
                     search: location.search,
                   })}
                 ></Button>

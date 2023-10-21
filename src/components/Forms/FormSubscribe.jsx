@@ -11,7 +11,7 @@ const FormSubscribe = () => {
   const clickHandler = (event) => {
     event.preventDefault();
     if (inputRef.current) dispatch(addSubscriber({ data: inputRef.current }));
-    fetch("https://students.netoservices.ru/fe-diplom/subscribe", {
+    fetch("https://students.netoservices.ru/fe-diplom-ver2/subscribe", {
       method: "POST",
       body: JSON.stringify({ email: inputRef.current }),
     })

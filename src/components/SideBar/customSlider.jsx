@@ -18,13 +18,6 @@ const RangeSlider = ({ min, max, step, height, type, start, end }) => {
     setValue(value);
 
     let upData = parsedUrlString(location.search);
-
-    /*здесь  некоторые типы и имена противоречатдруг другу
-это ненадолго.просто хотела и блоки поменьше делать и переиспользовать
-и потом еще куча запрсов наложилась
-очень тяжело придумывать имена.пока так.позже исправлю
-
-[хотя... после gender=false на бэке ...;)*/
     let template;
 
     if (type === "price") {
@@ -90,18 +83,10 @@ const RangeSlider = ({ min, max, step, height, type, start, end }) => {
   }, 2000);
 
   useEffect(
-    // Effect for API call
     () => {
       debounsedValue(value);
-
-      /* 
-      } /*else if (type === "start_departure" || type === "end_departure") {
-        setValue([start_departure_hour_from, end_departure_hour_from]);
-      } else if (type === "start_arrival" || type === "end_arrival") {
-        setValue([start_arrival_hour_from, end_arrival_hour_from]);
-      }*/
     },
-    [debounsedValue, value] // Only call effect if debounced search term changes
+    [debounsedValue, value]
   );
 
   const handleChange = (event, newValue, activeThumb) => {
@@ -129,7 +114,6 @@ const RangeSlider = ({ min, max, step, height, type, start, end }) => {
     },
   ];
 
-  /**Здесь ошибка "react.development.js:209 Warning: Failed prop type: Invalid prop `marks` supplied to `ForwardRef(Slider)`, expected one of type [boolean]." И... я понимаю о чем она, но не понимаю способа подружить */
   return (
     <Box
       sx={{
@@ -151,7 +135,6 @@ const RangeSlider = ({ min, max, step, height, type, start, end }) => {
       />
     </Box>
   );
-  /*valueLabelDisplay="auto"*/
 };
 
 export default RangeSlider;

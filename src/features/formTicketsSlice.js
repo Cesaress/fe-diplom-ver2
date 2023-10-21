@@ -49,10 +49,8 @@ const formSlice = createSlice({
       state.formData.to.city = finishCity;
     },
     upDateForm: (state, action) => {
-      //
       const { data } = action.payload;
       state.formData = data;
-      // console.log(data, 'slice')
       if (!data.to.date) state.formData.to.date = null;
     },
   },

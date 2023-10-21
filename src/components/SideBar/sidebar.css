@@ -3,11 +3,11 @@
   margin-top: 95px;
   margin-right: 0;
   width: 360px;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
 }
+
 .assistant-block_wrap,
 .order-details-block_wrap {
   background: #3e3c41;
@@ -18,9 +18,11 @@
   padding: 43px 36px 33px 28px;
   border-bottom: 1px solid #e5e5e5;
 }
+
 .form-sidebar-block_arrival {
   margin-top: 28px;
 }
+
 .form-sidebar-block_departure_title,
 .form-sidebar-block_arrival_title {
   font-size: 30px;
@@ -28,8 +30,7 @@
   color: #ffffff;
   font-weight: 400;
 }
-/*Switch*/
-/*Это надо найти время и работать с MuiTypography, а ен так топорн, но - "зона моего роста, пока так(с)"*/
+
 
 .sidebar-switch-block {
   padding-top: 32px;
@@ -42,18 +43,23 @@
   height: 21px;
   margin-bottom: 35px;
 }
+
 .sidebar-switch-block-form-item:last-child {
   margin-bottom: 0;
 }
+
 .MuiFormGroup-root {
   margin-right: 34px;
 }
+
 .sidebar-switchbox-svgIcon-wrap {
   margin-top: -6px;
 }
+
 label.MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementStart {
   margin: 0;
 }
+
 span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
   font-family: "Roboto";
   font-style: normal;
@@ -66,7 +72,7 @@ span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
   width: 102px;
 }
 
-/*PriceBlock*/
+
 .sidebar-price-block {
   border-top: 1px solid #e5e5e5;
   padding-top: 37px;
@@ -74,6 +80,7 @@ span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
   padding-left: 30px;
   padding-right: 34px;
 }
+
 .sidebar-price-block_title {
   width: 331px;
   height: 46px;
@@ -84,20 +91,17 @@ span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
   font-weight: 400;
   font-size: 30px;
   line-height: 35px;
-
   color: #ffffff;
 }
 
 span.MuiSlider-mark.css-1tfve6q-MuiSlider-mark {
   background-color: inherit;
 }
-span.MuiSlider-markLabel.css-yafthl-MuiSlider-markLabel {
-}
+
 .sidebar-price-block_description {
   display: flex;
   justify-content: space-between;
   margin: 0;
-
   margin-bottom: 5px;
   height: 23px;
   font-family: "Roboto";
@@ -121,6 +125,7 @@ span.MuiSlider-markLabel.css-yafthl-MuiSlider-markLabel {
   background: inherit;
   border: 1px solid #fff;
 }
+
 span.input-range__label.input-range__label--value {
   top: 0.8rem;
   font-weight: 400;
@@ -129,6 +134,7 @@ span.input-range__label.input-range__label--value {
 
   color: #e5e5e5;
 }
+
 span.input-range__label-container {
   bottom: -1.22rem;
   position: absolute;
@@ -137,6 +143,7 @@ span.input-range__label-container {
   line-height: 19px;
   color: #e5e5e5;
 }
+
 div.input-range__slider {
   background: #fff;
   border-color: #fff;
@@ -144,10 +151,12 @@ div.input-range__slider {
   height: 24px;
   top: -0.7rem;
 }
+
 span.input-range__label.input-range__label--max {
   right: 34px;
 }
-/*SideBlock*/
+
+
 .sidebar-side-block.sidebar-block-departure {
   font-family: "Roboto";
   font-style: normal;
@@ -161,7 +170,6 @@ span.input-range__label.input-range__label--max {
   display: flex;
   align-items: flex-end;
   margin: 27px 34px 25px 32px;
-
   font-weight: 700;
   font-size: 30px;
   line-height: 35px;
@@ -177,15 +185,18 @@ span.input-range__label.input-range__label--max {
   margin: 0;
   margin-left: 12px;
 }
+
 span.sidebar-side-block_date {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   margin-right: 62px;
 }
+
 img.sidebar-block-arrival_arrow__icon {
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
+
 button.sidebar-side-block_btn.btn.text-center,
 .order-details_passengers_btn.btn.text-center {
   padding: 0;
@@ -199,12 +210,11 @@ button.sidebar-side-block_btn.btn.text-center,
 
 .sidebar-side-block.sidebar-block-arrival {
   min-height: 94px;
-
   border-top: 1px solid #e5e5e5;
 }
+
 .tooltip_side_block_departure,
 .tooltip_side_block_arrival {
- 
   position: absolute;
   visibility: inherit!important;
   top: 50px;
@@ -214,7 +224,7 @@ button.sidebar-side-block_btn.btn.text-center,
   line-height: 28px;
   border: 1px solid red;
 }
-/*timing*/
+
 
 .arrival_timing-block {
   padding-bottom: 14px;
@@ -233,7 +243,6 @@ button.sidebar-side-block_btn.btn.text-center,
 .arrival_time-start_title,
 .arrival_time-end_title {
   margin: -3px 35px 15px 29px;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -241,12 +250,13 @@ button.sidebar-side-block_btn.btn.text-center,
   line-height: 28px;
   color: #e5e5e5;
 }
+
 .departure_time-end_title,
 .arrival_time-end + title {
   text-align: right;
 }
 
-/*LastTickets*/
+
 .last-tickets-block {
   width: 360px;
   margin-top: 94px;
@@ -267,6 +277,7 @@ button.sidebar-side-block_btn.btn.text-center,
   display: flex;
   flex-direction: column;
 }
+
 .card.last-tickets-menu-item {
   display: flex;
   padding: 18px;
@@ -280,6 +291,7 @@ button.sidebar-side-block_btn.btn.text-center,
   display: flex;
   justify-content: space-between;
 }
+
 span.last-tickets_train-departure.data-trains-city-name,
 span.last-tickets_train-departure-to.data-trains-city-name {
   font-family: "Roboto";
@@ -289,6 +301,7 @@ span.last-tickets_train-departure-to.data-trains-city-name {
   line-height: 23px;
   color: #292929;
 }
+
 span.last-tickets_train-departure.data-trains-railway_station_name,
 span.last-tickets_train-departure-to.data-trains-railway_station_name {
   font-family: "Roboto";
@@ -300,22 +313,24 @@ span.last-tickets_train-departure-to.data-trains-railway_station_name {
   width: 70%;
   color: #928f94;
 }
+
 .card-bottom.last-tickets__card {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 29px;
 }
+
 .last-tickets__card-price {
   height: 35px;
 }
+
 span.last-tickets__card_min-price {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
-
   color: #ffa800;
 }
 
@@ -325,13 +340,12 @@ i.fa.fa-rub.last-tickets__card_bottom-icon.currency-icon {
   font-weight: 100;
 }
 
-/*OrderDetails*/
 
 .order-details-block_wrap {
-  /**/
   width: 360px;
   margin-bottom: 40px;
 }
+
 .order-details-block_title {
   font-weight: 500;
   font-size: 30px;
@@ -344,6 +358,7 @@ i.fa.fa-rub.last-tickets__card_bottom-icon.currency-icon {
   height: 108px;
   padding: 35px 44px 30px 43px;
 }
+
 .order-details-block_footer {
   border-top: 1px solid #e5e5e5;
   padding: 30px 27px 34px 28px;
@@ -362,7 +377,6 @@ i.fa.fa-rub.last-tickets__card_bottom-icon.currency-icon {
   font-size: 30px;
   line-height: 24px;
   text-transform: uppercase;
-
   color: #ffffff;
 }
 
@@ -371,7 +385,6 @@ span.order-details.price-text {
   font-weight: 700;
   font-size: 48px;
   line-height: 32px;
-
   color: #ffa800;
 }
 
@@ -467,6 +480,7 @@ svg.data-ticket_price-currency-icon {
   text-align: right;
   color: #ffffff;
 }
+
 .side-block_text-name_wrap {
   display: flex;
   flex-direction: column;
@@ -482,10 +496,12 @@ svg.data-ticket_price-currency-icon {
   line-height: 21px;
   color: #928f94;
 }
+
 .order-details.train-departure-to.d-flex.flex-column {
   align-items: flex-end;
   text-align: right;
 }
+
 .order-details > .train-departure.data-trains-city-name {
   margin-top: 21px;
   color: #fff;
@@ -503,6 +519,7 @@ svg.data-ticket_price-currency-icon {
   top: -25px;
   text-align: center;
 }
+
 .order-details-block_wrap > .sidebar-side-block.sidebar-block-departure {
   margin: 0;
 }

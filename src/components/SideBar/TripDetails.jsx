@@ -4,7 +4,6 @@ import { CardBody } from "../Main/CardsBlock/CardsMolecules";
 import TrailsData from "../Molecules/SelectionTrain/TrailsData";
 import { capitalizeFirstLetter } from "../../utils/trainSelectionUtils";
 import icon_yellow_arrow_right from "../../img/selectionTrain/icon_yellow-arrow-right.svg";
-/**Кусок блока с данными поездки в сайдбаре OrderDetails */
 const TripDetails = () => {
   const { seletedTrain } = useSelector((state) => state.catalogTrains);
   console.log(seletedTrain, "selectedTrain");

@@ -20,6 +20,7 @@ const store = configureStore({
   },
   middleware: rtkMiddleware,
 });
+
 export default store;
 
 setupListeners(store.dispatch);

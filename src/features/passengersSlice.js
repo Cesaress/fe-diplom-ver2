@@ -13,13 +13,6 @@ const passengersSlice = createSlice({
       email: "",
       payment_method: "cash",
     },
-    /* totalPrice: {
-      items: [
-        { type: "adult", count: 0, price: 0 },
-        { type: "child", count: 0, price: 0 },
-        { type: "child-no-seats", count: 0, price: 0 },
-      ],
-    },*/
     dataSeats: [
       {
         type: "adult",
@@ -86,7 +79,6 @@ const passengersSlice = createSlice({
           if (idx !== -1) copyState[idx].dataPass = data;
         }
       }
-//let result = price.reduce((sum, current) => sum + current, 0);
       state.totalCount = state.passengers.length;
       state.totalPrice = getTotalPrice(state.passengers);
     },
@@ -116,7 +108,6 @@ console.log(data, 'data')
       const idx = state.dataSeats.findIndex((item) => item.type === data.type);
 
       const copySeats = state.dataSeats[idx].seats;
-      // eslint-disable-next-line
       const seatsIndex = copySeats.findIndex((item) => {
         if (item.seats === data.seats && item.coach_id === data.coach_id) {
           return item;
@@ -144,9 +135,7 @@ console.log(data, 'data')
         return (item = { ...item, seats: [], count: 0 });
       });
       state.dataSeats = result;
-
       state.passengers = [];
-      //
       state.totalPrice = 0;
       state.totalCount = 0;
     },

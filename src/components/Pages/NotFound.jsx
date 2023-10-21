@@ -7,11 +7,11 @@ const NotFound = () => {
   return (
     <section className="top-sales">
       <h2 className="text-center">Страница не найдена</h2>
-      <p>Извините, такая страница не найдена!</p>
+      <p>Такая страница не найдена!</p>
       <Button
         key={nanoid()}
         text={"Вернуться на главную"}
-        onClick={() => navigate("/fe-diplom")}
+        onClick={() => navigate("/fe-diplom-ver2")}
       />
     </section>
   );

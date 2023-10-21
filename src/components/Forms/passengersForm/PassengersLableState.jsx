@@ -8,7 +8,6 @@ const PassengersLableState = ({
   value,
   setState,
   options,
-
   popupIcon,
   placeholder,
 }) => {
@@ -54,7 +53,6 @@ const useStyles = makeStyles({
   customStyle: {
     "& .MuiOutlinedInput-root": {
       height: 50,
-
       paddingBottom: 13,
       "& input": {
         height: 15,
@@ -62,7 +60,6 @@ const useStyles = makeStyles({
       "& fieldset": {
         height: 50,
       },
-
       "&.Mui-focused fieldset": {
         borderColor: "#ffa800",
         borderWidth: "2px",
