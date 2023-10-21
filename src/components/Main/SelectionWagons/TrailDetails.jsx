@@ -12,6 +12,7 @@ const TrailDetails = ({ className, data }) => {
   if (!data) {
     return;
   }
+  /**инфо о поезде на странице выбора вагона,  "выбрать другой поезд" */
 
   return (
     <React.Fragment>

@@ -54,3 +54,5 @@ export const {
   useGetTrainIdQuery,
   useGetLastTicketsQuery,
 } = api;
+/* providesTags: (result, error, arg) => [{type: "dataSearchTrains", data: arg}],*/
+/**    */

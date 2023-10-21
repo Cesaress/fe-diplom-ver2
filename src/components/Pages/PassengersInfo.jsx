@@ -34,6 +34,7 @@ const PassengersInfo = () => {
   validatePass(passengers) ? (isValidData = false) : (isValidData = true);
 
   useEffect(() => {
+    // console.log(passengers, "passengers");
   }, [passengers, isValidData]);
   const clickHandler = (event) => {
     cardRef.current = event.target.parentElement.nextSibling;

@@ -6,7 +6,7 @@ const ProgressBar = () => {
  
   if (
     location.pathname === "/fe-diplom-ver2" ||
-    location.pathname === "/fe-diplom/order-result"
+    location.pathname === "/fe-diplom-ver2/order-result"
   ) {
     return;
   }

@@ -7,7 +7,7 @@ const CustomSwitch = styled(Switch)(() => ({
   width: 72,
   height: 30,
   padding: 6,
-  
+  /** */
   "& .MuiSwitch-switchBase": {
     margin: 1,
     padding: 0,

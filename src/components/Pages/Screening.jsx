@@ -32,7 +32,7 @@ const Screening = () => {
       passengers.length > 0 && !validateDataPassengers(contributor)
         ? true
         : false;
-
+    //console.log(addOrder, result, isError, "addOrder");
   }, [progress, passengers, contributor]);
 
   const paymentText =

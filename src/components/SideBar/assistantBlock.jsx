@@ -8,6 +8,7 @@ import SideBlock from "./SideBlock";
 import { parsedUrlString, getUrlSearch } from "../../utils/trainSelectionUtils";
 import { setTrainsParameters } from "../../features/catalogTrainsSlice";
 
+/* Боковая панель, выбор поездки по параметрам*/
 const AssistantBlock = () => {
   const { from, to } = useSelector(
     (state) => state.catalogTrains.searchData.travelData

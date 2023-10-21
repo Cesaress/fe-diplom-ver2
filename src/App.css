@@ -20,7 +20,7 @@ a:hover {
   cursor: pointer;
 }
 
-
+/* Common Styles */
 .invisible {
   opacity: 0;
 }
@@ -35,14 +35,13 @@ input::-webkit-inner-spin-button {
   width: 670px;
 }
 
-
+/* Preloader */
 .preloader {
   margin: 10px auto;
   position: relative;
   width: 30px;
   height: 30px;
 }
-
 .preloader span {
   border: 0;
   margin: 0;
@@ -52,26 +51,21 @@ input::-webkit-inner-spin-button {
   border-radius: 50%;
   animation: spin 2s ease infinite;
 }
-
 .preloader :first-child {
   background: #19a68c;
   animation-delay: -1.5s;
 }
-
 .preloader :nth-child(2) {
   background: #ff748b;
   animation-delay: -1s;
 }
-
 .preloader :nth-child(3) {
   background: #ffb676;
   animation-delay: -0.5s;
 }
-
 .preloader :last-child {
   background: #727e86;
 }
-
 @keyframes spin {
   0%,
   100% {
@@ -88,6 +82,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
+/* Bootstrap */
 
 input {
   border: none;
@@ -102,7 +97,6 @@ input:focus {
   -o-transition: color 0 ease-in;
   transition: none;
 }
-
 button:active,
 button:focus {
   outline: none !important;
