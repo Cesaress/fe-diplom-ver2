@@ -18,4 +18,3 @@ const Layout = () => {
   );
 };
 export default Layout;
-/**<Outlet /> - место для вложенных роутов> */

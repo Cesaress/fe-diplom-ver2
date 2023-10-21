@@ -16,21 +16,9 @@ import Info from "../Molecules/Info";
 import { findWagon } from "../../utils/trainSelectionUtils";
 import { getValidDataPass } from "../../utils/WagonSelectionUtils";
 import { addSeats, setDataPassengers } from "../../features/passengersSlice";
-import {
-  setTrainId,
-  setDataRequest,
-  upDateCatalog,
-  setSelectionTrain,
-} from "../../features/catalogTrainsSlice";
-import {
-  useGetTrainIdQuery,
-  useGetTrainsListQuery,
-} from "../../features/myApi";
-import {
-  getDuration,
-  parsedUrlString,
-  formattedFormData,
-} from "../../utils/trainSelectionUtils";
+import { setTrainId, setDataRequest, upDateCatalog, setSelectionTrain } from "../../features/catalogTrainsSlice";
+import { useGetTrainIdQuery, useGetTrainsListQuery } from "../../features/myApi";
+import { getDuration, parsedUrlString, formattedFormData } from "../../utils/trainSelectionUtils";
 import "../Main/SelectionWagons/selectionWagons.css";
 
 const SelectionWagons = () => {
@@ -46,21 +34,15 @@ const SelectionWagons = () => {
   const location = useLocation();
   let upData = parsedUrlString(location.search);
 console.log(upData,'upData')
-  const {
-    data: list,
-    /*isError: isErrorList,
-    isLoading: isLoadingList,
-    isSuccess,*/
-  } = useGetTrainsListQuery(upData);
+  const { data: list } = useGetTrainsListQuery(upData);
   const {
     data = [],
     isError: isErrorId,
     isLoading: isLoadingId,
   } = useGetTrainIdQuery(params.id);
-  //console.log(list, "list");
+
 
   const formData = formattedFormData(upData);
-
   const selectedSeats = { type: selectedTypeTicket.type, seats: null };
   if (!id) {
     dispatch(setDataRequest({ data: formData }));
@@ -84,7 +66,7 @@ console.log(upData,'upData')
         },
       })
     );
-    // eslint-disable-next-line
+
   }, [seleсtedTrain, selectedTypeWagon, list, params.id, dispatch]);
   const onClickInfo = () => {
     document.querySelector(".info_card").classList.remove("active");
@@ -181,7 +163,7 @@ console.log(upData,'upData')
                   type="next-block"
                   disabled={isValidSeats.length ? false : true}
                   onClick={() =>     navigate({
-                    pathname: `/fe-diplom/passengers/${id}`,
+                    pathname: `/fe-diplom-ver2/passengers/${id}`,
                     search: location.search,
                   })}
                 ></Button>

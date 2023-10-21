@@ -1,5 +1,4 @@
 import React from "react";
-
 import { TextField } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 const ControlledInput = ({ id, type, state, onChangeInput, errorDocs }) => {
@@ -8,8 +7,7 @@ const ControlledInput = ({ id, type, state, onChangeInput, errorDocs }) => {
   if (type === "date") placeholder = "ДД/ММ/ГГГГ";
   else if (type === "passport" && id === "seria") placeholder = "_ _ _ _ ";
   else if (type === "passport" && id === "number") placeholder = "_ _ _ _ _ _ ";
-  else if (type === "certificate")
-    placeholder = "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _";
+  else if (type === "certificate") placeholder = "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _";
   else placeholder = "";
 
   return (
@@ -41,7 +39,6 @@ const useStyles = makeStyles({
       "& fieldset": {
         height: 56,
       },
-
       "&.Mui-focused fieldset": {
         borderColor: "#ffa800",
         borderWidth: "2px",

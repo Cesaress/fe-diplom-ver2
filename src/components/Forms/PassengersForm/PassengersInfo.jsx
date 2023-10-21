@@ -1,7 +1,6 @@
 import React from "react";
 import PassengersSelect from "./PassengersLableState";
 import ControlledCheckbox from "../../Molecules/MUI/ControlledCheckbox";
-
 import ControlledInput from "../../Molecules/MUI/ControlledInput";
 
 const PassengersInfo = ({ state, setState }) => {

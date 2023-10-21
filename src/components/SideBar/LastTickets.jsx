@@ -1,5 +1,4 @@
 import React from "react";
-
 import CardIconsBlock from "../Main/SelectionTrain/TrainsMenu/CardIconsBlock";
 import { nanoid } from "nanoid";
 import { CardTitle } from "../Atoms/Atoms";

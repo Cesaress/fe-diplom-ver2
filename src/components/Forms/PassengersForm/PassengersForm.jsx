@@ -3,10 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import PassengersInfo from "./PassengersInfo";
 import PassengersDocs from "./PassengersDocs";
 import { Button, MySvgIcon } from "../../Atoms/Atoms";
-import {
-  validateDataPassengers,
-  validateInputForm,
-} from "../../../utils/formsValidator";
+import { validateDataPassengers, validateInputForm } from "../../../utils/formsValidator";
 import { setDataPassengers } from "../../../features/passengersSlice";
 import icon_green_btn from "../../../img/passengers/icon_green_btn.svg";
 import icon_error_docs from "../../../img/passengers/icon_error_docs.svg";
@@ -41,7 +38,7 @@ const PassengersForm = ({ id }) => {
       setInfo(passenger.dataPass.info);
       setDocs(passenger.dataPass.docs);
     }
-  }, [id, passengers]); // eslint-disable-next-line
+  }, [id, passengers]);
   const isValidData =
     validateDataPassengers(info) || validateDataPassengers(docs.data_docs)
       ? false

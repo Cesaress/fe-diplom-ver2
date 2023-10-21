@@ -1,7 +1,6 @@
 import author_1 from "../img/feedback/auhtor_1.jpg";
 import author_2 from "../img/feedback/author_2.jpg";
 
-
 export const optionsPayment = [
   "Банковской картой",
   "PayPal",

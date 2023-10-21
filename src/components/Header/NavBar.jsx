@@ -11,7 +11,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarMain">
           <ul className="navbar-nav mr-auto nav-list">
             <li className="nav-item active">
-              <Link className="nav-link" to="/fe-diplom#about">
+              <Link className="nav-link" to="/fe-diplom-ver2#about">
                 {" "}
                 О нас
               </Link>
@@ -19,7 +19,7 @@ const NavBar = () => {
             <li className="nav-item">
               <Link
                 className="nav-link"
-                to="/fe-diplom#howItWorks"
+                to="/fe-diplom-ver2#howItWorks"
               >
                 Как это работает
               </Link>
@@ -27,7 +27,7 @@ const NavBar = () => {
             <li className="nav-item">
               <Link
                 className="nav-link"
-                to="/fe-diplom#feedback"
+                to="/fe-diplom-ver2#feedback"
               >
                 Отзывы
               </Link>

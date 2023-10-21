@@ -8,6 +8,7 @@ import FormSubscribe from "../Forms/FormSubscribe";
 import SocialLinksGroup from "./SocialLinksGroup";
 import "./footer.css";
 import { nanoid } from "nanoid";
+
 const Footer = () => {
   return (
     <React.Fragment>
@@ -92,7 +93,7 @@ const Footer = () => {
             <div className="footer-border"></div>
             <div className="copyright">
               <Link
-                to="/fe-diplom"
+                to="/fe-diplom-ver2"
                 className="logo__footer-link"
               >
                 <span>Лого</span>

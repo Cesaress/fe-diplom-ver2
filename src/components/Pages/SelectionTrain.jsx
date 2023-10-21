@@ -9,28 +9,18 @@ import ProgressBar from "../Molecules/ProgressBar";
 import Loader from "../Molecules/Loader";
 import SearchControls from "../Main/SelectionTrain/SearchControls";
 import PaginatedItems from "../Molecules/ReactPaginate";
-import {
-  setParameters,
-  upDateCatalog,
-} from "../../features/catalogTrainsSlice";
+import { setParameters, upDateCatalog } from "../../features/catalogTrainsSlice";
 import Info from "../Molecules/Info";
 import { useGetTrainsListQuery } from "../../features/myApi";
 import "../Main/SelectionTrain/selectionTrain.css";
-import {
-  parsedUrlString,
-  getUrlSearch,
-  formattedFormData,
-} from "../../utils/trainSelectionUtils";
+import { parsedUrlString, getUrlSearch, formattedFormData } from "../../utils/trainSelectionUtils";
 
 const SelectionTrain = () => {
   const { parameters } = useSelector((state) => state.catalogTrains.searchData);
-
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
-
   let cardInfo = document.querySelector(".info_card");
-
   let upData = parsedUrlString(location.search);
   const formData = formattedFormData(upData);
 
@@ -59,7 +49,6 @@ const SelectionTrain = () => {
     );
 
    
-    // eslint-disable-next-line
   }, [dispatch, location, cardInfo]);
 
   if (isError) console.log(isError, "error!!!");

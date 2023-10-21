@@ -7,10 +7,7 @@ import { LocationOn } from "@mui/icons-material";
 import { Title, Button } from "../Atoms/Atoms";
 import Info from "../Molecules/Info";
 import FormCalendar from "../Molecules/ReactCalendar";
-import {
-  capitalizeFirstLetter,
-  getUrlSearch,
-} from "../../utils/trainSelectionUtils";
+import { capitalizeFirstLetter, getUrlSearch } from "../../utils/trainSelectionUtils";
 import ic_arrow from "../../img/ic_arrow.svg";
 import { inputValue } from "../../features/formTicketsSlice";
 import { setDataRequest } from "../../features/catalogTrainsSlice";
@@ -19,20 +16,16 @@ import { setReverseData } from "../../features/formTicketsSlice";
 
 const MainForm = ({ className }) => {
   const { name } = useSelector((state) => state.formTickets);
-
   const { from, to } = useSelector((state) => state.formTickets.formData);
-  const { parameters, trainsParameters } = useSelector(
-    (state) => state.catalogTrains.searchData
-  );
+  const { parameters, trainsParameters } = useSelector( (state) => state.catalogTrains.searchData );
   const dispatch = useDispatch();
   const reverseRef = useRef();
   const formRef = useRef();
-  const { data = [], isError /*isLoading */ } = useGetCityesNameQuery(name);
+  const { data = [], isError } = useGetCityesNameQuery(name);
   const navigate = useNavigate();
-
   const location = useLocation();
 
-  if (isError) console.log(isError, "error!!!");
+  if (isError) console.log(isError, "error!");
   let optionsData = [];
   if (data.length > 0) {
     optionsData = data.map((item) => {
@@ -66,14 +59,13 @@ const MainForm = ({ className }) => {
 
   const clickReverse = () => {
     dispatch(setReverseData());
-    // меняет местами города
   };
   const clickHandler = () => {
     dispatch(setDataRequest({ data: { from, to } }));
     dispatch(setParameters({ offset: 0 }));
-    if (location.pathname !== `/fe-diplom/trains/${urlSearchString}`)
+    if (location.pathname !== `/fe-diplom-ver2/trains/${urlSearchString}`)
       navigate({
-        pathname: `/fe-diplom/trains/`,
+        pathname: `/fe-diplom-ver2/trains/`,
         search: `${urlSearchString}`,
       });
   };
@@ -151,7 +143,7 @@ const MainForm = ({ className }) => {
                 : false
             }
           ></Button>
-          {isError && location.pathname === "/fe-diplom" && (
+          {isError && location.pathname === "/fe-diplom-ver2" && (
             <Info
               type={"error"}
               text={"Что-то пошло не так, обновите страницу..."}

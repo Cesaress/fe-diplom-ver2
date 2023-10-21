@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import { parsedUrlString } from "../utils/trainSelectionUtils";
 
 const search = parsedUrlString(window.location.search).formData;
-
 const formSlice = createSlice({
   name: "formTickets",
   initialState: {
@@ -49,10 +48,8 @@ const formSlice = createSlice({
       state.formData.to.city = finishCity;
     },
     upDateForm: (state, action) => {
-      //
       const { data } = action.payload;
       state.formData = data;
-      // console.log(data, 'slice')
       if (!data.to.date) state.formData.to.date = null;
     },
   },

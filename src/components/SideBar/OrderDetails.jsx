@@ -4,6 +4,7 @@ import QuantityPassBlock from "./QuantityPassBlock";
 import SideBlock from "./SideBlock";
 import { Title, CardTitle } from "../Atoms/Atoms";
 import { formattedPrice } from "../../utils/trainSelectionUtils";
+
 const OrderDetails = () => {
   const { dataSeats, totalPrice } = useSelector((state) => state.passengers);
   const { from, to } = useSelector(

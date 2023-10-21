@@ -8,7 +8,6 @@ const PassengersLableState = ({
   value,
   setState,
   options,
-
   popupIcon,
   placeholder,
 }) => {
@@ -22,7 +21,6 @@ const PassengersLableState = ({
       <Autocomplete
         className={classes.customStyle}
         id={id}
-       
         onChange={(event, newValue) => {
           console.log(id, 'id')
           setState(newValue,id);
@@ -33,7 +31,6 @@ const PassengersLableState = ({
         value={value}
         sx={{
           width: width,
-
           "& control": { height: 50 },
         }}
         renderInput={(params) => (
@@ -54,7 +51,6 @@ const useStyles = makeStyles({
   customStyle: {
     "& .MuiOutlinedInput-root": {
       height: 50,
-
       paddingBottom: 13,
       "& input": {
         height: 15,
@@ -62,7 +58,6 @@ const useStyles = makeStyles({
       "& fieldset": {
         height: 50,
       },
-
       "&.Mui-focused fieldset": {
         borderColor: "#ffa800",
         borderWidth: "2px",

@@ -5,23 +5,23 @@ const ProgressBar = () => {
   const params = useParams();
  
   if (
-    location.pathname === "/fe-diplom" ||
-    location.pathname === "/fe-diplom/order-result"
+    location.pathname === "/fe-diplom-ver2" ||
+    location.pathname === "/fe-diplom-ver2/order-result"
   ) {
     return;
   }
 
   let step=1;
 
-  if (location.pathname === `/fe-diplom/screening/${params.id}`) {
+  if (location.pathname === `/fe-diplom-ver2/screening/${params.id}`) {
     step = 4;
   } else if (
-    location.pathname === `/fe-diplom/personal_information/${params.id}`
+    location.pathname === `/fe-diplom-ver2/personal_information/${params.id}`
   ) {
     step = 3;
   } else if (
     location.pathname ===
-    `/fe-diplom/passengers/${params.id}`
+    `/fe-diplom-ver2/passengers/${params.id}`
   ) {
     step = 2;
   }

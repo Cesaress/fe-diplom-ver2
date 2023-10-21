@@ -8,7 +8,6 @@ import icon_third_class from "../../img/selectionTrain/icon_third_class.svg";
 import icon_rocket from "../../img/selectionTrain/icon_rocket.svg";
 import icon_star from "../../img/selectionTrain/icon_star.svg";
 import icon_wifi from "../../img/selectionTrain/icon_wifi.svg";
-
 import CustomSwitch from "../Molecules/MUI/CustomSwitch";
 import { MySvgIcon } from "../Atoms/Atoms";
 import "./sidebar.css";

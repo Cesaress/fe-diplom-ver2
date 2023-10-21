@@ -1,5 +1,5 @@
 import React from "react";
-import {dataReview} from  "../../utils/dataText";
+import { dataReview } from  "../../utils/dataText";
 
 const Review = () => {
     return (

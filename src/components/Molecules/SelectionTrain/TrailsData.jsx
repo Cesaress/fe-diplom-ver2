@@ -1,9 +1,6 @@
 import React from "react";
 import { MySvgIcon } from "../../Atoms/Atoms";
-import {
-  capitalizeFirstLetter,
-  getDuration,
-} from "../../../utils/trainSelectionUtils";
+import { capitalizeFirstLetter, getDuration } from "../../../utils/trainSelectionUtils";
 import { format } from "date-fns";
 import { nanoid } from "nanoid";
 

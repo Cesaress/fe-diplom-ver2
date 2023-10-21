@@ -4,10 +4,10 @@ import Timing from "./Timing";
 import TripDetails from "./TripDetails";
 import Tooltip from "../Molecules/Tooltip";
 import icon_arrow from "../../img/sidebar/icon_arrow.svg";
+
 const SideBlock = ({ type, data, date, side, children, parent, onChange }) => {
   const [showTiming, setShowTiming] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
-
   const basedClasses =
     type === "departure" ? "sidebar-block-departure" : "sidebar-block-arrival";
 

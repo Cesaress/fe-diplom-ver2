@@ -4,15 +4,14 @@ import { getDataPassTemplate } from "../../utils/WagonSelectionUtils";
 import { formattedPrice } from "../../utils/trainSelectionUtils";
 import icon_pass_yellow from "../../img/sidebar/icon_pass_yellow.svg";
 import { nanoid } from "nanoid";
+
 const QuantityPassBlock = ({ data }) => {
   const [showPassengers, setShowPassengers] = useState(true);
-
   const clickHandler = () => {
     setShowPassengers(!showPassengers);
   };
 
   const resultTemplate = getDataPassTemplate(data);
-    //console.log(data, 'data', resultTemplate,'resultTemplate')
 
   return (
     <React.Fragment>

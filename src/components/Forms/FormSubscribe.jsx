@@ -5,9 +5,7 @@ import { addSubscriber } from "../../features/passengersSlice";
 
 const FormSubscribe = () => {
   const inputRef = useRef();
-
   const dispatch = useDispatch();
-
   const clickHandler = (event) => {
     event.preventDefault();
     if (inputRef.current) dispatch(addSubscriber({ data: inputRef.current }));

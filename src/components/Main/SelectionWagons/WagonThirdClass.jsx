@@ -1,10 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import {
-  getDisabled,
-  getSeatsArr,
-  getClassName,
-} from "../../../utils/WagonSelectionUtils";
+import { getDisabled, getSeatsArr, getClassName } from "../../../utils/WagonSelectionUtils";
 import { nanoid } from "nanoid";
 const WagonThirdClass = ({ data, selectedTypeTicket, onClick }) => {
   const dataSeats = useSelector((state) => state.passengers.dataSeats);

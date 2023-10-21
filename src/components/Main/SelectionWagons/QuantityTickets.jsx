@@ -10,7 +10,6 @@ const QuantityTickets = ({ className, data, selected, setSelected }) => {
   const dispatch = useDispatch();
   const inputRef = useRef();
   const tooltipRef = useRef();
-
   const basedClassesItem = className + "_block-menu-item";
   const onMouseOver = (event) => {
     event.preventDefault();

@@ -10,8 +10,8 @@ const HomePage = () => {
   return (
     <React.Fragment>
       <Banner className="banner banner-home" banner={banner1}>
-
       </Banner>
+
       <MainForm className="homepage_form" />
       <About />
     

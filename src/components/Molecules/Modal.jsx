@@ -1,10 +1,6 @@
 import React from "react";
 import Card from "../Main/CardsBlock/Card";
-import {
-  CardTop,
-  CardBottom,
-  CardBody,
-} from "../Main/CardsBlock/CardsMolecules";
+import { CardTop, CardBottom, CardBody } from "../Main/CardsBlock/CardsMolecules";
 import icon_info from "../../img/howItWorks/icon_info.svg";
 import { nanoid } from "nanoid";
 import { Button } from "../Atoms/Atoms";
