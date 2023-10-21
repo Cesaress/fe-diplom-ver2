@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
-import { Button, Title } from "../Atoms/Atoms";
+import { Button, Title } from "./Atoms/Atoms";
 import Banner from "../Molecules/Banner";
 import banner3 from "../../img/banner/banner3.png";
 import MainForm from "../Forms/MainForm";
