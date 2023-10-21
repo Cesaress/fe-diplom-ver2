@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Button } from "../Atoms/Atoms";
+import { Button } from "../../Atoms/Atoms";
 import Banner from "../Molecules/Banner";
 import banner3 from "../../img/banner/banner3.png";
 import MainForm from "../Forms/MainForm";

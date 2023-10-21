@@ -10,7 +10,7 @@ import SideBar from "../SideBar/SideBar";
 import ProgressBar from "../Molecules/ProgressBar";
 import AddPassenger from "../Main/Passengers/AddPassengerBlock";
 import BlockItem from "../Main/Passengers/BlockItem";
-import { Button } from "../Atoms/Atoms";
+import { Button } from "../../Atoms/Atoms";
 import { validatePass } from "../../utils/formsValidator";
 import "../Main/Passengers/passengersInfo.css";
 

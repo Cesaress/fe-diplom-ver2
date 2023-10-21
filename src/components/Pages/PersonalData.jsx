@@ -10,7 +10,7 @@ import Info from "../Molecules/Info";
 import SideBar from "../SideBar/SideBar";
 import PersonalDataForm from "../Forms/PersonalDataForm";
 import ControlledCheckbox from "../Molecules/MUI/ControlledCheckbox";
-import { CardTitle, Button } from "../Atoms/Atoms";
+import { CardTitle, Button } from "../../Atoms/Atoms";
 import "../Main/PersonalData/personalData.css";
 import { validateDataPassengers } from "../../utils/formsValidator";
 import { optionsPayment } from "../../utils/dataText";
